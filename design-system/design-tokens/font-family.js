@@ -1,5 +1,5 @@
 module.exports = {
-  sans: ["Roboto"],
+  sans: ["Nunito Sans"],
   serif: ["Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
   mono: [
     "Menlo",
