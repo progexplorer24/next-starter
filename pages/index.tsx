@@ -8,7 +8,7 @@ const Home: NextPage = () => (
   <main>
     <h1
       css={css`
-        ${tw`heading-1`}
+        ${tw`text-6xl`}
       `}
     >
       This is the heading
