@@ -3,7 +3,6 @@ import { css } from "@emotion/core";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import tw from "twin.macro";
 import Icon from "@svg/icon-arrow-left.svg";
-import HelloWorld from "../components/hello";
 
 const Home: NextPage = () => (
   <main>
@@ -19,8 +18,6 @@ const Home: NextPage = () => (
         ${tw`w-8 h-8`}
       `}
     />
-
-    <HelloWorld />
   </main>
 );
 
