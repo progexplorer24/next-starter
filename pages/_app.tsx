@@ -17,6 +17,8 @@ import H3 from "@components/headings/h3/h3";
 import H4 from "@components/headings/h4/h4";
 import H5 from "@components/headings/h5/h5";
 import H6 from "@components/headings/h6/h6";
+import Table, { TableProps } from "@components/table/table";
+import TR from "@components/table/tr/tr";
 import globalStyles from "../styles/global-styles";
 
 const mdxComponents = {
@@ -102,6 +104,12 @@ const mdxComponents = {
     >
       {children}
     </A>
+  ),
+  table: ({ children, ...props }: TableProps): JSX.Element => (
+    <Table {...props}>{children}</Table>
+  ),
+  tr: ({ children, ...props }: TableProps): JSX.Element => (
+    <TR {...props}>{children}</TR>
   ),
 };
 
