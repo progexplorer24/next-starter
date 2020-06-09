@@ -6,10 +6,10 @@ import tw from "twin.macro";
 
 import P from "@components/p/p";
 import type { ParagraphProps } from "@components/p/p";
-import InlineCode from "@components/inline-code/inline-code";
-import type { InlineCodeProps } from "@components/inline-code/inline-code";
-import A from "@components/a/a";
-import type { AProps } from "@components/a/a";
+import InlineCode, {
+  InlineCodeProps,
+} from "@components/inline-code/inline-code";
+import A, { AProps } from "@components/a/a";
 import H1 from "@components/headings/h1/h1";
 import type { HeadingProps } from "@components/headings/types";
 import H2 from "@components/headings/h2/h2";
@@ -19,6 +19,14 @@ import H5 from "@components/headings/h5/h5";
 import H6 from "@components/headings/h6/h6";
 import Table, { TableProps } from "@components/table/table";
 import TR from "@components/table/tr/tr";
+import TH, { THProps } from "@components/table/th/th";
+import TD, { TDProps } from "@components/table/td/td";
+import UL, { ULProps } from "@components/lists/ul/ul";
+import LI, { LIProps } from "@components/lists/li/li";
+import OL, { OLProps } from "@components/lists/ol/ol";
+import HR, { HRProps } from "@components/hr";
+import Img, { ImgProps } from "@components/img/img";
+import Code, { CodeProps } from "@components/code/code";
 import globalStyles from "../styles/global-styles";
 
 const mdxComponents = {
@@ -111,6 +119,24 @@ const mdxComponents = {
   tr: ({ children, ...props }: TableProps): JSX.Element => (
     <TR {...props}>{children}</TR>
   ),
+  th: ({ children, ...props }: THProps): JSX.Element => (
+    <TH {...props}>{children}</TH>
+  ),
+  td: ({ children, ...props }: TDProps): JSX.Element => (
+    <TD {...props}>{children}</TD>
+  ),
+  ul: ({ children, ...props }: ULProps): JSX.Element => (
+    <UL {...props}>{children}</UL>
+  ),
+  li: ({ children, ...props }: LIProps): JSX.Element => (
+    <LI {...props}>{children}</LI>
+  ),
+  ol: ({ children, ...props }: OLProps): JSX.Element => (
+    <OL {...props}>{children}</OL>
+  ),
+  hr: (props: HRProps): JSX.Element => <HR {...props} />,
+  img: (props: ImgProps): JSX.Element => <Img {...props} />,
+  pre: (props: CodeProps): JSX.Element => <Code {...props} />,
 };
 
 export default ({ Component, pageProps }: AppProps): JSX.Element => (
