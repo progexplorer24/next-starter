@@ -5,3 +5,9 @@ declare module "*.svg" {
   const src: string;
   export default src;
 }
+
+// types/mdx.d.ts
+declare module "*.mdx" {
+  const MDXComponent: <T1>(props: T1) => JSX.Element;
+  export default MDXComponent;
+}
