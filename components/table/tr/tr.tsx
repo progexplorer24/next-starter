@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from "react";
-import { SerializedStyles } from "@emotion/core";
+import { SerializedStyles, css } from "@emotion/core";
+import tw from "twin.macro";
 
 type TRProps = {
   css?: SerializedStyles;
@@ -7,7 +8,16 @@ type TRProps = {
 };
 
 const TR: FC<TRProps> = ({ children, ...props }) => {
-  return <tr {...props}>{children}</tr>;
+  return (
+    <tr
+      css={css`
+        ${tw`border-t border-b border-gray-400`}
+      `}
+      {...props}
+    >
+      {children}
+    </tr>
+  );
 };
 
 export default TR;

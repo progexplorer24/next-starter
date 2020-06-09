@@ -10,7 +10,7 @@ export type TableProps = {
 const Table: FC<TableProps> = ({ children, ...props }) => (
   <table
     css={css`
-      ${tw`w-full text-left border-collapse`}
+      ${tw`w-full mt-6 text-left border-collapse`}
     `}
     {...props}
   >
