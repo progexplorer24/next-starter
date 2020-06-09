@@ -2,11 +2,13 @@ import { Global, css } from "@emotion/core";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import tw from "twin.macro";
 import tailwindReset from "./tailwind-reset";
+import highlightCode from "./highlight-code";
 
 const globalStyles = (
   <Global
     styles={css`
       ${tailwindReset}
+      ${highlightCode}
       /* To generate fonts it can be useful to use something like: https://google-webfonts-helper.herokuapp.com/fonts */
 
       /* nunito-sans-200 - latin */
