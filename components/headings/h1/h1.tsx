@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { HeadingProps } from "../types";
+import type { HeadingProps } from "../types";
 
 const H1: FC<HeadingProps> = ({ children, ...props }) => {
   return <h1 {...props}>{children}</h1>;
