@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React from "react";
 import fs from "fs";
 import path from "path";
-import { GetStaticProps } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Doc from "../mdx/all-components.mdx";
 
 const splitLines = (str: string): string[] => str.split(/\r?\n/);
@@ -29,7 +29,7 @@ type AllMdxProps = {
 |--------------------------------------------------
 */
 
-const Component: FC<AllMdxProps> = (props) => {
+const Component: NextPage<AllMdxProps> = (props) => {
   // console.log(props);
   return (<Doc {...props} />) as JSX.Element & AllMdxProps;
 };
