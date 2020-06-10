@@ -15,7 +15,9 @@ import LI from "@components/lists/li/li";
 import TextHR from "@components/text-hr";
 import Img from "@components/img/img";
 
-const Home: NextPage = () => {
+type HomeProps = {};
+
+const Home: NextPage<HomeProps> = () => {
   // console.log(props);
   return (
     <main>
