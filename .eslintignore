@@ -8,3 +8,5 @@ coverage
 cypress/integration/examples
 # lint storybook config files
 !.storybook
+# lint .eslintrc.js
+!.eslintrc.js
