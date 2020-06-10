@@ -37,7 +37,7 @@ const TailwindTable: FC<TailwindTableProps> = ({ specObj }) => {
     <Table>
       <THead>
         <TR>
-          <TH>Twin Macro</TH>
+          <TH>Macro</TH>
           <TH>Property</TH>
         </TR>
       </THead>
