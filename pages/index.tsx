@@ -1,7 +1,6 @@
 import { NextPage, GetStaticProps } from "next";
 import { css } from "@emotion/core";
 
-import Link from "next/link";
 import tw from "twin.macro";
 import Icon from "@svg/icon-arrow-left.svg";
 import Table from "@components/table/table";
@@ -16,12 +15,18 @@ import TextHR from "@components/text-hr";
 import Img from "@components/img/img";
 import MainContainer from "layouts/main-container";
 
+// import NextLink from "@components/next-link/next-link";
+import Nav from "@components/nav/nav";
+import A from "@components/a/a";
+import NextLink from "@components/next-link/next-link";
+
 type HomeProps = {};
 
 const Home: NextPage<HomeProps> = () => {
   // console.log(props);
   return (
     <main>
+      <Nav />
       <MainContainer>
         <h1
           css={css`
@@ -30,10 +35,15 @@ const Home: NextPage<HomeProps> = () => {
         >
           This is the heading
         </h1>
-        <Link href="/all-mdx-components">
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a>All Mdx components</a>
-        </Link>
+        <NextLink href="/all-mdx-components">All Mdx components</NextLink>
+        <A
+          css={css`
+            ${tw`block`}
+          `}
+          href="https://google.com"
+        >
+          Link
+        </A>
         <Icon
           css={css`
             ${tw`w-8 h-8`}
