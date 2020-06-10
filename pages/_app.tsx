@@ -27,6 +27,7 @@ import OL, { OLProps } from "@components/lists/ol/ol";
 import HR, { HRProps } from "@components/hr";
 import Img, { ImgProps } from "@components/img/img";
 import Code, { CodeProps } from "@components/code/code";
+import Blockquote, { BlockquoteProps } from "@components/blockquote/blockquote";
 import globalStyles from "../styles/global-styles";
 
 const mdxComponents = {
@@ -43,7 +44,7 @@ const mdxComponents = {
   h1: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H1
       css={css`
-        ${tw`text-6xl font-light tracking-tight`}
+        ${tw`mt-6 text-4xl font-semibold md:font-light md:tracking-tight md:text-6xl`}
       `}
       {...props}
     >
@@ -53,7 +54,7 @@ const mdxComponents = {
   h2: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H2
       css={css`
-        ${tw`text-5xl font-light tracking-tight`}
+        ${tw`mt-6 text-3xl md:text-5xl md:font-light md:tracking-tight`}
       `}
       {...props}
     >
@@ -63,7 +64,7 @@ const mdxComponents = {
   h3: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H3
       css={css`
-        ${tw`text-4xl`}
+        ${tw`mt-6 text-2xl tracking-wide md:text-4xl`}
       `}
       {...props}
     >
@@ -73,7 +74,7 @@ const mdxComponents = {
   h4: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H4
       css={css`
-        ${tw`text-3xl tracking-wide`}
+        ${tw`mt-6 text-xl font-bold tracking-wide md:tracking-normal md:text-3xl`}
       `}
       {...props}
     >
@@ -137,6 +138,9 @@ const mdxComponents = {
   hr: (props: HRProps): JSX.Element => <HR {...props} />,
   img: (props: ImgProps): JSX.Element => <Img {...props} />,
   pre: (props: CodeProps): JSX.Element => <Code {...props} />,
+  blockquote: ({ children, ...props }: BlockquoteProps): JSX.Element => (
+    <Blockquote {...props}>{children}</Blockquote>
+  ),
 };
 
 export default ({ Component, pageProps }: AppProps): JSX.Element => (
