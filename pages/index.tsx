@@ -14,6 +14,7 @@ import UL from "@components/lists/ul/ul";
 import LI from "@components/lists/li/li";
 import TextHR from "@components/text-hr";
 import Img from "@components/img/img";
+import MainContainer from "layouts/main-container";
 
 type HomeProps = {};
 
@@ -21,102 +22,104 @@ const Home: NextPage<HomeProps> = () => {
   // console.log(props);
   return (
     <main>
-      <h1
-        css={css`
-          ${tw`text-6xl`}
-        `}
-      >
-        This is the heading
-      </h1>
-      <Link href="/all-mdx-components">
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a>All Mdx components</a>
-      </Link>
-      <Icon
-        css={css`
-          ${tw`w-8 h-8`}
-        `}
-      />
-
-      <Img
-        css={css`
-          ${tw`w-32 h-32`}
-        `}
-        alt="CDC 3d generated bacteria"
-        src="../imgs/bacteria.jpg"
-      />
-
-      <UL>
-        <LI>Hello world</LI>
-        <LI>MDX List Element</LI>
-        <LI>I&apos;m another LI element</LI>
-        <LI>Last List Element</LI>
-      </UL>
-
-      <TextHR />
-
-      <Table>
-        <THead
+      <MainContainer>
+        <h1
           css={css`
-            ${tw`border-t border-b border-gray-400`}
+            ${tw`text-6xl`}
           `}
         >
-          <TR>
-            <TH>Tailwind Class</TH>
-            <TH>Value</TH>
-          </TR>
-        </THead>
-        <TBody>
-          <TR>
-            <TD
-              css={css`
-                ${tw`p-2 font-mono text-xs font-semibold text-indigo-700`}
-              `}
-            >
-              text-xs
-            </TD>
-            <TD
-              css={css`
-                ${tw`p-2 font-mono text-xs text-purple-600`}
-              `}
-            >
-              font-size: .75rem;
-            </TD>
-          </TR>
-          <TR>
-            <td
-              css={css`
-                ${tw`p-2 font-mono text-xs border-t border-gray-300`}
-              `}
-            >
-              text-xs
-            </td>
-            <td
-              css={css`
-                ${tw`p-2 font-mono text-xs border-t border-gray-300`}
-              `}
-            >
-              font-size: .75rem;
-            </td>
-          </TR>
-          <TR>
-            <td
-              css={css`
-                ${tw`p-2 font-mono text-xs border-t border-gray-300`}
-              `}
-            >
-              text-xs
-            </td>
-            <td
-              css={css`
-                ${tw`p-2 font-mono text-xs border-t border-gray-300`}
-              `}
-            >
-              font-size: .75rem;
-            </td>
-          </TR>
-        </TBody>
-      </Table>
+          This is the heading
+        </h1>
+        <Link href="/all-mdx-components">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a>All Mdx components</a>
+        </Link>
+        <Icon
+          css={css`
+            ${tw`w-8 h-8`}
+          `}
+        />
+
+        <Img
+          css={css`
+            ${tw`w-32 h-32`}
+          `}
+          alt="CDC 3d generated bacteria"
+          src="../imgs/bacteria.jpg"
+        />
+
+        <UL>
+          <LI>Hello world</LI>
+          <LI>MDX List Element</LI>
+          <LI>I&apos;m another LI element</LI>
+          <LI>Last List Element</LI>
+        </UL>
+
+        <TextHR />
+
+        <Table>
+          <THead
+            css={css`
+              ${tw`border-t border-b border-gray-400`}
+            `}
+          >
+            <TR>
+              <TH>Tailwind Class</TH>
+              <TH>Value</TH>
+            </TR>
+          </THead>
+          <TBody>
+            <TR>
+              <TD
+                css={css`
+                  ${tw`p-2 font-mono text-xs font-semibold text-indigo-700`}
+                `}
+              >
+                text-xs
+              </TD>
+              <TD
+                css={css`
+                  ${tw`p-2 font-mono text-xs text-purple-600`}
+                `}
+              >
+                font-size: .75rem;
+              </TD>
+            </TR>
+            <TR>
+              <td
+                css={css`
+                  ${tw`p-2 font-mono text-xs border-t border-gray-300`}
+                `}
+              >
+                text-xs
+              </td>
+              <td
+                css={css`
+                  ${tw`p-2 font-mono text-xs border-t border-gray-300`}
+                `}
+              >
+                font-size: .75rem;
+              </td>
+            </TR>
+            <TR>
+              <td
+                css={css`
+                  ${tw`p-2 font-mono text-xs border-t border-gray-300`}
+                `}
+              >
+                text-xs
+              </td>
+              <td
+                css={css`
+                  ${tw`p-2 font-mono text-xs border-t border-gray-300`}
+                `}
+              >
+                font-size: .75rem;
+              </td>
+            </TR>
+          </TBody>
+        </Table>
+      </MainContainer>
     </main>
   );
 };
