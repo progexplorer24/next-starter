@@ -1,0 +1,31 @@
+import MainContainer from "../layouts/main-container";
+import TailwindTable from "../components/tailwind-table/tailwind-table";
+import FontSizes from "../components/docs/tailwind-font-sizes/tailwind-font-sizes";
+import P from "../components/p/p";
+import { SerializedStyles, css } from "@emotion/core";
+import tw from "twin.macro";
+import { defaultFontSizes, customFontSizes } from "../data";
+
+<MainContainer>
+
+# Font Size
+
+**How to control size of a font?**
+
+To control the font weight of an element at a specific breakpoint, add a {screen}: prefix to any existing font weight utility. For example, use md:font-bold to apply the font-bold utility at only medium screen sizes and above.
+
+For more information about Tailwind's responsive design features, check out the Responsive Design documentation.
+
+## Default Font Sizes
+
+<TailwindTable specObj={defaultFontSizes} />
+
+## Usage
+
+<FontSizes />
+
+## Custom Font Sizes
+
+<TailwindTable specObj={customFontSizes} />
+
+</MainContainer>
