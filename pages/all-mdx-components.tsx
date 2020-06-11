@@ -8,7 +8,13 @@ const splitLines = (str: string): string[] => str.split(/\r?\n/);
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getStaticProps: GetStaticProps = async () => {
-  const localPath = path.join(process.cwd(), "components", "hr.tsx");
+  const localPath = path.join(
+    process.cwd(),
+    "components",
+    "atoms",
+    "hr",
+    "hr.tsx"
+  );
   const fileContent = fs.readFileSync(localPath, "utf8");
   const codeLines = splitLines(fileContent);
   return {
