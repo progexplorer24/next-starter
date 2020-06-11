@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { SerializedStyles, css } from "@emotion/core";
-import NextLink from "@components/next-link/next-link";
+import NextLink from "@components/atoms/next-link/next-link";
 import tw from "twin.macro";
 
 type NavProps = {
@@ -15,7 +15,8 @@ const Nav: FC<NavProps> = ({ ...props }) => {
       `}
       {...props}
     >
-      <NextLink href="/design-system">Design System</NextLink>
+      <NextLink href="/atoms">Atoms</NextLink>
+      <NextLink href="/font-size">Font Size</NextLink>
       <NextLink href="/font-weight">Font Weight</NextLink>
       <NextLink href="/mdx-components">MDX Components</NextLink>
     </nav>
