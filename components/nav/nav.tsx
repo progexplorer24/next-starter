@@ -18,7 +18,7 @@ const Nav: FC<NavProps> = ({ ...props }) => {
       <NextLink href="/atoms">Atoms</NextLink>
       <NextLink href="/font-size">Font Size</NextLink>
       <NextLink href="/font-weight">Font Weight</NextLink>
-      <NextLink href="/mdx-components">MDX Components</NextLink>
+      <NextLink href="/all-mdx-components">MDX Components</NextLink>
     </nav>
   );
 };
