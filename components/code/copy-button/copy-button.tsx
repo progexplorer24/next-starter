@@ -7,12 +7,15 @@ type CopyButtonProps = {
 };
 
 const CopyButton: React.FC<CopyButtonProps> = ({ handleClick }) => {
+  const positionButton = tw`absolute right-0 z-10 px-4 h-11`;
+
   return (
     <button
       onClick={handleClick}
       type="button"
       css={css`
-        ${tw`absolute right-0 z-10 px-4 pt-2 pb-5 text-xs font-semibold text-gray-500 rounded-lg hover:text-gray-200 focus:outline-none focus:text-gray-200`}
+        ${positionButton}
+        ${tw`text-sm font-bold tracking-widest text-gray-100 bg-blue-700 rounded-tr-lg rounded-bl-lg hocus:bg-blue-600 hocus:text-white focus:outline-none`}
       `}
     >
       Copy
