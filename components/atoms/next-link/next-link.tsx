@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import { SerializedStyles } from "@emotion/core";
 import Link from "next/link";
-import A from "@components/a/a";
+import A from "@components/atoms/a/a";
 
 type NextLinkProps = {
   css?: SerializedStyles;

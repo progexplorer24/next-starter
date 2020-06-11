@@ -4,37 +4,39 @@ import { AppProps } from "next/app";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 
-import P from "@components/p/p";
-import type { ParagraphProps } from "@components/p/p";
+import P from "@components/atoms/p/p";
+import type { ParagraphProps } from "@components/atoms/p/p";
 import InlineCode, {
   InlineCodeProps,
 } from "@components/inline-code/inline-code";
-import A, { AProps } from "@components/a/a";
-import H1 from "@components/headings/h1/h1";
-import type { HeadingProps } from "@components/headings/types";
-import H2 from "@components/headings/h2/h2";
-import H3 from "@components/headings/h3/h3";
-import H4 from "@components/headings/h4/h4";
-import H5 from "@components/headings/h5/h5";
-import H6 from "@components/headings/h6/h6";
+import A, { AProps } from "@components/atoms/a/a";
+import H1 from "@components/atoms/headings/h1/h1";
+import type { HeadingProps } from "@components/atoms/headings/types";
+import H2 from "@components/atoms/headings/h2/h2";
+import H3 from "@components/atoms/headings/h3/h3";
+import H4 from "@components/atoms/headings/h4/h4";
+import H5 from "@components/atoms/headings/h5/h5";
+import H6 from "@components/atoms/headings/h6/h6";
 import Table, { TableProps } from "@components/table/table";
 import TR from "@components/table/tr/tr";
 import TH, { THProps } from "@components/table/th/th";
 import TD, { TDProps } from "@components/table/td/td";
-import UL, { ULProps } from "@components/lists/ul/ul";
-import LI, { LIProps } from "@components/lists/li/li";
-import OL, { OLProps } from "@components/lists/ol/ol";
-import HR, { HRProps } from "@components/hr";
-import Img, { ImgProps } from "@components/img/img";
+import UL, { ULProps } from "@components/atoms/lists/ul/ul";
+import LI, { LIProps } from "@components/atoms/lists/li/li";
+import OL, { OLProps } from "@components/atoms/lists/ol/ol";
+import HR, { HRProps } from "@components/atoms/hr";
+import Img, { ImgProps } from "@components/atoms/img/img";
 import Code, { CodeProps } from "@components/code/code";
-import Blockquote, { BlockquoteProps } from "@components/blockquote/blockquote";
+import Blockquote, {
+  BlockquoteProps,
+} from "@components/atoms/blockquote/blockquote";
 import globalStyles from "../styles/global-styles";
 
 const mdxComponents = {
   p: ({ children, ...props }: ParagraphProps): JSX.Element => (
     <P
       css={css`
-        ${tw`mt-6 leading-relaxed text-gray-700`}
+        ${tw`mt-4 leading-relaxed text-gray-700`}
       `}
       {...props}
     >
@@ -44,7 +46,7 @@ const mdxComponents = {
   h1: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H1
       css={css`
-        ${tw`mt-6 text-4xl font-semibold md:font-light md:tracking-tight md:text-6xl`}
+        ${tw`mt-6 text-4xl font-light tracking-tight md:tracking-tighter md:text-5xl`}
       `}
       {...props}
     >
@@ -54,7 +56,7 @@ const mdxComponents = {
   h2: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H2
       css={css`
-        ${tw`mt-6 text-3xl md:text-5xl md:font-light md:tracking-tight`}
+        ${tw`mt-6 text-3xl font-light tracking-tight md:text-4xl`}
       `}
       {...props}
     >
@@ -64,7 +66,7 @@ const mdxComponents = {
   h3: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H3
       css={css`
-        ${tw`mt-6 text-2xl tracking-wide md:text-4xl`}
+        ${tw`mt-6 text-2xl md:text-3xl`}
       `}
       {...props}
     >
@@ -74,7 +76,7 @@ const mdxComponents = {
   h4: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H4
       css={css`
-        ${tw`mt-6 text-xl font-bold tracking-wide md:tracking-normal md:text-3xl`}
+        ${tw`mt-6 text-xl font-semibold tracking-wide md:text-2xl`}
       `}
       {...props}
     >
@@ -84,7 +86,7 @@ const mdxComponents = {
   h5: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H5
       css={css`
-        ${tw`text-2xl`}
+        ${tw`mt-6 text-lg tracking-widest md:text-xl`}
       `}
       {...props}
     >
@@ -94,7 +96,7 @@ const mdxComponents = {
   h6: ({ children, ...props }: HeadingProps): JSX.Element => (
     <H6
       css={css`
-        ${tw`text-xl font-bold tracking-wide`}
+        ${tw`mt-6 font-bold tracking-wider md:text-lg`}
       `}
       {...props}
     >

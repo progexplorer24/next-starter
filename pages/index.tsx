@@ -9,16 +9,16 @@ import TH from "@components/table/th/th";
 import TR from "@components/table/tr/tr";
 import TBody from "@components/table/tbody/tbody";
 import TD from "@components/table/td/td";
-import UL from "@components/lists/ul/ul";
-import LI from "@components/lists/li/li";
+import UL from "@components/atoms/lists/ul/ul";
+import LI from "@components/atoms/lists/li/li";
 import TextHR from "@components/text-hr";
-import Img from "@components/img/img";
+import Img from "@components/atoms/img/img";
 import MainContainer from "layouts/main-container";
 
 // import NextLink from "@components/next-link/next-link";
 import Nav from "@components/nav/nav";
-import A from "@components/a/a";
-import NextLink from "@components/next-link/next-link";
+import A from "@components/atoms/a/a";
+import NextLink from "@components/atoms/next-link/next-link";
 
 type HomeProps = {};
 

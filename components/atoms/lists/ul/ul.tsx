@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw from "twin.macro";
-// import { LIProps } from "../li/li";
 import RightArrow from "../li/right-arrow.svg";
 
 export type ULProps = {
