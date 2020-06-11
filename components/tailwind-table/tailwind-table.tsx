@@ -1,19 +1,16 @@
-import React, { FC, ReactNode } from "react";
-import { SerializedStyles } from "@emotion/core";
+import React, { FC } from "react";
 import { TwStyle } from "twin.macro";
 import { v4 as uuid } from "uuid";
-import Table from "@components/table/table";
-import THead from "@components/table/thead/thead";
-import TH from "@components/table/th/th";
-import TBody from "@components/table/tbody/tbody";
-import TR from "@components/table/tr/tr";
+import Table, { TableProps } from "@components/atoms/table/table";
+import THead from "@components/atoms/table/thead/thead";
+import TH from "@components/atoms/table/th/th";
+import TBody from "@components/atoms/table/tbody/tbody";
+import TR from "@components/atoms/table/tr/tr";
 import { toPairs } from "ramda";
 import LeftCol from "./left-col/left-col";
 import RightCol from "./right-col/right-col";
 
-type TailwindTableProps = {
-  css?: SerializedStyles;
-  children: ReactNode;
+type TailwindTableProps = TableProps & {
   specObj: {
     [key: string]: {
       value: string;

@@ -1,14 +1,9 @@
-import React, { FC, ReactNode } from "react";
-import { SerializedStyles, css } from "@emotion/core";
+import React, { FC } from "react";
+import { css } from "@emotion/core";
 import tw from "twin.macro";
-import TD from "@components/table/td/td";
+import TD, { TDProps } from "@components/atoms/table/td/td";
 
-type RightColProps = {
-  css?: SerializedStyles;
-  children: ReactNode;
-};
-
-const RightCol: FC<RightColProps> = ({ children, ...props }) => {
+const RightCol: FC<TDProps> = ({ children, ...props }) => {
   return (
     <TD
       css={css`
