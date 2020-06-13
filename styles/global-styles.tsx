@@ -4,13 +4,11 @@ import tw from "twin.macro";
 import tailwindReset from "./tailwind-reset";
 import highlightCode from "./highlight-code";
 
-export const globalStyling = css`
-  ${tailwindReset}
-  ${highlightCode}
-      /* To generate fonts it can be useful to use something like: https://google-webfonts-helper.herokuapp.com/fonts */
+const loadFonts = css`
+  /* To generate fonts it can be useful to use something like: https://google-webfonts-helper.herokuapp.com/fonts */
 
-      /* nunito-sans-200 - latin */
-      @font-face {
+  /* nunito-sans-200 - latin */
+  @font-face {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 200;
@@ -79,10 +77,16 @@ export const globalStyling = css`
       /* Chrome 26+, Opera 23+, Firefox 39+ */
         url("../fonts/nunito-sans-v5-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+`;
+
+export const globalStyling = css`
+  ${tailwindReset}
+  ${highlightCode}
 
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: "Nunito Sans", sans-serif;
   }
 
   body {
@@ -90,6 +94,13 @@ export const globalStyling = css`
   }
 `;
 
-const globalStyles = <Global styles={globalStyling} />;
+const globalStyles = (
+  <Global
+    styles={css`
+      ${loadFonts}
+      ${globalStyling}
+    `}
+  />
+);
 
 export default globalStyles;
