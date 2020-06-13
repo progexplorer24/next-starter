@@ -11,7 +11,7 @@ const Board: FC<BoardProps> = ({ children, ...props }) => {
   return (
     <div
       css={css`
-        ${tw`p-2 mb-6 bg-gray-100 border border-gray-400 rounded-lg shadow-lg `}
+        ${tw`p-2 mt-6 bg-gray-100 border border-gray-400 rounded-lg shadow-lg`}
       `}
       {...props}
     >
