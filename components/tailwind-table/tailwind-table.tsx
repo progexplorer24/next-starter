@@ -11,6 +11,7 @@ import LeftCol from "./left-col/left-col";
 import RightCol from "./right-col/right-col";
 
 type TailwindTableProps = TableProps & {
+  headings?: [string, string];
   specObj: {
     [key: string]: {
       value: string;
@@ -19,7 +20,10 @@ type TailwindTableProps = TableProps & {
   };
 };
 
-const TailwindTable: FC<TailwindTableProps> = ({ specObj }) => {
+const TailwindTable: FC<TailwindTableProps> = ({
+  specObj,
+  headings = ["Macro", "Property"],
+}) => {
   const pairKeysAndValues = toPairs(specObj);
 
   const renderValues = (arr: typeof pairKeysAndValues): JSX.Element[] =>
@@ -34,8 +38,8 @@ const TailwindTable: FC<TailwindTableProps> = ({ specObj }) => {
     <Table>
       <THead>
         <TR>
-          <TH>Macro</TH>
-          <TH>Property</TH>
+          <TH>{headings[0]}</TH>
+          <TH>{headings[1]}</TH>
         </TR>
       </THead>
       <TBody>{renderValues(pairKeysAndValues)}</TBody>
