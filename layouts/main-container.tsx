@@ -11,7 +11,7 @@ const MainContainer: FC<MainContainerProps> = ({ children, ...props }) => {
   return (
     <div
       css={css`
-        ${tw`max-w-3xl px-5 md:mx-auto `}
+        ${tw`max-w-3xl px-5 my-6 md:mx-auto `}
       `}
       {...props}
     >
