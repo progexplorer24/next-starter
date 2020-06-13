@@ -17,5 +17,6 @@
 import "./commands";
 import "@cypress/code-coverage/support";
 import "cypress-react-unit-test/support";
+import "cypress-axe";
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
