@@ -1,20 +1,39 @@
 import MainContainer from "../layouts/main-container";
 import TailwindTable from "../components/tailwind-table/tailwind-table";
+import Text from "../components/docs/text/text";
+import FontWeights from "../components/docs/render-examples/render-examples";
 import { fontWeight } from "../data";
 
 <MainContainer>
 
 # Font Weight
 
-**How to control weight of a font?**
+**List of tokens for controlling the font-weight of an element.**
 
-**Note:**
-Not all font families have all the font weight available. You need to check out the documentation for the font to find out which one are available.
+There are maximally nine values available ranging from 100 to 900. You shouldn't pick more than 2-3 styles, because for every new font weight added there is a performance penalty.
 
 ## Default Tailwind Values
 
+**Note:**
+The choice between styles depends on the font family you use. Not every font lets you choose between nine styles.
+
 <TailwindTable specObj={fontWeight} />
 
-## Use
+## Examples
+
+To control the weight of an element use `font-{weight}`.
+
+**Note:**
+If you don't see any difference between styles, it means that this font-weight is not available. If that's the case the closest font-weight will be added as a fallback.
+
+<FontWeights data={fontWeight}>
+  <Text />
+</FontWeights>
+
+## Links
+
+For more information visit:
+
+- [Tailwind - Font Weight](https://tailwindcss.com/docs/font-weight/)
 
 </MainContainer>
