@@ -6,10 +6,8 @@
     "allowSyntheticDefaultImports": true,
     "target": "es5",
     "lib": ["es5", "dom"],
-    "types": ["cypress", "cypress-react-unit-test"],
-    "paths": {
-      "@components/*": ["src/components/*"]
-    }
+    "types": ["cypress", "cypress-react-unit-test", "cypress-axe"],
+    "paths": {}
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "../**/*.ts", "../**/*.tsx"]
 }
