@@ -1,35 +1,41 @@
 import MainContainer from "../layouts/main-container";
 import TailwindTable from "../components/tailwind-table/tailwind-table";
-import FontSizes from "../components/docs/tailwind-font-sizes/tailwind-font-sizes";
-import P from "../components/atoms/p/p";
-import { SerializedStyles, css } from "@emotion/core";
-import tw from "twin.macro";
+import FontSizes from "../components/docs/render-examples/render-examples";
+import Text from "../components/docs/text/text";
 import { defaultFontSizes, customFontSizes } from "../data";
 
 <MainContainer>
 
 # Font Size
 
-**How to control size of a font?**
+**List of tokens for controlling the font-size of an element.**
 
-To control the font weight of an element at a specific breakpoint, add a {screen}: prefix to any existing font weight utility. For example, use md:font-bold to apply the font-bold utility at only medium screen sizes and above.
+All available font size values are listed in tables below.
 
-For more information about Tailwind's responsive design features, check out the Responsive Design documentation.
-
-## Default Font Sizes
+## Default Font Size Values
 
 <TailwindTable specObj={defaultFontSizes} />
 
-## Usage
+### Examples
 
-<FontSizes fonts={defaultFontSizes} />
+To control font-size in tailwindcss we use class `text-{size}`.
 
-## Custom Font Sizes
+<FontSizes data={defaultFontSizes} />
+
+## Custom Font Size Values
+
+In order to have more flexibility over which type scale to use (for more information visit [Type Sacle Section]()).
 
 <TailwindTable specObj={customFontSizes} />
 
-<FontSizes fonts={customFontSizes} />
+### Examples
 
-## Usage
+<FontSizes data={customFontSizes} />
+
+## Links
+
+For more information visit:
+
+- [Tailwind - Font Size](https://tailwindcss.com/docs/font-size)
 
 </MainContainer>
