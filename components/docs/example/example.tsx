@@ -24,7 +24,11 @@ const Example: FC<ExampleProps> = ({ classKey, twClass, ...props }) => {
       >
         .{classKey}
       </span>
-      <Text />
+      <Text
+        css={css`
+          ${twClass}
+        `}
+      />
     </div>
   );
 };
