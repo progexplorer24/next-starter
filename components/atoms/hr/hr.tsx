@@ -8,11 +8,13 @@ export type HRProps = {
 
 const HR: FC<HRProps> = () => {
   return (
+    /* !!-example-!!*/
     <hr
       css={css`
         ${tw`my-16 border-t border-gray-300`}
       `}
     />
+    /* @@-example-@@*/
   );
 };
 
