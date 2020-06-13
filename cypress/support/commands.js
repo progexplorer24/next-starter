@@ -1,3 +1,5 @@
+import { globalStyling } from "../../styles/global-styles";
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +25,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("addGlobalStyles", () => {
+  cy.document().then((document) => {
+    const styleTag = document.createElement("style");
+
+    styleTag.append(document.createTextNode(globalStyling.styles));
+    const head = document.querySelector("head");
+    head?.appendChild(styleTag);
+  });
+});
