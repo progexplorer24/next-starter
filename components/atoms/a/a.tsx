@@ -27,6 +27,7 @@ const A = React.forwardRef<HTMLAnchorElement, AProps>(
     return (
       <a
         ref={ref}
+        href={href}
         css={css`
           ${tw`font-bold underline cursor-pointer`}
         `}
