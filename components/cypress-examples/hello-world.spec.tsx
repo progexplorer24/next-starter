@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "cypress-react-unit-test";
-import HelloWorld from "@components/cypress-examples/hello-world";
+import HelloWorld from "./hello-world";
 
 describe("HelloWorld component", () => {
   it("works", () => {
