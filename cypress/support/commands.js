@@ -30,7 +30,9 @@ Cypress.Commands.add("addGlobalStyles", () => {
   cy.document().then((document) => {
     const styleTag = document.createElement("style");
 
-    styleTag.append(document.createTextNode(globalStyling.styles));
+    const importFont = `@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');`;
+
+    styleTag.append(document.createTextNode(importFont + globalStyling.styles));
     const head = document.querySelector("head");
     head?.appendChild(styleTag);
   });
