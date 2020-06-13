@@ -22,7 +22,7 @@ import Showcase from "@components/docs/showcase";
 import Board from "@components/docs/board/board";
 import SpaceBlock from "@components/docs/space-block/space-block";
 
-type HomeProps = {};
+type HomeProps = Record<string, unknown>;
 
 const Home: NextPage<HomeProps> = () => {
   // console.log(props);
