@@ -1,13 +1,16 @@
 import React, { ReactNode } from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import tw from "twin.macro";
-import { css } from "@emotion/core";
+import { css, SerializedStyles } from "@emotion/core";
 import copyToClipboard from "../../utils/copyt-to-clipboard";
 import CopyButton from "./copy-button/copy-button";
 import LineNumber from "./line-number/line-number";
 import LanguageButton from "./language-button/language-button";
 
 export type CodeProps = {
+  css?: SerializedStyles;
+  preCss?: SerializedStyles;
+  buttonCss?: SerializedStyles;
   children: {
     props: {
       parentName: string;
@@ -19,13 +22,17 @@ export type CodeProps = {
   };
 };
 
-const Code: React.FC<CodeProps> = ({ children }) => {
+const Code: React.FC<CodeProps> = ({
+  children,
+  preCss,
+  buttonCss,
+  ...props
+}) => {
   const mdxProps = children.props;
   const cName = mdxProps?.className || "";
 
   const matches = cName.match(/language-(?<lang>.*)/);
-  const codeString = children.props.children.trim();
-
+  const codeString = children.props.children;
   const handleClick = (): void => {
     copyToClipboard(codeString);
   };
@@ -56,16 +63,20 @@ const Code: React.FC<CodeProps> = ({ children }) => {
           css={css`
             ${tw`relative mt-8`}
           `}
+          {...props}
         >
           {matches.groups.lang ? (
             <LanguageButton>{matches.groups.lang}</LanguageButton>
           ) : undefined}
-          <CopyButton handleClick={handleClick}>Copy</CopyButton>
+          <CopyButton css={buttonCss} handleClick={handleClick}>
+            Copy
+          </CopyButton>
           <pre
             className={className}
             style={style}
             css={css`
-              ${tw`relative px-4 pt-10 pb-2 overflow-x-auto scrolling-touch text-left rounded-lg`}
+              ${tw`relative px-4 pt-10 pb-2 overflow-x-auto scrolling-touch text-left rounded-lg `}
+              ${preCss}
               & .token-line {
                 ${tw`h-5 leading-snug`}
               }
