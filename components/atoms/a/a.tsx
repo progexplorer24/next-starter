@@ -8,20 +8,6 @@ export type AProps = {
   children: ReactNode;
 };
 
-// const A: FC<AProps> = ({ children, href, ...props }) => {
-//   return (
-//     <a
-//       href={href}
-//       css={css`
-//         ${tw`font-bold underline`}
-//       `}
-//       {...props}
-//     >
-//       {children}
-//     </a>
-//   );
-// };
-
 const A = React.forwardRef<HTMLAnchorElement, AProps>(
   ({ children, href, ...props }, ref) => {
     return (
