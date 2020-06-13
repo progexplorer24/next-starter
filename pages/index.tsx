@@ -3,22 +3,24 @@ import { css } from "@emotion/core";
 
 import tw from "twin.macro";
 import Icon from "@svg/icon-arrow-left.svg";
-import Table from "@components/table/table";
-import THead from "@components/table/thead/thead";
-import TH from "@components/table/th/th";
-import TR from "@components/table/tr/tr";
-import TBody from "@components/table/tbody/tbody";
-import TD from "@components/table/td/td";
+import Table from "@components/atoms/table/table";
+import THead from "@components/atoms/table/thead/thead";
+import TH from "@components/atoms/table/th/th";
+import TR from "@components/atoms/table/tr/tr";
+import TBody from "@components/atoms/table/tbody/tbody";
+import TD from "@components/atoms/table/td/td";
 import UL from "@components/atoms/lists/ul/ul";
 import LI from "@components/atoms/lists/li/li";
 import TextHR from "@components/text-hr";
 import Img from "@components/atoms/img/img";
 import MainContainer from "layouts/main-container";
 
-// import NextLink from "@components/next-link/next-link";
 import Nav from "@components/nav/nav";
 import A from "@components/atoms/a/a";
 import NextLink from "@components/atoms/next-link/next-link";
+import Showcase from "@components/docs/showcase";
+import Board from "@components/docs/board/board";
+import SpaceBlock from "@components/docs/space-block/space-block";
 
 type HomeProps = {};
 
@@ -35,6 +37,27 @@ const Home: NextPage<HomeProps> = () => {
         >
           This is the heading
         </h1>
+
+        <Board>
+          <SpaceBlock
+            css={css`
+              ${tw`w-1`}
+            `}
+          />
+          <SpaceBlock
+            css={css`
+              ${tw`w-2`}
+            `}
+          />
+          <SpaceBlock
+            css={css`
+              ${tw`w-3`}
+            `}
+          />
+        </Board>
+
+        <Showcase code="Hello" />
+
         <NextLink href="/all-mdx-components">All Mdx components</NextLink>
         <A
           css={css`
@@ -49,7 +72,6 @@ const Home: NextPage<HomeProps> = () => {
             ${tw`w-8 h-8`}
           `}
         />
-
         <Img
           css={css`
             ${tw`w-32 h-32`}
