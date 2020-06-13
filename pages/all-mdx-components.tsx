@@ -1,32 +1,32 @@
 import React from "react";
-import fs from "fs";
 import path from "path";
 import { GetStaticProps, NextPage } from "next";
 import Doc from "../mdx/all-components.mdx";
+import returnCodeExamples from "./api/return-code-examples";
 
-const splitLines = (str: string): string[] => str.split(/\r?\n/);
+// const splitLines = (str: string): string[] => str.split(/\r?\n/);
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getStaticProps: GetStaticProps = async () => {
-  const localPath = path.join(
+  const hrPath = path.join(
     process.cwd(),
     "components",
     "atoms",
     "hr",
     "hr.tsx"
   );
-  const fileContent = fs.readFileSync(localPath, "utf8");
-  const codeLines = splitLines(fileContent);
+
+  const examples = returnCodeExamples(hrPath);
+
   return {
     props: {
-      text: "hello",
-      codeLines,
+      examples,
     },
   };
 };
 
 type AllMdxProps = {
-  text: string;
+  code: string;
 };
 
 /**
