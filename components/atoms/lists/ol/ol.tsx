@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { SerializedStyles, css } from "@emotion/core";
-import {} from "ramda";
 import tw from "twin.macro";
+import Numeration from "./numeration/numeration";
 
 export type OLProps = {
   css?: SerializedStyles;
@@ -9,19 +9,6 @@ export type OLProps = {
 };
 
 const OL: FC<OLProps> = ({ children, ...props }) => {
-  type NumerationProps = {
-    number: number;
-  };
-  const Numeration = ({ number }: NumerationProps): JSX.Element => (
-    <span
-      css={css`
-        ${tw`px-1 mr-2 font-semibold text-gray-600`}
-      `}
-    >
-      {number}.
-    </span>
-  );
-
   return (
     <ol
       css={css`
@@ -31,7 +18,7 @@ const OL: FC<OLProps> = ({ children, ...props }) => {
     >
       {React.Children.map(children, (child, i) =>
         React.cloneElement(child, {
-          listDecoration: <Numeration number={i + 1} />,
+          listDecoration: <Numeration>{i + 1}</Numeration>,
         })
       )}
     </ol>
