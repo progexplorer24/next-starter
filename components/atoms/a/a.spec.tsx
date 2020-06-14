@@ -2,7 +2,7 @@ import React from "react";
 import { mount } from "cypress-react-unit-test";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
-import IconArrow from "./icon-arrow-left.svg";
+import RightArrow from "./right-arrow.svg";
 import A from "./a";
 
 before(() => {
@@ -32,7 +32,7 @@ describe("A component", () => {
   it("renders children with icons", () => {
     mount(
       <A href={url}>
-        <IconArrow
+        <RightArrow
           css={css`
             ${tw`w-8 h-8`}
           `}
@@ -72,7 +72,7 @@ describe("A component", () => {
   it("includes valid href attribute", () => {
     mount(
       <A href={url}>
-        <IconArrow
+        <RightArrow
           css={css`
             ${tw`w-8 h-8`}
           `}
