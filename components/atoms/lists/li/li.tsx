@@ -5,18 +5,18 @@ import tw from "twin.macro";
 export type LIProps = {
   css?: SerializedStyles;
   children: ReactNode;
-  listType?: JSX.Element;
+  listDecoration?: JSX.Element;
 };
 
-const LI: FC<LIProps> = ({ children, listType, ...props }) => {
+const LI: FC<LIProps> = ({ children, listDecoration, ...props }) => {
   return (
     <li
       {...props}
       css={css`
-        ${tw`flex items-center pl-4 mt-2 text-lg font-thin tracking-wide`}
+        ${tw`flex items-center mt-2 text-lg font-thin tracking-wide`}
       `}
     >
-      {typeof listType !== undefined ? listType : undefined}
+      {typeof listDecoration !== undefined ? listDecoration : undefined}
       {children}
     </li>
   );
