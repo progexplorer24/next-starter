@@ -15,7 +15,7 @@ const OL: FC<OLProps> = ({ children, ...props }) => {
   const Numeration = ({ number }: NumerationProps): JSX.Element => (
     <span
       css={css`
-        ${tw`px-1 mr-2 font-semibold text-gray-700`}
+        ${tw`px-1 mr-2 font-semibold text-gray-600`}
       `}
     >
       {number}.
@@ -31,7 +31,7 @@ const OL: FC<OLProps> = ({ children, ...props }) => {
     >
       {React.Children.map(children, (child, i) =>
         React.cloneElement(child, {
-          listType: <Numeration number={i + 1} />,
+          listDecoration: <Numeration number={i + 1} />,
         })
       )}
     </ol>
