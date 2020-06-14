@@ -1,22 +1,29 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { css, SerializedStyles } from "@emotion/core";
 import tw from "twin.macro";
 
 export type BlockquoteProps = {
-  children: JSX.Element;
+  children: React.ReactElement<
+    { css?: SerializedStyles; hello: string[] },
+    (props: unknown) => ReactElement
+  >;
   css?: SerializedStyles;
   author?: string;
   cite?: string;
 };
 
-const Blockquote: React.FC<BlockquoteProps> = ({
+const Blockquote = ({
   children,
   cite,
   ...props
-}) => {
+}: BlockquoteProps): JSX.Element => {
   const zeroMaringOnParagraph = css`
     ${tw`m-0`}
   `;
+
+  const childrenWithStyles = React.cloneElement(children, {
+    css: css([children.props.css, zeroMaringOnParagraph]),
+  });
 
   return (
     <blockquote
@@ -26,7 +33,7 @@ const Blockquote: React.FC<BlockquoteProps> = ({
       cite={typeof cite === "undefined" ? undefined : cite}
       {...props}
     >
-      {React.cloneElement(children, { css: zeroMaringOnParagraph })}
+      {childrenWithStyles}
     </blockquote>
   );
 };
