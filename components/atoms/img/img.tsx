@@ -7,7 +7,7 @@ export type ImgProps = {
   src: string;
 };
 
-const Img: FC<ImgProps> = ({ alt = "", src = "/", ...props }) => {
+const Img: FC<ImgProps> = ({ alt = "", src, ...props }) => {
   return <img alt={alt} src={src} {...props} />;
 };
 
