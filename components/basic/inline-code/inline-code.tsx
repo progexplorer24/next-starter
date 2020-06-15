@@ -1,14 +1,9 @@
-import React, { FC, ReactNode } from "react";
-import { SerializedStyles, css } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css } from "@emotion/core";
 import tw from "twin.macro";
-import Code from "@components/atoms/code/code";
+import Code, { CodeProps } from "@components/atoms/code/code";
 
-export type InlineCodeProps = {
-  css?: SerializedStyles;
-  children: ReactNode;
-};
-
-const InlineCode: FC<InlineCodeProps> = ({ children, ...props }) => {
+const InlineCode = ({ children, ...props }: CodeProps): ReactElement => {
   return (
     <Code
       css={css`

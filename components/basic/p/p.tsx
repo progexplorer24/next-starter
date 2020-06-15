@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 import PAtom, { ParagraphProps } from "@components/atoms/p/p";
 
-const P: FC<ParagraphProps> = ({ children, ...props }) => {
+const P = ({ children, ...props }: ParagraphProps): ReactElement => {
   return (
     <PAtom
       css={css`

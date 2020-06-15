@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 import AAtom, { AProps } from "@components/atoms/a/a";
 
-const A: FC<AProps> = ({ children, href, ...props }) => (
+const A = ({ children, href, ...props }: AProps): ReactElement => (
   <AAtom
     css={css`
       ${tw`text-blue-700`}

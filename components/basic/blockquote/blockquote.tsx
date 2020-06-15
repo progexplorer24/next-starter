@@ -1,11 +1,11 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 import BlockquoteAtom, {
   BlockquoteProps,
 } from "@components/atoms/blockquote/blockquote";
 
-const Blockquote: React.FC<BlockquoteProps> = ({ children, ...props }) => (
+const Blockquote = ({ children, ...props }: BlockquoteProps): ReactElement => (
   <BlockquoteAtom
     css={css`
       ${tw`italic font-thin rounded-lg`}
