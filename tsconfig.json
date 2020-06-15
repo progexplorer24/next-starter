@@ -28,7 +28,10 @@
       "@pages/*": ["pages/*"],
       "@design/*": ["design-system/*"],
       "@styles/*": ["styles/*"],
-      "@svg/*": ["public/svg/*"]
+      "@svg/*": ["public/svg/*"],
+      "@atoms/*": ["components/atoms"],
+      "@basic/*": ["components/basic"],
+      "@layouts": ["layouts/*"]
     }
   },
   "exclude": ["node_modules"],
