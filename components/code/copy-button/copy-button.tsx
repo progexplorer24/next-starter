@@ -1,13 +1,18 @@
-import React from "react";
+import React, { ReactElement, ReactNode } from "react";
 import { css, SerializedStyles } from "@emotion/core";
 import tw from "twin.macro";
 
 type CopyButtonProps = {
   css?: SerializedStyles;
   handleClick: () => void;
+  children?: ReactNode;
 };
 
-const CopyButton: React.FC<CopyButtonProps> = ({ handleClick, ...props }) => {
+const CopyButton = ({
+  children = "Copy",
+  handleClick,
+  ...props
+}: CopyButtonProps): ReactElement => {
   const positionButton = tw`absolute right-0 z-10 px-4 py-2`;
 
   return (
@@ -20,7 +25,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({ handleClick, ...props }) => {
       `}
       {...props}
     >
-      Copy
+      {children}
     </button>
   );
 };

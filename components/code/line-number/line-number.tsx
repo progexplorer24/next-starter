@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 
@@ -6,7 +6,7 @@ type LineNumberProps = {
   children: number;
 };
 
-const LineNumber: React.FC<LineNumberProps> = ({ children }) => {
+const LineNumber = ({ children }: LineNumberProps): ReactElement => {
   return (
     <span
       css={css`
