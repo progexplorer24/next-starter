@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import type { ParagraphProps } from "@components/atoms/p/p";
 import P from "@components/basic/p/p";
 import H1 from "@components/basic/h1/h1";
@@ -7,9 +8,7 @@ import H3 from "@components/basic/h3/h3";
 import H4 from "@components/basic/h4/h4";
 import H5 from "@components/basic/h5/h5";
 import H6 from "@components/basic/h6/h6";
-import InlineCode, {
-  InlineCodeProps,
-} from "@components/basic/inline-code/inline-code";
+import InlineCode from "@components/basic/inline-code/inline-code";
 import type { AProps } from "@components/atoms/a/a";
 import A from "@components/basic/a/a";
 import Table, { TableProps } from "@components/atoms/table/table";
@@ -25,59 +24,61 @@ import Code, { CodeProps } from "@components/code/code";
 import type { BlockquoteProps } from "@components/atoms/blockquote/blockquote";
 import Blockquote from "@components/basic/blockquote/blockquote";
 
+import type { CodeProps as InlineCodeProps } from "../atoms/code/code";
+
 const MdxComponents = {
-  p: ({ children, ...props }: ParagraphProps): JSX.Element => (
+  p: ({ children, ...props }: ParagraphProps): ReactElement => (
     <P {...props}>{children}</P>
   ),
-  h1: ({ children, ...props }: HeadingProps): JSX.Element => (
+  h1: ({ children, ...props }: HeadingProps): ReactElement => (
     <H1 {...props}>{children}</H1>
   ),
-  h2: ({ children, ...props }: HeadingProps): JSX.Element => (
+  h2: ({ children, ...props }: HeadingProps): ReactElement => (
     <H2 {...props}>{children}</H2>
   ),
-  h3: ({ children, ...props }: HeadingProps): JSX.Element => (
+  h3: ({ children, ...props }: HeadingProps): ReactElement => (
     <H3 {...props}>{children}</H3>
   ),
-  h4: ({ children, ...props }: HeadingProps): JSX.Element => (
+  h4: ({ children, ...props }: HeadingProps): ReactElement => (
     <H4 {...props}>{children}</H4>
   ),
-  h5: ({ children, ...props }: HeadingProps): JSX.Element => (
+  h5: ({ children, ...props }: HeadingProps): ReactElement => (
     <H5 {...props}>{children}</H5>
   ),
-  h6: ({ children, ...props }: HeadingProps): JSX.Element => (
+  h6: ({ children, ...props }: HeadingProps): ReactElement => (
     <H6 {...props}>{children}</H6>
   ),
-  inlineCode: ({ children, ...props }: InlineCodeProps): JSX.Element => (
+  inlineCode: ({ children, ...props }: InlineCodeProps): ReactElement => (
     <InlineCode {...props}>{children}</InlineCode>
   ),
-  a: ({ children, ...props }: AProps): JSX.Element => (
+  a: ({ children, ...props }: AProps): ReactElement => (
     <A {...props}>{children}</A>
   ),
-  table: ({ children, ...props }: TableProps): JSX.Element => (
+  table: ({ children, ...props }: TableProps): ReactElement => (
     <Table {...props}>{children}</Table>
   ),
-  tr: ({ children, ...props }: TableProps): JSX.Element => (
+  tr: ({ children, ...props }: TableProps): ReactElement => (
     <TR {...props}>{children}</TR>
   ),
-  th: ({ children, ...props }: THProps): JSX.Element => (
+  th: ({ children, ...props }: THProps): ReactElement => (
     <TH {...props}>{children}</TH>
   ),
-  td: ({ children, ...props }: TDProps): JSX.Element => (
+  td: ({ children, ...props }: TDProps): ReactElement => (
     <TD {...props}>{children}</TD>
   ),
-  ul: ({ children, ...props }: ULProps): JSX.Element => (
+  ul: ({ children, ...props }: ULProps): ReactElement => (
     <UL {...props}>{children}</UL>
   ),
-  li: ({ children, ...props }: LIProps): JSX.Element => (
+  li: ({ children, ...props }: LIProps): ReactElement => (
     <LI {...props}>{children}</LI>
   ),
-  ol: ({ children, ...props }: OLProps): JSX.Element => (
+  ol: ({ children, ...props }: OLProps): ReactElement => (
     <OL {...props}>{children}</OL>
   ),
-  hr: (props: HRProps): JSX.Element => <HR {...props} />,
-  img: (props: ImgProps): JSX.Element => <Img {...props} />,
-  pre: (props: CodeProps): JSX.Element => <Code {...props} />,
-  blockquote: ({ children, ...props }: BlockquoteProps): JSX.Element => (
+  hr: (props: HRProps): ReactElement => <HR {...props} />,
+  img: (props: ImgProps): ReactElement => <Img {...props} />,
+  pre: (props: CodeProps): ReactElement => <Code {...props} />,
+  blockquote: ({ children, ...props }: BlockquoteProps): ReactElement => (
     <Blockquote {...props}>{children}</Blockquote>
   ),
 };
