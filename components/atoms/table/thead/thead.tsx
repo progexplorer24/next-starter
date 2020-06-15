@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles } from "@emotion/core";
 
 type THeadProps = {
@@ -6,7 +6,7 @@ type THeadProps = {
   children: ReactNode;
 };
 
-const THead: FC<THeadProps> = ({ children, ...props }) => {
+const THead = ({ children, ...props }: THeadProps): ReactElement => {
   return <thead {...props}>{children}</thead>;
 };
 

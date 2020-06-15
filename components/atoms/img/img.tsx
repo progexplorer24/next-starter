@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { SerializedStyles } from "@emotion/core";
 
 export type ImgProps = {
@@ -7,7 +7,7 @@ export type ImgProps = {
   src: string;
 };
 
-const Img: FC<ImgProps> = ({ alt = "", src, ...props }) => {
+const Img = ({ alt = "", src, ...props }: ImgProps): ReactElement => {
   return <img alt={alt} src={src} {...props} />;
 };
 

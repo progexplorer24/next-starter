@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw from "twin.macro";
 
@@ -7,7 +7,7 @@ type TRProps = {
   children: ReactNode;
 };
 
-const TR: FC<TRProps> = ({ children, ...props }) => {
+const TR = ({ children, ...props }: TRProps): ReactElement => {
   return (
     <tr
       css={css`

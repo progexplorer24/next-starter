@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 
 import type { HeadingProps } from "../types";
 
-const H1: FC<HeadingProps> = ({ children, ...props }) => {
+const H1 = ({ children, ...props }: HeadingProps): ReactElement => {
   return <h1 {...props}>{children}</h1>;
 };
 

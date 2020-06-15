@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw from "twin.macro";
 import Numeration from "./numeration/numeration";
@@ -8,7 +8,7 @@ export type OLProps = {
   children: JSX.Element[];
 };
 
-const OL: FC<OLProps> = ({ children, ...props }) => {
+const OL = ({ children, ...props }: OLProps): ReactElement => {
   return (
     <ol
       css={css`

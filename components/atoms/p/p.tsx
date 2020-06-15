@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles } from "@emotion/core";
 
 export type ParagraphProps = {
@@ -6,7 +6,7 @@ export type ParagraphProps = {
   children: ReactNode;
 };
 
-const P: FC<ParagraphProps> = ({ children, ...props }) => {
+const P = ({ children, ...props }: ParagraphProps): ReactElement => {
   return <p {...props}>{children}</p>;
 };
 

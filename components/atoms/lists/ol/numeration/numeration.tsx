@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw from "twin.macro";
 
@@ -7,7 +7,7 @@ type NumerationProps = {
   children: number;
 };
 
-const Numeration: FC<NumerationProps> = ({ children, ...props }) => {
+const Numeration = ({ children, ...props }: NumerationProps): ReactElement => {
   return (
     <span
       css={css`

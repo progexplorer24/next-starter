@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles } from "@emotion/core";
 
 export type CodeProps = {
@@ -6,12 +6,8 @@ export type CodeProps = {
   children: ReactNode;
 };
 
-const Code: FC<CodeProps> = ({ children, ...props }) => {
+const Code = ({ children, ...props }: CodeProps): ReactElement => {
   return <code {...props}>{children}</code>;
 };
-
-// const Code: FC<CodeProps> = ({ children, ...props }) => {
-//   return (<code {...props}>{children}</code>)
-// };
 
 export default Code;

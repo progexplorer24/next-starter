@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles } from "@emotion/core";
 
 type H3Props = {
@@ -6,7 +6,7 @@ type H3Props = {
   children: ReactNode;
 };
 
-const H3: FC<H3Props> = ({ children, ...props }) => {
+const H3 = ({ children, ...props }: H3Props): ReactElement => {
   return <h3 {...props}>{children}</h3>;
 };
 

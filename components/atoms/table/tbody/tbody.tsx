@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles } from "@emotion/core";
 
 type TBodyProps = {
@@ -6,7 +6,7 @@ type TBodyProps = {
   children: ReactNode;
 };
 
-const TBody: FC<TBodyProps> = ({ children, ...props }) => {
+const TBody = ({ children, ...props }: TBodyProps): ReactElement => {
   return <tbody {...props}>{children}</tbody>;
 };
 

@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw from "twin.macro";
 
@@ -8,7 +8,7 @@ export type LIProps = {
   listDecoration?: JSX.Element;
 };
 
-const LI: FC<LIProps> = ({ children, listDecoration, ...props }) => {
+const LI = ({ children, listDecoration, ...props }: LIProps): ReactElement => {
   return (
     <li
       {...props}

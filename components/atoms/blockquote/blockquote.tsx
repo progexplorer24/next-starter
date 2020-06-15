@@ -16,7 +16,7 @@ const Blockquote = ({
   children,
   cite,
   ...props
-}: BlockquoteProps): JSX.Element => {
+}: BlockquoteProps): ReactElement => {
   const zeroMaringOnParagraph = css`
     ${tw`m-0`}
   `;
