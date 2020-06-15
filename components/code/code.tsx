@@ -1,11 +1,11 @@
-import React, { ReactNode } from "react";
-import Highlight, { defaultProps } from "prism-react-renderer";
+import React, { ReactNode, ReactElement } from "react";
+import Highlight, { defaultProps, Language } from "prism-react-renderer";
 import tw from "twin.macro";
 import { css, SerializedStyles } from "@emotion/core";
 import copyToClipboard from "../../utils/copyt-to-clipboard";
-import CopyButton from "./copy-button/copy-button";
 import LineNumber from "./line-number/line-number";
-import LanguageButton from "./language-button/language-button";
+import LanguageLabel from "./language-label/language-label";
+import CopyButton from "./copy-button/copy-button";
 
 export type CodeProps = {
   css?: SerializedStyles;
@@ -22,34 +22,29 @@ export type CodeProps = {
   };
 };
 
-const Code: React.FC<CodeProps> = ({
+const Code = ({
   children,
   preCss,
   buttonCss,
   ...props
-}) => {
+}: CodeProps): ReactElement => {
   const mdxProps = children.props;
   const cName = mdxProps?.className || "";
 
-  const matches = cName.match(/language-(?<lang>.*)/);
+  const langRegex = /language-(?<lang>.*)/;
+
+  const matches = (langRegex.exec(cName)?.groups?.lang ?? "tsx") as Language;
+
   const codeString = children.props.children;
-  const handleClick = (): void => {
-    copyToClipboard(codeString);
+  const handleClick = async (): Promise<void> => {
+    await copyToClipboard(codeString);
   };
-
-  // const metaString = mdxProps.metastring || "";
-
-  // console.log(metaString);
 
   return (
     <Highlight
       {...defaultProps}
       code={codeString}
-      language={
-        matches && matches.groups && matches.groups.lang
-          ? matches.groups.lang
-          : ""
-      }
+      language={matches}
       theme={undefined}
     >
       {({
@@ -65,12 +60,10 @@ const Code: React.FC<CodeProps> = ({
           `}
           {...props}
         >
-          {matches.groups.lang ? (
-            <LanguageButton>{matches.groups.lang}</LanguageButton>
-          ) : undefined}
-          <CopyButton css={buttonCss} handleClick={handleClick}>
-            Copy
-          </CopyButton>
+          <LanguageLabel>{matches}</LanguageLabel>
+
+          <CopyButton css={buttonCss} handleClick={handleClick} />
+
           <pre
             className={className}
             style={style}
