@@ -1,12 +1,12 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 
-type LanguageButtonProps = {
+type LanguageLabelProps = {
   children?: string;
 };
 
-const LanguageButton: React.FC<LanguageButtonProps> = ({ children = "" }) => {
+const LanguageLabel = ({ children = "" }: LanguageLabelProps): ReactElement => {
   return (
     <span
       css={css`
@@ -18,4 +18,4 @@ const LanguageButton: React.FC<LanguageButtonProps> = ({ children = "" }) => {
   );
 };
 
-export default LanguageButton;
+export default LanguageLabel;
