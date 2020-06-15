@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw from "twin.macro";
 import Code from "@components/code/code";
@@ -10,7 +10,11 @@ type ShowcaseProps = {
   children?: ReactNode;
 };
 
-const Showcase: FC<ShowcaseProps> = ({ children, code, ...props }) => {
+const Showcase = ({
+  children,
+  code,
+  ...props
+}: ShowcaseProps): ReactElement => {
   return (
     <div
       css={css`

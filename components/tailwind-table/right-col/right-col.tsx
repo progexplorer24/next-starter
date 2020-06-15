@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 import TD, { TDProps } from "@components/atoms/table/td/td";
 
-const RightCol: FC<TDProps> = ({ children, ...props }) => {
+const RightCol = ({ children, ...props }: TDProps): ReactElement => {
   return (
     <TD
       css={css`

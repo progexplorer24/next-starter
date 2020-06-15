@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw, { TwStyle } from "twin.macro";
 import Text from "../text/text";
@@ -9,7 +9,11 @@ type ExampleProps = {
   twClass: TwStyle;
 };
 
-const Example: FC<ExampleProps> = ({ classKey, twClass, ...props }) => {
+const Example = ({
+  classKey,
+  twClass,
+  ...props
+}: ExampleProps): ReactElement => {
   return (
     <div
       css={css`

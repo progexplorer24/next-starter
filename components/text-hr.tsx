@@ -1,16 +1,16 @@
-import React from "react";
-import { css, SerializedStyles } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css } from "@emotion/core";
 import tw from "twin.macro";
 import colors from "@design/design-tokens/colors";
+import HR, { HRProps } from "./atoms/hr/hr";
 
-export type TextHRProps = {
+export type TextHRProps = HRProps & {
   text?: string;
-  css?: SerializedStyles;
 };
 
-const TextHR: React.FC<TextHRProps> = ({ text, ...props }) => {
+const TextHR = ({ text, ...props }: TextHRProps): ReactElement => {
   return (
-    <hr
+    <HR
       css={css`
         ${tw`relative h-6 my-16 text-center border-0 outline-none `}
         &:before {

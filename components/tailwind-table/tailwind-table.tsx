@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { TwStyle } from "twin.macro";
 import { v4 as uuid } from "uuid";
 import Table, { TableProps } from "@components/atoms/table/table";
@@ -20,10 +20,10 @@ type TailwindTableProps = TableProps & {
   };
 };
 
-const TailwindTable: FC<TailwindTableProps> = ({
+const TailwindTable = ({
   specObj,
   headings = ["Macro", "Property"],
-}) => {
+}: TailwindTableProps): ReactElement => {
   const pairKeysAndValues = toPairs(specObj);
 
   const renderValues = (arr: typeof pairKeysAndValues): JSX.Element[] =>

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { SerializedStyles } from "@emotion/core";
 import { TwStyle } from "twin.macro";
 import { v4 as uuid } from "uuid";
@@ -16,7 +16,10 @@ type RenderExamplesProps = {
   };
 };
 
-const RenderExamples: FC<RenderExamplesProps> = ({ data = {}, ...props }) => {
+const RenderExamples = ({
+  data = {},
+  ...props
+}: RenderExamplesProps): ReactElement => {
   const pairKeysAndValues = toPairs(data);
 
   const renderExamples = (arr: typeof pairKeysAndValues): JSX.Element => (
