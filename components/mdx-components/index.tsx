@@ -12,13 +12,13 @@ import InlineCode from "@components/basic/inline-code/inline-code";
 import type { AProps } from "@components/atoms/a/a";
 import A from "@components/basic/a/a";
 import Table, { TableProps } from "@components/atoms/table/table";
-import TR from "@components/atoms/table/tr/tr";
-import TH, { THProps } from "@components/atoms/table/th/th";
-import TD, { TDProps } from "@components/atoms/table/td/td";
-import UL, { ULProps } from "@components/atoms/lists/ul/ul";
-import LI, { LIProps } from "@components/atoms/lists/li/li";
-import OL, { OLProps } from "@components/atoms/lists/ol/ol";
-import HR, { HRProps } from "@components/atoms/hr/hr";
+import Tr, { TrProps } from "@components/atoms/table/tr/tr";
+import Th, { ThProps } from "@components/atoms/table/th/th";
+import Td, { TdProps } from "@components/atoms/table/td/td";
+import Ul, { UlProps } from "@components/atoms/lists/ul/ul";
+import Li, { LiProps } from "@components/atoms/lists/li/li";
+import Ol, { OlProps } from "@components/atoms/lists/ol/ol";
+import Hr, { HrProps } from "@components/atoms/hr/hr";
 import Img, { ImgProps } from "@components/atoms/img/img";
 import Code, { CodeProps } from "@components/code/code";
 import type { BlockquoteProps } from "@components/atoms/blockquote/blockquote";
@@ -57,25 +57,25 @@ const MdxComponents = {
   table: ({ children, ...props }: TableProps): ReactElement => (
     <Table {...props}>{children}</Table>
   ),
-  tr: ({ children, ...props }: TableProps): ReactElement => (
-    <TR {...props}>{children}</TR>
+  tr: ({ children, ...props }: TrProps): ReactElement => (
+    <Tr {...props}>{children}</Tr>
   ),
-  th: ({ children, ...props }: THProps): ReactElement => (
-    <TH {...props}>{children}</TH>
+  th: ({ children, ...props }: ThProps): ReactElement => (
+    <Th {...props}>{children}</Th>
   ),
-  td: ({ children, ...props }: TDProps): ReactElement => (
-    <TD {...props}>{children}</TD>
+  td: ({ children, ...props }: TdProps): ReactElement => (
+    <Td {...props}>{children}</Td>
   ),
-  ul: ({ children, ...props }: ULProps): ReactElement => (
-    <UL {...props}>{children}</UL>
+  ul: ({ children, ...props }: UlProps): ReactElement => (
+    <Ul {...props}>{children}</Ul>
   ),
-  li: ({ children, ...props }: LIProps): ReactElement => (
-    <LI {...props}>{children}</LI>
+  li: ({ children, ...props }: LiProps): ReactElement => (
+    <Li {...props}>{children}</Li>
   ),
-  ol: ({ children, ...props }: OLProps): ReactElement => (
-    <OL {...props}>{children}</OL>
+  ol: ({ children, ...props }: OlProps): ReactElement => (
+    <Ol {...props}>{children}</Ol>
   ),
-  hr: (props: HRProps): ReactElement => <HR {...props} />,
+  hr: (props: HrProps): ReactElement => <Hr {...props} />,
   img: (props: ImgProps): ReactElement => <Img {...props} />,
   pre: (props: CodeProps): ReactElement => <Code {...props} />,
   blockquote: ({ children, ...props }: BlockquoteProps): ReactElement => (

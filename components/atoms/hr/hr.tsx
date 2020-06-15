@@ -2,11 +2,11 @@ import React, { ReactElement } from "react";
 import tw from "twin.macro";
 import { css, SerializedStyles } from "@emotion/core";
 
-export type HRProps = {
+export type HrProps = {
   css?: SerializedStyles;
 };
 
-const HR = (props: HRProps): ReactElement => {
+const Hr = (props: HrProps): ReactElement => {
   return (
     /* !!-example-!!*/
     <hr
@@ -19,4 +19,4 @@ const HR = (props: HRProps): ReactElement => {
   );
 };
 
-export default HR;
+export default Hr;

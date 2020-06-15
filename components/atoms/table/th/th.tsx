@@ -2,12 +2,12 @@ import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw from "twin.macro";
 
-export type THProps = {
+export type ThProps = {
   css?: SerializedStyles;
   children: ReactNode;
 };
 
-const TH = ({ children, ...props }: THProps): ReactElement => {
+const Th = ({ children, ...props }: ThProps): ReactElement => {
   return (
     <th
       css={css`
@@ -20,4 +20,4 @@ const TH = ({ children, ...props }: THProps): ReactElement => {
   );
 };
 
-export default TH;
+export default Th;

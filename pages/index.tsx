@@ -4,14 +4,14 @@ import { css } from "@emotion/core";
 import tw from "twin.macro";
 import Icon from "@svg/icon-arrow-left.svg";
 import Table from "@components/atoms/table/table";
-import THead from "@components/atoms/table/thead/thead";
-import TH from "@components/atoms/table/th/th";
-import TR from "@components/atoms/table/tr/tr";
-import TBody from "@components/atoms/table/tbody/tbody";
-import TD from "@components/atoms/table/td/td";
-import UL from "@components/atoms/lists/ul/ul";
-import LI from "@components/atoms/lists/li/li";
-import TextHR from "@components/text-hr";
+import Thead from "@components/atoms/table/thead/thead";
+import Th from "@components/atoms/table/th/th";
+import Tr from "@components/atoms/table/tr/tr";
+import Tbody from "@components/atoms/table/tbody/tbody";
+import Td from "@components/atoms/table/td/td";
+import Ul from "@components/atoms/lists/ul/ul";
+import Li from "@components/atoms/lists/li/li";
+import TextHr from "@components/text-hr";
 import Img from "@components/atoms/img/img";
 import MainContainer from "layouts/main-container";
 
@@ -80,44 +80,44 @@ const Home: NextPage<HomeProps> = () => {
           src="../imgs/bacteria.jpg"
         />
 
-        <UL>
-          <LI>Hello world</LI>
-          <LI>MDX List Element</LI>
-          <LI>I&apos;m another LI element</LI>
-          <LI>Last List Element</LI>
-        </UL>
+        <Ul>
+          <Li>Hello world</Li>
+          <Li>MDX List Element</Li>
+          <Li>I&apos;m another LI element</Li>
+          <Li>Last List Element</Li>
+        </Ul>
 
-        <TextHR />
+        <TextHr />
 
         <Table>
-          <THead
+          <Thead
             css={css`
               ${tw`border-t border-b border-gray-400`}
             `}
           >
-            <TR>
-              <TH>Tailwind Class</TH>
-              <TH>Value</TH>
-            </TR>
-          </THead>
-          <TBody>
-            <TR>
-              <TD
+            <Tr>
+              <Th>Tailwind Class</Th>
+              <Th>Value</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            <Tr>
+              <Td
                 css={css`
                   ${tw`p-2 font-mono text-xs font-semibold text-indigo-700`}
                 `}
               >
                 text-xs
-              </TD>
-              <TD
+              </Td>
+              <Td
                 css={css`
                   ${tw`p-2 font-mono text-xs text-purple-600`}
                 `}
               >
                 font-size: .75rem;
-              </TD>
-            </TR>
-            <TR>
+              </Td>
+            </Tr>
+            <Tr>
               <td
                 css={css`
                   ${tw`p-2 font-mono text-xs border-t border-gray-300`}
@@ -132,8 +132,8 @@ const Home: NextPage<HomeProps> = () => {
               >
                 font-size: .75rem;
               </td>
-            </TR>
-            <TR>
+            </Tr>
+            <Tr>
               <td
                 css={css`
                   ${tw`p-2 font-mono text-xs border-t border-gray-300`}
@@ -148,8 +148,8 @@ const Home: NextPage<HomeProps> = () => {
               >
                 font-size: .75rem;
               </td>
-            </TR>
-          </TBody>
+            </Tr>
+          </Tbody>
         </Table>
       </MainContainer>
     </main>

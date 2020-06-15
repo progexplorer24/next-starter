@@ -2,13 +2,13 @@ import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw from "twin.macro";
 
-export type LIProps = {
+export type LiProps = {
   css?: SerializedStyles;
   children: ReactNode;
   listDecoration?: JSX.Element;
 };
 
-const LI = ({ children, listDecoration, ...props }: LIProps): ReactElement => {
+const Li = ({ children, listDecoration, ...props }: LiProps): ReactElement => {
   return (
     <li
       {...props}
@@ -22,4 +22,4 @@ const LI = ({ children, listDecoration, ...props }: LIProps): ReactElement => {
   );
 };
 
-export default LI;
+export default Li;

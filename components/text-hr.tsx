@@ -2,15 +2,15 @@ import React, { ReactElement } from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 import colors from "@design/design-tokens/colors";
-import HR, { HRProps } from "./atoms/hr/hr";
+import Hr, { HrProps } from "./atoms/hr/hr";
 
-export type TextHRProps = HRProps & {
+export type TextHRProps = HrProps & {
   text?: string;
 };
 
-const TextHR = ({ text, ...props }: TextHRProps): ReactElement => {
+const TextHr = ({ text, ...props }: TextHRProps): ReactElement => {
   return (
-    <HR
+    <Hr
       css={css`
         ${tw`relative h-6 my-16 text-center border-0 outline-none `}
         &:before {
@@ -38,4 +38,4 @@ const TextHR = ({ text, ...props }: TextHRProps): ReactElement => {
   );
 };
 
-export default TextHR;
+export default TextHr;

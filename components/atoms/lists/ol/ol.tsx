@@ -3,12 +3,12 @@ import { SerializedStyles, css } from "@emotion/core";
 import tw from "twin.macro";
 import Numeration from "./numeration/numeration";
 
-export type OLProps = {
+export type OlProps = {
   css?: SerializedStyles;
   children: JSX.Element[];
 };
 
-const OL = ({ children, ...props }: OLProps): ReactElement => {
+const Ol = ({ children, ...props }: OlProps): ReactElement => {
   return (
     <ol
       css={css`
@@ -25,4 +25,4 @@ const OL = ({ children, ...props }: OLProps): ReactElement => {
   );
 };
 
-export default OL;
+export default Ol;

@@ -1,13 +1,13 @@
 import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles } from "@emotion/core";
 
-type THeadProps = {
+type TheadProps = {
   css?: SerializedStyles;
   children: ReactNode;
 };
 
-const THead = ({ children, ...props }: THeadProps): ReactElement => {
+const Thead = ({ children, ...props }: TheadProps): ReactElement => {
   return <thead {...props}>{children}</thead>;
 };
 
-export default THead;
+export default Thead;
