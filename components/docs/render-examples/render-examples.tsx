@@ -6,6 +6,8 @@ import { toPairs } from "ramda";
 import Board from "@components/docs/board/board";
 import Example from "../example/example";
 
+type ExampleChildProps = { css?: SerializedStyles };
+
 type RenderExamplesProps = {
   css?: SerializedStyles;
   data: {
@@ -14,10 +16,16 @@ type RenderExamplesProps = {
       twClass: TwStyle;
     };
   };
+
+  exampleChild: ReactElement<
+    ExampleChildProps,
+    (props: ExampleChildProps) => ReactElement
+  >;
 };
 
 const RenderExamples = ({
   data = {},
+  exampleChild,
   ...props
 }: RenderExamplesProps): ReactElement => {
   const pairKeysAndValues = toPairs(data);
@@ -25,7 +33,11 @@ const RenderExamples = ({
   const renderExamples = (arr: typeof pairKeysAndValues): JSX.Element => (
     <>
       {arr.map(([key, { twClass }]) => {
-        return <Example key={uuid()} twClass={twClass} classKey={key} />;
+        return (
+          <Example key={uuid()} classKey={key} twClass={twClass}>
+            {exampleChild}
+          </Example>
+        );
       })}
     </>
   );
@@ -33,26 +45,3 @@ const RenderExamples = ({
 };
 
 export default RenderExamples;
-
-// return (
-//   <div
-//     css={css`
-//       ${tw`px-2 mt-4`}
-//     `}
-//     key={uuid()}
-//   >
-//     <span
-//       css={css`
-//         ${tw`text-sm font-bold text-gray-600 `}
-//       `}
-//     >
-//       .{key}
-//     </span>
-//     <Text
-//       css={css`
-//         ${twClass}
-//         ${shouldTruncate(fontSize) ? tw`truncate` : undefined}
-//       `}
-//     />
-//   </div>
-// );
