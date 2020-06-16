@@ -1,11 +1,12 @@
 import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css } from "@emotion/core";
+import { SerializedStyles, css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import Code from "@components/code/code";
 import Board from "./board/board";
 
 type ShowcaseProps = {
   css?: SerializedStyles;
+  className?: string;
   code: string;
   children?: ReactNode;
 };
@@ -13,30 +14,20 @@ type ShowcaseProps = {
 const Showcase = ({
   children,
   code,
+  css,
   ...props
 }: ShowcaseProps): ReactElement => {
   return (
-    <div
-      css={css`
-        ${tw`mt-6`}
-      `}
-      {...props}
-    >
-      <Board
-        css={css`
-          ${tw`mb-0 rounded-b-none`}
-        `}
-      >
-        {children}
-      </Board>
+    <div css={emotionCss([tw`mt-6`, css])} {...props}>
+      <Board css={emotionCss([tw`mb-0 rounded-b-none`])}>{children}</Board>
       <Code
-        css={css`
+        css={emotionCss`
           ${tw`mt-0`}
         `}
-        preCss={css`
+        preCss={emotionCss`
           ${tw`rounded-t-none`}
         `}
-        buttonCss={css`
+        buttonCss={emotionCss`
           ${tw`rounded-tr-none`}
         `}
       >

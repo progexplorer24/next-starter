@@ -1,18 +1,17 @@
 import React, { ReactElement } from "react";
-import { SerializedStyles, css } from "@emotion/core";
+import { SerializedStyles, css as emotionCss } from "@emotion/core";
 import NextLink from "@components/atoms/next-link/next-link";
 import tw from "twin.macro";
 
 type NavProps = {
   css?: SerializedStyles;
+  className?: string;
 };
 
-const Nav = ({ ...props }: NavProps): ReactElement => {
+const Nav = ({ css, ...props }: NavProps): ReactElement => {
   return (
     <nav
-      css={css`
-        ${tw`flex justify-center h-10 space-x-4`}
-      `}
+      css={emotionCss([tw`flex justify-center h-10 space-x-4`, css])}
       {...props}
     >
       <NextLink href="/atoms">Atoms</NextLink>

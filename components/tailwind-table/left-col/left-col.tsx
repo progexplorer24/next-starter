@@ -1,14 +1,15 @@
 import React, { ReactElement } from "react";
-import { css } from "@emotion/core";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import Td, { TdProps } from "@components/atoms/table/td/td";
 
-const LeftCol = ({ children, ...props }: TdProps): ReactElement => {
+const LeftCol = ({ children, css, ...props }: TdProps): ReactElement => {
   return (
     <Td
-      css={css`
-        ${tw`p-2 font-mono text-xs font-semibold text-indigo-700`}
-      `}
+      css={emotionCss([
+        tw`p-2 font-mono text-xs font-semibold text-indigo-700`,
+        css,
+      ])}
       {...props}
     >
       {children}

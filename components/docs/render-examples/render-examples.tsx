@@ -10,6 +10,7 @@ type ExampleChildProps = { css?: SerializedStyles };
 
 type RenderExamplesProps = {
   css?: SerializedStyles;
+  className?: string;
   data: {
     [key: string]: {
       value: string;
