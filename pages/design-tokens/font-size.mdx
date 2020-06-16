@@ -1,6 +1,7 @@
 import MainContainer from "layouts/main-container";
 import TailwindTable from "components/tailwind-table/tailwind-table";
 import FontSizes from "components/docs/render-examples/render-examples";
+import Example from "components/docs/example/example";
 import Text from "components/docs/text/text";
 import { defaultFontSizes, customFontSizes } from "../../data";
 
@@ -20,7 +21,7 @@ All available font size values are listed in tables below.
 
 To control font-size in tailwindcss we use class `text-{size}`.
 
-<FontSizes data={defaultFontSizes} />
+<FontSizes exampleChild={<Text />} data={defaultFontSizes} />
 
 ## Custom Font Size Values
 
@@ -30,7 +31,7 @@ In order to have more flexibility over which type scale to use (for more informa
 
 ### Examples
 
-<FontSizes data={customFontSizes} />
+<FontSizes exampleChild={<Text />} data={customFontSizes} />
 
 ## Links
 
