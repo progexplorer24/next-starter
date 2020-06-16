@@ -19,8 +19,6 @@ import Nav from "@components/nav/nav";
 import A from "@components/atoms/a/a";
 import NextLink from "@components/atoms/next-link/next-link";
 import Showcase from "@components/docs/showcase";
-import Board from "@components/docs/board/board";
-import SpaceBlock from "@components/docs/space-block/space-block";
 
 type HomeProps = Record<string, unknown>;
 
@@ -37,24 +35,6 @@ const Home: NextPage<HomeProps> = () => {
         >
           This is the heading
         </h1>
-
-        <Board>
-          <SpaceBlock
-            css={css`
-              ${tw`w-1`}
-            `}
-          />
-          <SpaceBlock
-            css={css`
-              ${tw`w-2`}
-            `}
-          />
-          <SpaceBlock
-            css={css`
-              ${tw`w-3`}
-            `}
-          />
-        </Board>
 
         <Showcase code="Hello" />
 
