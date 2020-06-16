@@ -9,8 +9,16 @@ export type TextProps = {
 
 const defaultText = `The quick brown fox jumped over the lazy dog.`;
 
-const Text = ({ text = defaultText, css }: TextProps): ReactElement => {
-  return <p css={emotionCss([tw`truncate`, css])}>{text}</p>;
+const Text = ({
+  text = defaultText,
+  css,
+  ...props
+}: TextProps): ReactElement => {
+  return (
+    <p css={emotionCss([tw`truncate`, css])} {...props}>
+      {text}
+    </p>
+  );
 };
 
 export default Text;

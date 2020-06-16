@@ -1,17 +1,16 @@
 import { ReactNode, ReactElement } from "react";
-import { css, SerializedStyles } from "@emotion/core";
+import { css as emotionCss, SerializedStyles } from "@emotion/core";
 import tw from "twin.macro";
 
 export type TableProps = {
   css?: SerializedStyles;
+  className?: string;
   children: ReactNode;
 };
 
-const Table = ({ children, ...props }: TableProps): ReactElement => (
+const Table = ({ children, css, ...props }: TableProps): ReactElement => (
   <table
-    css={css`
-      ${tw`w-full mt-6 text-left border-collapse`}
-    `}
+    css={emotionCss([tw`w-full mt-6 text-left border-collapse`])}
     {...props}
   >
     {children}

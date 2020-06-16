@@ -1,20 +1,27 @@
 import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css } from "@emotion/core";
+import { SerializedStyles, css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 
 export type LiProps = {
   css?: SerializedStyles;
+  className?: string;
   children: ReactNode;
   listDecoration?: JSX.Element;
 };
 
-const Li = ({ children, listDecoration, ...props }: LiProps): ReactElement => {
+const Li = ({
+  children,
+  listDecoration,
+  css,
+  ...props
+}: LiProps): ReactElement => {
   return (
     <li
       {...props}
-      css={css`
-        ${tw`flex items-center mt-2 text-lg font-thin tracking-wide`}
-      `}
+      css={emotionCss([
+        tw`flex items-center mt-2 text-lg font-thin tracking-wide`,
+        css,
+      ])}
     >
       {typeof listDecoration !== undefined ? listDecoration : undefined}
       {children}

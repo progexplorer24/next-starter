@@ -1,15 +1,17 @@
 import React, { ReactElement } from "react";
-import { css } from "@emotion/core";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import BlockquoteAtom, {
   BlockquoteProps,
 } from "@components/atoms/blockquote/blockquote";
 
-const Blockquote = ({ children, ...props }: BlockquoteProps): ReactElement => (
+const Blockquote = ({
+  children,
+  css,
+  ...props
+}: BlockquoteProps): ReactElement => (
   <BlockquoteAtom
-    css={css`
-      ${tw`italic font-thin rounded-lg`}
-    `}
+    css={emotionCss([tw`italic font-thin rounded-lg`, css])}
     {...props}
   >
     {children}

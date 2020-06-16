@@ -1,13 +1,18 @@
 import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles } from "@emotion/core";
+import { css as emotionCss, SerializedStyles } from "@emotion/core";
 
 export type CodeProps = {
   css?: SerializedStyles;
   children: ReactNode;
+  className?: string;
 };
 
-const Code = ({ children, ...props }: CodeProps): ReactElement => {
-  return <code {...props}>{children}</code>;
+const Code = ({ children, css, ...props }: CodeProps): ReactElement => {
+  return (
+    <code css={emotionCss([css])} {...props}>
+      {children}
+    </code>
+  );
 };
 
 export default Code;

@@ -1,18 +1,17 @@
 import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css } from "@emotion/core";
+import { SerializedStyles, css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 
 export type TrProps = {
   css?: SerializedStyles;
+  className?: string;
   children: ReactNode;
 };
 
-const Tr = ({ children, ...props }: TrProps): ReactElement => {
+const Tr = ({ children, css, ...props }: TrProps): ReactElement => {
   return (
     <tr
-      css={css`
-        ${tw`border-t border-b border-gray-400`}
-      `}
+      css={emotionCss([tw`border-t border-b border-gray-400`, css])}
       {...props}
     >
       {children}

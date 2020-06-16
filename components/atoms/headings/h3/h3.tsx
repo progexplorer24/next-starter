@@ -1,13 +1,13 @@
-import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import { HeadingProps } from "../types";
 
-type H3Props = {
-  css?: SerializedStyles;
-  children: ReactNode;
-};
-
-const H3 = ({ children, ...props }: H3Props): ReactElement => {
-  return <h3 {...props}>{children}</h3>;
+const H3 = ({ children, css, ...props }: HeadingProps): ReactElement => {
+  return (
+    <h3 css={emotionCss([css])} {...props}>
+      {children}
+    </h3>
+  );
 };
 
 export default H3;
