@@ -1,15 +1,20 @@
 import React, { ReactElement } from "react";
 import { SerializedStyles, css } from "@emotion/core";
 import tw, { TwStyle } from "twin.macro";
-import Text from "../text/text";
+
+type ChildrenProps = {
+  css?: SerializedStyles;
+};
 
 type ExampleProps = {
   css?: SerializedStyles;
-  classKey: string;
-  twClass: TwStyle;
+  classKey?: string;
+  twClass?: TwStyle;
+  children: ReactElement<ChildrenProps, (props: ChildrenProps) => ReactElement>;
 };
 
 const Example = ({
+  children,
   classKey,
   twClass,
   ...props
@@ -28,11 +33,10 @@ const Example = ({
       >
         .{classKey}
       </span>
-      <Text
-        css={css`
-          ${twClass}
-        `}
-      />
+
+      {React.cloneElement(children, {
+        css: css([children?.props.css, twClass]),
+      })}
     </div>
   );
 };
