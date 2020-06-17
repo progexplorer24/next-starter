@@ -22,7 +22,7 @@ const Example = ({
   ...props
 }: ExampleProps): ReactElement => {
   return (
-    <div css={emotionCss([tw`px-2 mt-4`, css])} {...props}>
+    <div css={emotionCss([css])} {...props}>
       <span css={emotionCss([tw`text-sm font-bold text-gray-600`])}>
         .{classKey}
       </span>
