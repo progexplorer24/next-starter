@@ -359,11 +359,58 @@ export const fontWeight = {
     twClass: tw`font-bold`,
   },
   "font-extrabold": {
-    value: "font-weight:800",
+    value: "font-weight:800;",
     twClass: tw`font-extrabold`,
   },
   "font-black": {
-    value: "font-weight:900",
+    value: "font-weight:900;",
     twClass: tw`font-black`,
+  },
+};
+
+export const defaultShadows = {
+  "shadow-xs": {
+    value: "box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);",
+    twClass: tw`shadow-xs`,
+  },
+  "shadow-sm": {
+    value: "box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);",
+    twClass: tw`shadow-sm`,
+  },
+  shadow: {
+    value:
+      "box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);",
+    twClass: tw`shadow`,
+  },
+  "shadow-md": {
+    value:
+      "box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);",
+    twClass: tw`shadow-md`,
+  },
+  "shadow-lg": {
+    value:
+      "box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);",
+    twClass: tw`shadow-lg`,
+  },
+  "shadow-xl": {
+    value:
+      "box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);",
+    twClass: tw`shadow-xl`,
+  },
+  "shadow-2xl": {
+    value: "box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);",
+    twClass: tw`shadow-2xl`,
+  },
+  "shadow-inner": {
+    value: "box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);",
+    twClass: tw`shadow-inner`,
+  },
+  "shadow-outline": {
+    value: "box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);",
+    twClass: tw`shadow-outline`,
+  },
+  "shadow-none": {
+    value: "box-shadow: none;",
+    twClass: tw`shadow-none`,
   },
 };
