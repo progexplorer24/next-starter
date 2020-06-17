@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "./lint-staged.sh --fix",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:run-unit": "cypress run --spec \"./components/**/*\"",
@@ -90,7 +89,7 @@
   "lint-staged": {
     "./**/!(.eslintrc.js).{js,jsx,ts,tsx}": [
       "pretty-quick --staged",
-      "npx lint"
+      "./lint-staged.sh --fix"
     ],
     "./**/*.{json,md,mdx}": [
       "pretty-quick --staged"
