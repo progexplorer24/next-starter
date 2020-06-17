@@ -1,0 +1,48 @@
+import MainContainer from "layouts/main-container";
+import TailwindTable from "components/tailwind-table/tailwind-table";
+import ShadowExamples from "components/docs/render-examples/render-examples";
+import ShadowBlock from "components/docs/shadow-block/shadow-block";
+import { defaultShadows, customShadows } from "data";
+import { css } from "@emotion/core";
+import tw from "twin.macro";
+
+<MainContainer>
+
+# Shadows
+
+**List of tokens for controlling the shadows of an element.**
+
+## Default Box Shadow values
+
+This section presents list of default box shadow values from [tailwindcss](https://tailwindcss.com/) with simple examples.
+
+<TailwindTable specObj={defaultShadows} />
+
+### Examples
+
+<ShadowExamples
+  exampleChild={<ShadowBlock />}
+  data={defaultShadows}
+  boardCss={css`
+    ${tw`grid justify-center grid-cols-2 pb-8`}
+    div:first-of-type {
+      ${tw`mt-4`}
+    }
+    justify-items: center;
+  `}
+/>
+
+## Custom Box Shadow values
+
+<TailwindTable specObj={customShadows} />
+
+## Links
+
+For more information visit:
+
+- [Tailwind - Box Shadow](https://tailwindcss.com/docs/box-shadow/)
+- [Material Design - Surfaces](https://material.io/design/environment/surfaces.html#material-environment)
+- [Material Design - Elevation](https://material.io/design/environment/elevation.html)
+- [Material Design - Light](https://material.io/design/environment/light-shadows.html#light)
+
+</MainContainer>
