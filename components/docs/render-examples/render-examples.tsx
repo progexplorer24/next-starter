@@ -17,9 +17,7 @@ type RenderExamplesProps = {
       twClass: TwStyle;
     };
   };
-
   boardCss?: SerializedStyles;
-
   exampleChild: ReactElement<
     ExampleChildProps,
     (props: ExampleChildProps) => ReactElement
