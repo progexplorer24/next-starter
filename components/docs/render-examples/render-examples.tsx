@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
-import { SerializedStyles } from "@emotion/core";
-import { TwStyle } from "twin.macro";
+import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import tw, { TwStyle } from "twin.macro";
 import { v4 as uuid } from "uuid";
 import { toPairs } from "ramda";
 import Board from "@components/docs/board/board";
@@ -18,6 +18,8 @@ type RenderExamplesProps = {
     };
   };
 
+  boardCss?: SerializedStyles;
+
   exampleChild: ReactElement<
     ExampleChildProps,
     (props: ExampleChildProps) => ReactElement
@@ -27,6 +29,8 @@ type RenderExamplesProps = {
 const RenderExamples = ({
   data = {},
   exampleChild,
+  boardCss,
+
   ...props
 }: RenderExamplesProps): ReactElement => {
   const pairKeysAndValues = toPairs(data);
@@ -42,7 +46,11 @@ const RenderExamples = ({
       })}
     </>
   );
-  return <Board {...props}>{renderExamples(pairKeysAndValues)}</Board>;
+  return (
+    <Board css={emotionCss([tw`space-y-4`, boardCss])} {...props}>
+      {renderExamples(pairKeysAndValues)}
+    </Board>
+  );
 };
 
 export default RenderExamples;
