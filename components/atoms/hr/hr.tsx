@@ -10,7 +10,7 @@ export type HrProps = {
 const Hr = ({ css, ...props }: HrProps): ReactElement => {
   return (
     /* !!-example-!!*/
-    <hr css={emotionCss([tw`my-16 border-t border-gray-300`])} {...props} />
+    <hr css={emotionCss([tw`my-10 border-t border-gray-300`])} {...props} />
     /* @@-example-@@*/
   );
 };
