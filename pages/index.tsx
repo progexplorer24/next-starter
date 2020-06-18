@@ -19,8 +19,9 @@ import Nav from "@components/nav/nav";
 import A from "@components/atoms/a/a";
 import NextLink from "@components/atoms/next-link/next-link";
 import Showcase from "@components/docs/showcase";
-import H4 from "@components/basic/h4/h4";
-import ColorPill from "@components/docs/color-pill/color-pill";
+// import ColorPill from "@components/docs/color-pill/color-pill";
+
+import RenderColorPalette from "@components/docs/render-color-palette/render-color-palette";
 
 type HomeProps = Record<string, unknown>;
 
@@ -38,40 +39,23 @@ const Home: NextPage<HomeProps> = () => {
           This is the heading
         </h1>
 
-        <div
+        {/* <div
           css={css`
-            ${tw`mt-10`}
-          `}
-        >
-          <H4
-            css={css`
-              ${tw`pl-3`}
-            `}
-          >
-            Red
-          </H4>
-          <div
-            css={css`
-              ${tw`grid grid-cols-2`}
-            `}
-          >
-            <div
-              css={css`
                 ${tw`mt-2`}
               `}
-            >
-              <ColorPill twClass={tw`bg-red-100`} color="#FF3322" value="100" />
-              <ColorPill twClass={tw`bg-red-200`} color="#FF3322" value="200" />
-              <ColorPill twClass={tw`bg-red-300`} color="#FF3322" value="300" />
-              <ColorPill twClass={tw`bg-red-400`} color="#FF3322" value="400" />
-              <ColorPill twClass={tw`bg-red-500`} color="#FF3322" value="500" />
-              <ColorPill twClass={tw`bg-red-600`} color="#FF3322" value="600" />
-              <ColorPill twClass={tw`bg-red-700`} color="#FF3322" value="700" />
-              <ColorPill twClass={tw`bg-red-800`} color="#FF3322" value="800" />
-              <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
-            </div>
-          </div>
-        </div>
+        >
+          <ColorPill twClass={tw`bg-red-100`} color="#FF3322" value="100" />
+          <ColorPill twClass={tw`bg-red-200`} color="#FF3322" value="200" />
+          <ColorPill twClass={tw`bg-red-300`} color="#FF3322" value="300" />
+          <ColorPill twClass={tw`bg-red-400`} color="#FF3322" value="400" />
+          <ColorPill twClass={tw`bg-red-500`} color="#FF3322" value="500" />
+          <ColorPill twClass={tw`bg-red-600`} color="#FF3322" value="600" />
+          <ColorPill twClass={tw`bg-red-700`} color="#FF3322" value="700" />
+          <ColorPill twClass={tw`bg-red-800`} color="#FF3322" value="800" />
+          <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
+        </div> */}
+
+        <RenderColorPalette />
 
         <Showcase code="Hello" />
 
