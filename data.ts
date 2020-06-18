@@ -547,3 +547,394 @@ export const customShadows = {
     twClass: tw`shadow-24`,
   },
 };
+
+export const colors = {
+  white: {
+    value: "#FFFFFF",
+    twClass: tw`bg-white`,
+  },
+  black: {
+    value: "#000000",
+    twClass: tw`bg-black`,
+  },
+  gray: {
+    "100": {
+      value: "#F7FAFC",
+      twClass: tw`bg-gray-100`,
+    },
+    "200": {
+      value: "#EDF2F7",
+      twClass: tw`bg-gray-200`,
+    },
+    "300": {
+      value: "#E2E8F0",
+      twClass: tw`bg-gray-300`,
+    },
+    "400": {
+      value: "#CBD5E0",
+      twClass: tw`bg-gray-400`,
+    },
+    "500": {
+      value: "#A0AEC0",
+      twClass: tw`bg-gray-500`,
+    },
+    "600": {
+      value: "#718096",
+      twClass: tw`bg-gray-600`,
+    },
+    "700": {
+      value: "#4A5568",
+      twClass: tw`bg-gray-700`,
+    },
+    "800": {
+      value: "#2D3748",
+      twClass: tw`bg-gray-800`,
+    },
+    "900": {
+      value: "#1A202C",
+      twClass: tw`bg-gray-900`,
+    },
+  },
+  red: {
+    "100": {
+      value: "#FFF5F5",
+      twClass: tw`bg-red-100`,
+    },
+    "200": {
+      value: "#FED7D7",
+      twClass: tw`bg-red-200`,
+    },
+    "300": {
+      value: "#FEB2B2",
+      twClass: tw`bg-red-300`,
+    },
+    "400": {
+      value: "#FC8181",
+      twClass: tw`bg-red-400`,
+    },
+    "500": {
+      value: "#F56565",
+      twClass: tw`bg-red-500`,
+    },
+    "600": {
+      value: "#E53E3E",
+      twClass: tw`bg-red-600`,
+    },
+    "700": {
+      value: "#C53030",
+      twClass: tw`bg-red-700`,
+    },
+    "800": {
+      value: "#9B2C2C",
+      twClass: tw`bg-red-800`,
+    },
+    "900": {
+      value: "#742A2A",
+      twClass: tw`bg-red-900`,
+    },
+  },
+  orange: {
+    "100": {
+      value: "#FFFAF0",
+      twClass: tw`bg-orange-100`,
+    },
+    "200": {
+      value: "#FEEBC8",
+      twClass: tw`bg-orange-200`,
+    },
+    "300": {
+      value: "#FBD38D",
+      twClass: tw`bg-orange-300`,
+    },
+    "400": {
+      value: "#F6AD55",
+      twClass: tw`bg-orange-400`,
+    },
+    "500": {
+      value: "#ED8936",
+      twClass: tw`bg-orange-500`,
+    },
+    "600": {
+      value: "#DD6B20",
+      twClass: tw`bg-orange-600`,
+    },
+    "700": {
+      value: "#C05621",
+      twClass: tw`bg-orange-700`,
+    },
+    "800": {
+      value: "#9C4221",
+      twClass: tw`bg-orange-800`,
+    },
+    "900": {
+      value: "#7B341E",
+      twClass: tw`bg-orange-900`,
+    },
+  },
+  yellow: {
+    "100": {
+      value: "#FFFFF0",
+      twClass: tw`bg-yellow-100`,
+    },
+    "200": {
+      value: "#FEFCBF",
+      twClass: tw`bg-yellow-200`,
+    },
+    "300": {
+      value: "#FAF089",
+      twClass: tw`bg-yellow-300`,
+    },
+    "400": {
+      value: "#F6E05E",
+      twClass: tw`bg-yellow-400`,
+    },
+    "500": {
+      value: "#ECC94B",
+      twClass: tw`bg-yellow-500`,
+    },
+    "600": {
+      value: "#D69E2E",
+      twClass: tw`bg-yellow-600`,
+    },
+    "700": {
+      value: "#B7791F",
+      twClass: tw`bg-yellow-700`,
+    },
+    "800": {
+      value: "#975A16",
+      twClass: tw`bg-yellow-800`,
+    },
+    "900": {
+      value: "#744210",
+      twClass: tw`bg-yellow-900`,
+    },
+  },
+  green: {
+    "100": {
+      value: "#F0FFF4",
+      twClass: tw`bg-green-100`,
+    },
+    "200": {
+      value: "#C6F6D5",
+      twClass: tw`bg-green-200`,
+    },
+    "300": {
+      value: "#9AE6B4",
+      twClass: tw`bg-green-300`,
+    },
+    "400": {
+      value: "#68D391",
+      twClass: tw`bg-green-400`,
+    },
+    "500": {
+      value: "#48BB78",
+      twClass: tw`bg-green-500`,
+    },
+    "600": {
+      value: "#38A169",
+      twClass: tw`bg-green-600`,
+    },
+    "700": {
+      value: "#2F855A",
+      twClass: tw`bg-green-700`,
+    },
+    "800": {
+      value: "#276749",
+      twClass: tw`bg-green-800`,
+    },
+    "900": {
+      value: "#22543D",
+      twClass: tw`bg-green-900`,
+    },
+  },
+  teal: {
+    "100": {
+      value: "#E6FFFA",
+      twClass: tw`bg-teal-100`,
+    },
+    "200": {
+      value: "#B2F5EA",
+      twClass: tw`bg-teal-200`,
+    },
+    "300": {
+      value: "#81E6D9",
+      twClass: tw`bg-teal-300`,
+    },
+    "400": {
+      value: "#4FD1C5",
+      twClass: tw`bg-teal-400`,
+    },
+    "500": {
+      value: "#38B2AC",
+      twClass: tw`bg-teal-500`,
+    },
+    "600": {
+      value: "#319795",
+      twClass: tw`bg-teal-600`,
+    },
+    "700": {
+      value: "#2C7A7B",
+      twClass: tw`bg-teal-700`,
+    },
+    "800": {
+      value: "#285E61",
+      twClass: tw`bg-teal-800`,
+    },
+    "900": {
+      value: "#234E52",
+      twClass: tw`bg-teal-900`,
+    },
+  },
+  blue: {
+    "100": {
+      value: "#EBF8FF",
+      twClass: tw`bg-blue-100`,
+    },
+    "200": {
+      value: "#BEE3F8",
+      twClass: tw`bg-blue-200`,
+    },
+    "300": {
+      value: "#90CDF4",
+      twClass: tw`bg-blue-300`,
+    },
+    "400": {
+      value: "#63B3ED",
+      twClass: tw`bg-blue-400`,
+    },
+    "500": {
+      value: "#4299E1",
+      twClass: tw`bg-blue-500`,
+    },
+    "600": {
+      value: "#3182CE",
+      twClass: tw`bg-blue-600`,
+    },
+    "700": {
+      value: "#2C7A7B",
+      twClass: tw`bg-blue-700`,
+    },
+    "800": {
+      value: "#2C5282",
+      twClass: tw`bg-blue-800`,
+    },
+    "900": {
+      value: "#2A4365",
+      twClass: tw`bg-blue-900`,
+    },
+  },
+  indigo: {
+    "100": {
+      value: "#EBF4FF",
+      twClass: tw`bg-indigo-100`,
+    },
+    "200": {
+      value: "#C3DAFE",
+      twClass: tw`bg-indigo-200`,
+    },
+    "300": {
+      value: "#A3BFFA",
+      twClass: tw`bg-indigo-300`,
+    },
+    "400": {
+      value: "#7F9CF5",
+      twClass: tw`bg-indigo-400`,
+    },
+    "500": {
+      value: "#667EEA",
+      twClass: tw`bg-indigo-500`,
+    },
+    "600": {
+      value: "#5A67D8",
+      twClass: tw`bg-indigo-600`,
+    },
+    "700": {
+      value: "#4C51BF",
+      twClass: tw`bg-indigo-700`,
+    },
+    "800": {
+      value: "#434190",
+      twClass: tw`bg-indigo-800`,
+    },
+    "900": {
+      value: "#3C366B",
+      twClass: tw`bg-indigo-900`,
+    },
+  },
+  purple: {
+    "100": {
+      value: "#FAF5FF",
+      twClass: tw`bg-purple-100`,
+    },
+    "200": {
+      value: "#E9D8FD",
+      twClass: tw`bg-purple-200`,
+    },
+    "300": {
+      value: "#D6BCFA",
+      twClass: tw`bg-purple-300`,
+    },
+    "400": {
+      value: "#B794F4",
+      twClass: tw`bg-purple-400`,
+    },
+    "500": {
+      value: "#9F7AEA",
+      twClass: tw`bg-purple-500`,
+    },
+    "600": {
+      value: "#805AD5",
+      twClass: tw`bg-purple-600`,
+    },
+    "700": {
+      value: "#6B46C1",
+      twClass: tw`bg-purple-700`,
+    },
+    "800": {
+      value: "#553C9A",
+      twClass: tw`bg-purple-800`,
+    },
+    "900": {
+      value: "#44337A",
+      twClass: tw`bg-purple-900`,
+    },
+  },
+  pink: {
+    "100": {
+      value: "#FFF5F7",
+      twClass: tw`bg-pink-100`,
+    },
+    "200": {
+      value: "#FED7E2",
+      twClass: tw`bg-pink-200`,
+    },
+    "300": {
+      value: "#FBB6CE",
+      twClass: tw`bg-pink-300`,
+    },
+    "400": {
+      value: "#F687B3",
+      twClass: tw`bg-pink-400`,
+    },
+    "500": {
+      value: "#ED64A6",
+      twClass: tw`bg-pink-500`,
+    },
+    "600": {
+      value: "#D53F8C",
+      twClass: tw`bg-pink-600`,
+    },
+    "700": {
+      value: "#B83280",
+      twClass: tw`bg-pink-700`,
+    },
+    "800": {
+      value: "#97266D",
+      twClass: tw`bg-pink-800`,
+    },
+    "900": {
+      value: "#702459",
+      twClass: tw`bg-pink-900`,
+    },
+  },
+};
