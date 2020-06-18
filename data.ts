@@ -549,14 +549,19 @@ export const customShadows = {
 };
 
 export const colors = {
-  white: {
-    value: "#FFFFFF",
-    twClass: tw`bg-white`,
-  },
   black: {
-    value: "#000000",
-    twClass: tw`bg-black`,
+    black: {
+      value: "#000000",
+      twClass: tw`bg-black`,
+    },
   },
+  white: {
+    white: {
+      value: "#FFFFFF",
+      twClass: tw`bg-white`,
+    },
+  },
+
   gray: {
     "100": {
       value: "#F7FAFC",
