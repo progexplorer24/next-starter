@@ -36,6 +36,20 @@ This section presents list of default box shadow values from [tailwindcss](https
 
 <TailwindTable specObj={customShadows} />
 
+### Examples
+
+<ShadowExamples
+  exampleChild={<ShadowBlock />}
+  data={customShadows}
+  boardCss={css`
+    ${tw`grid justify-center grid-cols-2 pb-8`}
+    div:first-of-type {
+      ${tw`mt-4`}
+    }
+    justify-items: center;
+  `}
+/>
+
 ## Links
 
 For more information visit:
