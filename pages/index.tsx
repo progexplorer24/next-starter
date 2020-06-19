@@ -50,6 +50,8 @@ const Home: NextPage<HomeProps> = () => {
 
         <H1 css={css([tw`text-gray-500`])}>Color Palette</H1>
 
+        <div>Hello</div>
+
         <RenderColorPalette />
 
         <Showcase code="Hello" />
