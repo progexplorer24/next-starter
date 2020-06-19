@@ -5,6 +5,7 @@ import { map, toPairs } from "ramda";
 import tw, { TwStyle } from "twin.macro";
 import H4 from "@components/basic/h4/h4";
 import { colors } from "data";
+import responsiveBreakpoint from "utils/responsive-breakpoint";
 import ColorCircle from "../color-circle/color-circle";
 
 type RenderColorPaletteProps = {
@@ -35,12 +36,13 @@ const RenderColorPalette = ({
     { value: string; twClass: TwStyle }
   ]) => {
     return (
-      <div key={uuid()} css={emotionCss([tw`sm:flex sm:items-center `])}>
-        <ColorCircle css={emotionCss([tw`bg-red-100 sm:mx-0`, twClass])} />
+      <div
+        key={uuid()}
+        css={emotionCss([responsiveBreakpoint(400)(tw`flex items-center`)])}
+      >
+        <ColorCircle css={emotionCss([tw`bg-red-100`, twClass])} />
         <div
-          css={emotionCss`
-            ${tw`mt-2 sm:pl-3 sm:mt-2`}
-          `}
+          css={emotionCss([tw`mt-2`, responsiveBreakpoint(400)(tw`pl-3 mt-2`)])}
         >
           <div
             css={emotionCss([
@@ -66,7 +68,9 @@ const RenderColorPalette = ({
             {isBlackOrWhite(color) ? undefined : (
               <div
                 css={emotionCss([
-                  tw`h-40 mt-4 rounded-full w-14 sm:w-40 sm:h-16`,
+                  tw`h-40 mt-4 rounded-full w-14`,
+                  responsiveBreakpoint(400)(tw`w-40 h-14`),
+                  responsiveBreakpoint(600)(tw`h-16`),
                   obj[400].twClass,
                 ])}
               />
