@@ -2,6 +2,7 @@ import MainContainer from "layouts/main-container";
 import TailwindTable from "components/tailwind-table/tailwind-table";
 import ShadowExamples from "components/docs/render-examples/render-examples";
 import ShadowBlock from "components/docs/shadow-block/shadow-block";
+import SubHeading from "components/basic/subheading/subheading";
 import { defaultShadows, customShadows } from "data";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
@@ -10,11 +11,16 @@ import tw from "twin.macro";
 
 # Shadows
 
-**List of tokens for controlling the shadows of an element.**
+<SubHeading>
+  In this section we will explore all box-shadow values available in this design
+  system.
+</SubHeading>
+
+---
 
 ## Default Box Shadow values
 
-This section presents list of default box shadow values from [tailwindcss](https://tailwindcss.com/) with simple examples.
+A table below presents list of all [tailwindcss](https://tailwindcss.com/docs/box-shadow) classes that are available by default.
 
 <TailwindTable specObj={defaultShadows} />
 
@@ -33,6 +39,8 @@ This section presents list of default box shadow values from [tailwindcss](https
 />
 
 ## Custom Box Shadow values
+
+A table below presents list of all [Material Design](https://material.io/design/environment/elevation.html#type-properties) elevation levels. The idea behind it is to use shadows to represent distance between surfaces. It allows us to build elegant structure of our application and give us clues about relationships between elements.
 
 <TailwindTable specObj={customShadows} />
 
