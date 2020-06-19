@@ -48,7 +48,7 @@ const Home: NextPage<HomeProps> = () => {
           <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
         </div> */}
 
-        <H1>Color Palette</H1>
+        <H1 css={css([tw`text-gray-500`])}>Color Palette</H1>
 
         <RenderColorPalette />
 
