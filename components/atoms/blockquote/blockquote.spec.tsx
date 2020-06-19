@@ -6,9 +6,9 @@ import Blockquote from "./blockquote";
 import RightArrow from "./right-arrow.svg";
 import P from "../p/p";
 
-// before(() => {
-//   cy.addGlobalStyles();
-// });
+before(() => {
+  cy.addGlobalStyles();
+});
 
 const text = "Hello World!";
 
