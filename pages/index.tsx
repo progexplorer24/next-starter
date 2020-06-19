@@ -22,6 +22,7 @@ import Showcase from "@components/docs/showcase";
 // import ColorPill from "@components/docs/color-pill/color-pill";
 
 import RenderColorPalette from "@components/docs/render-color-palette/render-color-palette";
+import H1 from "@components/basic/h1/h1";
 
 type HomeProps = Record<string, unknown>;
 
@@ -31,14 +32,6 @@ const Home: NextPage<HomeProps> = () => {
     <main>
       <Nav />
       <MainContainer>
-        <h1
-          css={css`
-            ${tw`text-6xl`}
-          `}
-        >
-          This is the heading
-        </h1>
-
         {/* <div
           css={css`
                 ${tw`mt-2`}
@@ -54,6 +47,8 @@ const Home: NextPage<HomeProps> = () => {
           <ColorPill twClass={tw`bg-red-800`} color="#FF3322" value="800" />
           <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
         </div> */}
+
+        <H1>Color Palette</H1>
 
         <RenderColorPalette />
 
