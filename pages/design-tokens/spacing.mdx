@@ -2,13 +2,23 @@ import MainContainer from "layouts/main-container";
 import TailwindTable from "components/tailwind-table/tailwind-table";
 import SpacingExamples from "components/docs/render-examples/render-examples";
 import SpaceBlock from "components/docs/space-block/space-block";
+import SubHeading from "components/basic/subheading/subheading";
 import { spacing } from "data";
 
 <MainContainer>
 
 # Spacing Scale
 
-For controlling paddings, margins, widths and heights we use 4pt sizing scale.
+<SubHeading>
+  In this section we will explore all spacing values available in this design
+  system.
+</SubHeading>
+
+---
+
+Spacing is used for controlling paddings, margins, widths and heights of elements. Here, we use 4pt sizing scale, which means that every spacing value is multiple of four.
+
+For small elements we want to have high level of precision, that's why values increments are smaller at the beginning. When you reach medium and large sizes, we don't need to be as precise. That's why we want to loosen up the scale a little bit.
 
 ## List of Available Values
 
@@ -18,7 +28,7 @@ For controlling paddings, margins, widths and heights we use 4pt sizing scale.
 
 To control font-size in tailwindcss we use one of the variations of classes: `w-{value}`, `h-{value}`, `m-{vale}`, `p-{value}`.
 
-**Note:** Check links below to get exhaustive list of informations on how to use spacing with tailwindcss.
+**Note:** Check links below to get detailed informations on how to use spacing with tailwindcss.
 
 <SpacingExamples data={spacing} exampleChild={<SpaceBlock />} />
 
