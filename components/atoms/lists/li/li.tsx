@@ -19,7 +19,7 @@ const Li = ({
     <li
       {...props}
       css={emotionCss([
-        tw`flex items-center mt-2 text-lg font-thin tracking-wide`,
+        tw`mt-2 text-lg font-thin text-gray-700 list-none `,
         css,
       ])}
     >
