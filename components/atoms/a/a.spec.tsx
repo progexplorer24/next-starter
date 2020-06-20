@@ -2,7 +2,6 @@ import React from "react";
 import { mount } from "cypress-react-unit-test";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
-import RightArrow from "./right-arrow.svg";
 import A from "./a";
 
 before(() => {
@@ -24,24 +23,9 @@ const Component = () => (
 );
 
 describe("A component", () => {
-  it("renders children", () => {
+  it("renders text", () => {
     mount(<A href="/">{text}</A>);
     cy.contains(text);
-  });
-
-  it("renders children with icons", () => {
-    mount(
-      <A href={url}>
-        <RightArrow
-          css={css`
-            ${tw`w-8 h-8`}
-          `}
-        />
-        {text}
-      </A>
-    );
-
-    cy.get("svg").should("have.length", 1);
   });
 
   it("renders another component", () => {
@@ -70,16 +54,7 @@ describe("A component", () => {
   });
 
   it("includes valid href attribute", () => {
-    mount(
-      <A href={url}>
-        <RightArrow
-          css={css`
-            ${tw`w-8 h-8`}
-          `}
-        />
-        {text}
-      </A>
-    );
+    mount(<A href={url}>{text}</A>);
 
     cy.url().should("include", "/");
   });
