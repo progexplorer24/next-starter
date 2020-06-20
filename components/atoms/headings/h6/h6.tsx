@@ -4,9 +4,9 @@ import { HeadingProps } from "../types";
 
 const H6 = ({ children, css, ...props }: HeadingProps): ReactElement => {
   return (
-    <div css={emotionCss([css])} {...props}>
+    <h6 css={emotionCss([css])} {...props}>
       {children}
-    </div>
+    </h6>
   );
 };
 
