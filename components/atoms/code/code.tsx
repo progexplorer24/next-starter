@@ -1,5 +1,6 @@
 import React, { ReactNode, ReactElement } from "react";
 import { css as emotionCss, SerializedStyles } from "@emotion/core";
+import tw from "twin.macro";
 
 export type CodeProps = {
   css?: SerializedStyles;
@@ -9,7 +10,7 @@ export type CodeProps = {
 
 const Code = ({ children, css, ...props }: CodeProps): ReactElement => {
   return (
-    <code css={emotionCss([css])} {...props}>
+    <code css={emotionCss([tw`font-mono`, css])} {...props}>
       {children}
     </code>
   );
