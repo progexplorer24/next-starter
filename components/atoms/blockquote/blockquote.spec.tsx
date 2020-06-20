@@ -3,8 +3,6 @@ import { mount } from "cypress-react-unit-test";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 import Blockquote from "./blockquote";
-import RightArrow from "./right-arrow.svg";
-import P from "../p/p";
 
 before(() => {
   cy.addGlobalStyles();
@@ -12,30 +10,17 @@ before(() => {
 
 const text = "Hello World!";
 
+const P = () => <p data-cy="component">{text}</p>;
+
 describe("Blockquote component", () => {
   it("renders another component", () => {
     mount(
       <Blockquote>
-        <P>{text}</P>
+        <P />
       </Blockquote>
     );
     cy.contains(text);
-  });
-
-  it("renders children with icons", () => {
-    mount(
-      <Blockquote>
-        <p>
-          <RightArrow
-            css={css`
-              ${tw`w-8 h-8`}
-            `}
-          />
-        </p>
-      </Blockquote>
-    );
-
-    cy.get("svg").should("have.length", 1);
+    cy.get("[data-cy=component]").should("exist");
   });
 
   it("works with emotion and tailwindcss styling", () => {
@@ -50,22 +35,5 @@ describe("Blockquote component", () => {
     );
 
     cy.get("blockquote").should("have.css", "display", "flex");
-  });
-
-  it("passes down styles to child element", () => {
-    mount(
-      <Blockquote>
-        <P
-          css={css`
-            ${tw`flex`}
-          `}
-          data-cy="child"
-        >
-          Nice to meet you
-        </P>
-      </Blockquote>
-    );
-
-    cy.get("[data-cy=child]").should("have.css", "display", "flex");
   });
 });
