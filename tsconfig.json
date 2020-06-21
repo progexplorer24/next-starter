@@ -31,7 +31,8 @@
       "@svg/*": ["public/svg/*"],
       "@atoms/*": ["components/atoms"],
       "@basic/*": ["components/basic"],
-      "@layouts": ["layouts/*"]
+      "@layouts/*": ["layouts/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "exclude": ["node_modules"],
