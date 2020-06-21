@@ -23,6 +23,7 @@ import Showcase from "@components/docs/showcase";
 
 import RenderColorPalette from "@components/docs/render-color-palette/render-color-palette";
 import H1 from "@components/basic/h1/h1";
+import Ol from "@components/atoms/lists/ol/ol";
 
 type HomeProps = Record<string, unknown>;
 
@@ -47,6 +48,23 @@ const Home: NextPage<HomeProps> = () => {
           <ColorPill twClass={tw`bg-red-800`} color="#FF3322" value="800" />
           <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
         </div> */}
+
+        <Ol>
+          <Li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            vero consequatur iusto qui nostrum eaque impedit animi officia.
+            Officiis placeat repellat cum maiores eos voluptatibus laboriosam
+            sunt velit voluptates iste recusandae alias, possimus facere
+            pariatur suscipit nam excepturi quod harum veniam! Soluta facere,
+            unde odio perspiciatis totam incidunt ipsam. Nihil?
+          </Li>
+          <Li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+            accusantium?
+          </Li>
+          <Li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Li>
+          <Li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Li>
+        </Ol>
 
         <H1>Color Palette</H1>
 
