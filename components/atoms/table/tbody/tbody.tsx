@@ -1,10 +1,13 @@
-import React, { ReactNode, ReactElement } from "react";
+import React, { ReactElement } from "react";
 import { css as emotionCss, SerializedStyles } from "@emotion/core";
+import type { TrProps } from "../tr/tr";
 
-type TbodyProps = {
+export type TbodyProps = {
   css?: SerializedStyles;
   className?: string;
-  children: ReactNode;
+  children?:
+    | ReactElement<TrProps, (props: TrProps) => ReactElement>
+    | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
 };
 
 const Tbody = ({ children, css, ...props }: TbodyProps): ReactElement => {
