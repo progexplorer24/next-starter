@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { SerializedStyles, css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import cloneEmotion from "utils/emotion-clone";
+import cloneEmotion from "@utils/emotion-clone";
 import RightArrow from "./right-arrow.svg";
 import type { LiProps } from "../li/li";
 
