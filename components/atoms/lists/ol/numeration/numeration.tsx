@@ -5,7 +5,7 @@ import tw from "twin.macro";
 type NumerationProps = {
   css?: SerializedStyles;
   className?: string;
-  children: number;
+  children: number | string;
 };
 
 const Numeration = ({
