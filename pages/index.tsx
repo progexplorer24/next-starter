@@ -24,6 +24,12 @@ import Showcase from "@components/docs/showcase";
 import RenderColorPalette from "@components/docs/render-color-palette/render-color-palette";
 import H1 from "@components/basic/h1/h1";
 import Ol from "@components/atoms/lists/ol/ol";
+import Checkbox from "@components/atoms/form-elements/checkbox/checkbox";
+import Input from "@components/atoms/form-elements/input/input";
+import Multiselect from "@components/atoms/form-elements/multiselect/multiselect";
+import RadioButton from "@components/atoms/form-elements/radio-button/radio-button";
+import Select from "@components/atoms/form-elements/select/select";
+import Textarea from "@components/atoms/form-elements/textarea/textarea";
 
 type HomeProps = Record<string, unknown>;
 
@@ -65,6 +71,23 @@ const Home: NextPage<HomeProps> = () => {
           <Li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Li>
           <Li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Li>
         </Ol>
+
+        <Checkbox id="test" name="horn" />
+        <Input />
+        <Multiselect id="test" name="horn">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </Multiselect>
+        <RadioButton id="test" name="horn" />
+        <Select id="test" name="horn">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </Select>
+        <Textarea />
 
         <H1>Color Palette</H1>
 
