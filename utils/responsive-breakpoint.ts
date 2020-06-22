@@ -16,15 +16,4 @@ const responsiveBreakpoint = (breakpoint: number) => (
   }
 `;
 
-// const responsiveBreakpoint = (
-//   breakpoint: number,
-//   styles: SerializedStyles
-// ): SerializedStyles => {
-//   return css`
-//     @media (min-width: ${breakpoint}px) {
-//       ${styles}
-//     }
-//   `;
-// };
-
 export default responsiveBreakpoint;
