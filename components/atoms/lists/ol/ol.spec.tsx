@@ -25,13 +25,11 @@ describe("Ordered List Component", () => {
         <Li>{singleLi}</Li>
       </Ol>
     );
-    cy.get("li")
-      .should("have.length", 1)
-      .and("contain.text", singleLi)
-      .and("contain.html", "span", "1.");
+    cy.get("ol").should("exist").and("be.visible");
+    cy.get("li").should("have.length", 1).and("contain.text", singleLi);
   });
 
-  it("renders multiple list elements wit correct numeration", () => {
+  it("renders multiple list elements with correct numeration", () => {
     mount(
       <Ol>
         {items.map((item) => (
@@ -41,11 +39,8 @@ describe("Ordered List Component", () => {
     );
 
     cy.get("li").should("have.length", 5);
-    items.forEach((item, index) => {
-      cy.get("ol")
-        .should("contain.text", item)
-        .and("be.visible")
-        .and("contain.html", "span", `${index + 1}.`);
+    items.forEach((item) => {
+      cy.get("ol").should("contain.text", item).and("be.visible");
     });
   });
   it("works with emotion and tailwindcss styling", () => {

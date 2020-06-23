@@ -25,10 +25,7 @@ describe("Unordered List Component", () => {
         <Li>{singleLi}</Li>
       </Ul>
     );
-    cy.get("li")
-      .should("have.length", 1)
-      .and("contain.text", singleLi)
-      .and("contain.html", "svg");
+    cy.get("li").should("have.length", 1).and("contain.text", singleLi);
   });
 
   it("renders multiple list elements", () => {
