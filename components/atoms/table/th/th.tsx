@@ -10,13 +10,7 @@ export type ThProps = {
 
 const Th = ({ children, css, ...props }: ThProps): ReactElement => {
   return (
-    <th
-      css={emotionCss([
-        tw`p-2 text-sm font-bold text-gray-900 bg-gray-200`,
-        css,
-      ])}
-      {...props}
-    >
+    <th css={emotionCss([tw`p-2`, css])} {...props}>
       {children}
     </th>
   );

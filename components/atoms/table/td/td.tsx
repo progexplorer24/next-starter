@@ -10,10 +10,7 @@ export type TdProps = {
 
 const Td = ({ children, css, ...props }: TdProps): ReactElement => {
   return (
-    <td
-      css={emotionCss([tw`p-2 text-sm font-semibold text-gray-700`, css])}
-      {...props}
-    >
+    <td css={emotionCss([tw`p-2`, css])} {...props}>
       {children}
     </td>
   );
