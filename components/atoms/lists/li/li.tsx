@@ -9,21 +9,9 @@ export type LiProps = {
   listDecoration?: JSX.Element;
 };
 
-const Li = ({
-  children,
-  listDecoration,
-  css,
-  ...props
-}: LiProps): ReactElement => {
+const Li = ({ children, css, ...props }: LiProps): ReactElement => {
   return (
-    <li
-      {...props}
-      css={emotionCss([
-        tw`mt-2 text-lg font-thin text-gray-700 list-none `,
-        css,
-      ])}
-    >
-      {typeof listDecoration !== undefined ? listDecoration : undefined}
+    <li {...props} css={emotionCss([tw`list-none`, css])}>
       {children}
     </li>
   );
