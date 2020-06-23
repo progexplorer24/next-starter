@@ -9,8 +9,11 @@ import Th from "@components/atoms/table/th/th";
 import Tr from "@components/atoms/table/tr/tr";
 import Tbody from "@components/atoms/table/tbody/tbody";
 import Td from "@components/atoms/table/td/td";
-import Ul from "@components/atoms/lists/ul/ul";
-import Li from "@components/atoms/lists/li/li";
+import Ul from "@components/basic/lists/ul/ul";
+import Li from "@components/basic/lists/li/li";
+import AtomUl from "@components/atoms/lists/ul/ul";
+import AtomOl from "@components/atoms/lists/ol/ol";
+import AtomLi from "@components/atoms/lists/li/li";
 import TextHr from "@components/text-hr";
 import Img from "@components/atoms/img/img";
 import MainContainer from "layouts/main-container";
@@ -23,7 +26,7 @@ import Showcase from "@components/docs/showcase";
 
 import RenderColorPalette from "@components/docs/render-color-palette/render-color-palette";
 import H1 from "@components/basic/h1/h1";
-import Ol from "@components/atoms/lists/ol/ol";
+import Ol from "@components/basic/lists/ol/ol";
 import Checkbox from "@components/atoms/form-elements/checkbox/checkbox";
 import Input from "@components/atoms/form-elements/input/input";
 import Multiselect from "@components/atoms/form-elements/multiselect/multiselect";
@@ -54,6 +57,19 @@ const Home: NextPage<HomeProps> = () => {
           <ColorPill twClass={tw`bg-red-800`} color="#FF3322" value="800" />
           <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
         </div> */}
+
+        <AtomUl>
+          <AtomLi>List item 1</AtomLi>
+          <AtomLi>List item 2</AtomLi>
+          <AtomLi>List item 3</AtomLi>
+          <AtomLi>List item 4</AtomLi>
+        </AtomUl>
+        <AtomOl>
+          <AtomLi>List item 1</AtomLi>
+          <AtomLi>List item 2</AtomLi>
+          <AtomLi>List item 3</AtomLi>
+          <AtomLi>List item 4</AtomLi>
+        </AtomOl>
 
         <Ol>
           <Li>
