@@ -1,0 +1,63 @@
+import MainContainer from "layouts/main-container";
+import SubHeading from "components/basic/subheading/subheading";
+import Board from "components/docs/board/board";
+import Showcase from "components/docs/showcase";
+import Alert from "components/alert/alert";
+import AlertError from "components/alert/variations/alert-error";
+import AlertWarning from "components/alert/variations/alert-warning";
+import { Basic, Outlined } from "components/alert/examples";
+
+import { css } from "@emotion/core";
+import tw from "twin.macro";
+import dedent from "dedent";
+
+<MainContainer>
+
+# Alert Component
+
+<SubHeading>In this section we will explore how to use alerts.</SubHeading>
+
+An alert is used to display important information, usually in response to user action.
+
+## Basic Alert
+
+Alerts could be divided into four categories based on the message they try to tell:
+
+- error - action didn't go as we planned
+- warning - this action can have serious consequences
+- information - gives additional context to the user
+- success - informs that action was successful
+
+<Showcase
+  code={dedent`<Alert> This is default alert compoenent </Alert>
+      <Alert>This is default alert compoenent</Alert>
+      <AlertWarning>This is default alert compoenent</AlertWarning>
+      <AlertInfo>This is default alert compoenent</AlertInfo>
+      <AlertSuccess>This is default alert compoenent</AlertSuccess>`}
+>
+  <Basic />
+</Showcase>
+
+## Variants
+
+There are also additional variants available:
+
+### Outlined
+
+<Showcase
+  code={dedent`<Alert outlined>This alert is a basic building block.</Alert>
+      <AlertInfo outlined>Here&lsquo;s some more information.</AlertInfo>
+      <AlertWarning outlined>
+        Important. Your actions have consequences
+      </AlertWarning>
+      <AlertError outlined>Look out! Something went wrong. </AlertError>
+      <AlertSuccess outlined>Success! You did it.</AlertSuccess>`}
+>
+  <Outlined />
+</Showcase>
+
+## Customization
+
+You can also easily customize alert component.
+
+</MainContainer>
