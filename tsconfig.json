@@ -32,7 +32,9 @@
       "@atoms/*": ["components/atoms"],
       "@basic/*": ["components/basic"],
       "@layouts/*": ["layouts/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@mdx/*": ["mdx/*"],
+      "@api/*": ["pages/api/*"]
     }
   },
   "exclude": ["node_modules"],
