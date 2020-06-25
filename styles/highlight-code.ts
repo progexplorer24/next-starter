@@ -8,6 +8,8 @@ import tw from "twin.macro";
 // keyword attr-name   color: #c792ea;
 // Comment  color: ${theme.colors.gray["500"]};
 
+// .token.keyword,
+
 const highlightCode = css`
   code[class*="language-"],
   pre[class*="language-"] {
@@ -80,7 +82,6 @@ const highlightCode = css`
     color: #ffe484;
   }
 
-  .token.keyword,
   .token.attr-name {
     color: #c792ea;
   }
