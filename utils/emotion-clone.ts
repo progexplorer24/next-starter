@@ -1,4 +1,5 @@
-import { SerializedStyles, jsx } from "@emotion/core";
+import { ReactElement, ReactNode } from "react";
+import { jsx } from "@emotion/core";
 
 /**
 |--------------------------------------------------
@@ -9,15 +10,25 @@ import { SerializedStyles, jsx } from "@emotion/core";
 |--------------------------------------------------
 */
 
-const cloneEmotion = (
-  element: JSX.Element & { ref?: unknown },
-  props: { css?: SerializedStyles }
-): JSX.Element =>
-  jsx(element.type, {
-    key: element.key,
-    ref: element.ref,
-    ...element.props,
-    ...props,
-  });
+const emotionClone = (
+  element: ReactElement<EmotionProps, (props: EmotionProps) => ReactElement>,
+  config: EmotionProps,
+  children?: ReactNode
+): ReactElement => {
+  return jsx(
+    // eslint-disable-next-line no-underscore-dangle
+    element.props.__EMOTION_TYPE_PLEASE_DO_NOT_USE__
+      ? // eslint-disable-next-line no-underscore-dangle
+        element.props.__EMOTION_TYPE_PLEASE_DO_NOT_USE__
+      : element.type,
+    {
+      key: element.key !== null ? element.key : undefined,
 
-export default cloneEmotion;
+      ...element.props,
+      ...config,
+    },
+    children
+  );
+};
+
+export default emotionClone;
