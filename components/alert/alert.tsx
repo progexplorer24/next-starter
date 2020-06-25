@@ -12,6 +12,7 @@ export type IconTypeElement = ReactElement<
 export type AlertProps = EmotionProps & {
   icon?: IconTypeElement;
   outlined?: boolean;
+  filled?: boolean;
   children: ReactNode;
 };
 
@@ -20,14 +21,21 @@ const Alert = ({
   css,
   icon = <InfoIcon />,
   outlined,
+  filled,
   ...props
 }: AlertProps): ReactElement => {
+  const filledIcon = filled ? tw`text-white fill-current` : undefined;
+
   const iconStyled = cloneEmotion(icon, {
-    css: emotionCss([tw`w-5 h-5 mt-1`, icon.props.css]),
+    css: emotionCss([tw`w-5 h-5 mt-1`, filledIcon, icon.props.css]),
   });
 
   const outlinedStyles = outlined
     ? tw`bg-transparent border border-gray-400`
+    : undefined;
+
+  const filledStyles = filled
+    ? tw`font-bold text-white bg-gray-600 border-none`
     : undefined;
 
   return (
@@ -37,6 +45,7 @@ const Alert = ({
       css={emotionCss([
         tw`flex w-full px-4 py-3 mt-4 bg-gray-300 rounded-md`,
         outlinedStyles,
+        filledStyles,
         css,
       ])}
     >
