@@ -6,7 +6,10 @@ import { LiProps } from "../li/li";
 export type UlProps = {
   css?: SerializedStyles;
   className?: string;
-  icon?: ReactElement;
+  icon?: ReactElement<
+    { css?: SerializedStyles },
+    (props: { css?: SerializedStyles }) => ReactElement
+  >;
   children:
     | FunctionComponentElement<LiProps>
     | FunctionComponentElement<LiProps>[];
