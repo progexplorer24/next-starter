@@ -11,9 +11,6 @@ import Tbody from "@components/atoms/table/tbody/tbody";
 import Td from "@components/atoms/table/td/td";
 import Ul from "@components/basic/lists/ul/ul";
 import Li from "@components/basic/lists/li/li";
-import AtomUl from "@components/atoms/lists/ul/ul";
-import AtomOl from "@components/atoms/lists/ol/ol";
-import AtomLi from "@components/atoms/lists/li/li";
 import TextHr from "@components/text-hr";
 import Img from "@components/atoms/img/img";
 import MainContainer from "layouts/main-container";
@@ -33,6 +30,7 @@ import Multiselect from "@components/atoms/form-elements/multiselect/multiselect
 import RadioButton from "@components/atoms/form-elements/radio-button/radio-button";
 import Select from "@components/atoms/form-elements/select/select";
 import Textarea from "@components/atoms/form-elements/textarea/textarea";
+import Alert from "@components/alert/alert";
 
 type HomeProps = Record<string, unknown>;
 
@@ -58,18 +56,28 @@ const Home: NextPage<HomeProps> = () => {
           <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
         </div> */}
 
-        <AtomUl>
-          <AtomLi>List item 1</AtomLi>
-          <AtomLi>List item 2</AtomLi>
-          <AtomLi>List item 3</AtomLi>
-          <AtomLi>List item 4</AtomLi>
-        </AtomUl>
-        <AtomOl>
-          <AtomLi>List item 1</AtomLi>
-          <AtomLi>List item 2</AtomLi>
-          <AtomLi>List item 3</AtomLi>
-          <AtomLi>List item 4</AtomLi>
-        </AtomOl>
+        <Showcase code="string">
+          <Alert>
+            A simple alert can be used to give user notifications about some
+            action.
+          </Alert>
+          <Alert css={css([tw`text-red-900 bg-red-200`])}>
+            A simple alert can be used to give user notifications about some
+            action.
+          </Alert>
+          <Alert css={css([tw`text-orange-900 bg-orange-200`])}>
+            A simple alert can be used to give user notifications about some
+            action.
+          </Alert>
+          <Alert css={css([tw`text-blue-900 bg-blue-200`])}>
+            A simple alert can be used to give user notifications about some
+            action.
+          </Alert>
+          <Alert css={css([tw`text-green-900 bg-green-200`])}>
+            A simple alert can be used to give user notifications about some
+            action.
+          </Alert>
+        </Showcase>
 
         <Ol>
           <Li>
