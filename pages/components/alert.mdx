@@ -5,7 +5,14 @@ import Showcase from "components/docs/showcase";
 import Alert from "components/alert/alert";
 import AlertError from "components/alert/variations/alert-error";
 import AlertWarning from "components/alert/variations/alert-warning";
-import { Basic, Outlined } from "components/alert/examples";
+import {
+  Basic,
+  Outlined,
+  Filled,
+  Custom,
+  NoIcons,
+  string,
+} from "components/alert/examples";
 
 import { css } from "@emotion/core";
 import tw from "twin.macro";
@@ -45,21 +52,53 @@ There are also additional variants available:
 ### Outlined
 
 <Showcase
-  code={dedent`<Alert outlined>This alert is a basic building block.</Alert>
-      <AlertInfo outlined>Here&lsquo;s some more information.</AlertInfo>
-      <AlertWarning outlined>
-        Important. Your actions have consequences
+  code={dedent`<Alert type="outlined">This alert is a basic building block.</Alert>
+      <AlertInfo type="outlined">Here&lsquo;s some more information.</AlertInfo>
+      <AlertWarning type="outlined">
+        Important. Your actions have consequences.
       </AlertWarning>
-      <AlertError outlined>Look out! Something went wrong. </AlertError>
-      <AlertSuccess outlined>Success! You did it.</AlertSuccess>`}
+      <AlertError type="outlined">Look out! Something went wrong. </AlertError>
+      <AlertSuccess type="outlined">Success! You did it.</AlertSuccess>`}
 >
   <Outlined />
 </Showcase>
 
 ### Filled
 
+<Showcase
+  code={dedent`<Alert type="filled">This alert is a basic building block.</Alert>
+      <AlertInfo type="filled">Here&lsquo;s some more information.</AlertInfo>
+      <AlertWarning type="filled">
+        Important. Your actions have consequences.
+      </AlertWarning>
+      <AlertError type="filled">Look out! Something went wrong. </AlertError>
+      <AlertSuccess type="filled">Success! You did it.</AlertSuccess>`}
+>
+  <Filled />
+</Showcase>
+
 ## Customization
 
-You can also easily customize alert component.
+You can easily create custom variants of this component:
+
+<Showcase code={dedent(string)}>
+  <Custom />
+</Showcase>
+
+## No Icon
+
+If you don't want to add icons to your alert, you just have to pass `icon={false}` as argument:
+
+<Showcase
+  code={dedent`<Alert icon={false}>This alert is a basic building block.</Alert>
+      <AlertError icon={false}>Look out! Something went wrong. </AlertError>
+      <AlertInfo icon={false}>Here&lsquo;s some more information.</AlertInfo>
+      <AlertWarning icon={false}>
+        Important. Your actions have consequences.
+      </AlertWarning>
+      <AlertSuccess icon={false}>Success! You did it.</AlertSuccess>`}
+>
+  <NoIcons />
+</Showcase>
 
 </MainContainer>
