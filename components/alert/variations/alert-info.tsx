@@ -2,29 +2,53 @@ import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import cloneEmotion from "@utils/emotion-clone";
-import Alert, { AlertProps, IconTypeElement } from "../alert";
+import { cond, equals, always, T } from "ramda";
+import Alert, { AlertProps, IconTypeElement, AlertStyles } from "../alert";
 import InfoIcon from "../info.svg";
 
 const AlertInfo = ({
   children,
   css,
-  outlined,
+  type = "default",
   icon = <InfoIcon />,
   ...props
 }: AlertProps): ReactElement => {
-  const styledIcon = cloneEmotion(icon, {
-    css: emotionCss([icon.props.css, tw`text-blue-600 fill-current`]),
-  }) as IconTypeElement;
+  const { iconStyles, alertStyles } = cond<string, AlertStyles>([
+    [
+      equals("filled"),
+      always({
+        iconStyles: undefined,
+        alertStyles: tw`bg-blue-600`,
+      }),
+    ],
+    [
+      equals("outlined"),
+      always({
+        iconStyles: tw`text-blue-600`,
+        alertStyles: tw`text-blue-800 border-blue-600`,
+      }),
+    ],
+    [
+      T,
+      always({
+        iconStyles: tw`text-blue-600`,
+        alertStyles: tw`text-blue-800 bg-blue-200`,
+      }),
+    ],
+  ])(type);
 
-  const outlinedStyles = outlined
-    ? tw`bg-transparent border border-blue-400`
-    : undefined;
+  const styledIcon = icon
+    ? (cloneEmotion(icon, {
+        css: emotionCss([iconStyles, icon.props.css]),
+      }) as IconTypeElement)
+    : false;
 
   return (
     <Alert
       {...props}
       icon={styledIcon}
-      css={emotionCss([tw`text-blue-900 bg-blue-200`, outlinedStyles])}
+      type={type}
+      css={emotionCss([alertStyles, css])}
     >
       {children}
     </Alert>
