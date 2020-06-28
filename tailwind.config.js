@@ -14,6 +14,8 @@ module.exports = {
         transparent: "transparent",
         none: "none",
       },
+      minHeight: (theme) => theme("spacing"),
+      minWidth: (theme) => theme("spacing"),
     },
   },
   variants: {},

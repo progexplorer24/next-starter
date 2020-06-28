@@ -1,7 +1,8 @@
 import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import tw from "twin.macro";
 
-type ButtonProps = {
+export type ButtonProps = {
   css?: SerializedStyles;
   className?: string;
   children: ReactNode;
@@ -9,7 +10,11 @@ type ButtonProps = {
 
 const Button = ({ children, css, ...props }: ButtonProps): ReactElement => {
   return (
-    <button type="button" css={emotionCss([css])} {...props}>
+    <button
+      type="button"
+      css={emotionCss([tw`min-w-11 min-h-11`, css])}
+      {...props}
+    >
       {children}
     </button>
   );
