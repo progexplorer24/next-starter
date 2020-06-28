@@ -317,6 +317,15 @@ export const IconButtons = (): ReactElement => {
       <IconButton css={emotionCss([tw`m-4`])} label="volume-off">
         <VolumeOffIcon css={emotionCss([tw`text-indigo-400`])} />
       </IconButton>
+
+      <button
+        type="button"
+        css={emotionCss([tw`bg-gray-300 min-w-11 min-h-11`])}
+      >
+        <div css={emotionCss([tw`font-bold text-white bg-blue-700 `])}>
+          This is button
+        </div>
+      </button>
     </div>
   );
 };
