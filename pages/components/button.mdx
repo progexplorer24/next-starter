@@ -1,0 +1,115 @@
+import MainContainer from "layouts/main-container";
+import SubHeading from "components/basic/subheading/subheading";
+import Board from "components/docs/board/board";
+import Showcase from "components/docs/showcase";
+import {
+  Basic,
+  Filled,
+  filledString,
+  basicString,
+  Priority,
+  priorityString,
+  Text,
+  textString,
+  Outlined,
+  outlinedString,
+  ButtonsWithIcons,
+  buttonsWithIconsString,
+  IconButtons,
+  iconButtonsString,
+} from "components/button/examples";
+import dedent from "dedent";
+
+<MainContainer>
+
+# Button Component
+
+<SubHeading>In this section we will explore how to use buttons.</SubHeading>
+
+Buttons are used to take actions and make decisions.
+
+## Clickable Area
+
+We recommend three button sizes that are optimal for high touch accuracy.
+
+General advice would be:
+**Create buttons where smaller dimension is between: 42-72px**
+
+Chosen button sizes are based on:
+
+- [Touch Screen User Interfaces](https://www.researchgate.net/publication/225367546_Touch_Screen_User_Interfaces_for_Older_Adults_Button_Size_and_Spacing)
+- [Touch target size](https://support.google.com/accessibility/android/answer/7101858?hl=en)
+- [Optimal Size and Spacing](https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons/)
+
+**Note:**
+
+Button size can be smaller but make sure that clickable area is always at least 42x42.
+
+<Showcase code={dedent(basicString)}>
+  <Basic />
+</Showcase>
+
+## Priority
+
+If you want to put higher emphasis on one of your buttons you should consider:
+
+- increasing a button size
+- adding elevation
+- adding fill to a button
+- uppercase letters
+
+Let's look at the examples:
+
+<Showcase code={dedent(priorityString)}>
+  <Priority />
+</Showcase>
+
+## Variants
+
+In this section we present a list of popular button variants with some clues about how to use them.
+
+### Filled
+
+High emphasis buttons. They should be used for the most important actions in your app.
+
+<Showcase code={dedent(filledString)}>
+  <Filled />
+</Showcase>
+
+### Outlined Buttons
+
+Medium emphasis buttons. They can be used as lower emphasis alternative to contained buttons, or higher emphasis alternative to text buttons.
+
+<Showcase code={dedent(outlinedString)}>
+  <Outlined />
+</Showcase>
+
+### Text Buttons
+
+Low emphasis buttons usually used for less important actions.
+
+<Showcase code={dedent(textString)}>
+  <Text />
+</Showcase>
+
+### Buttons With Icons
+
+To improve user experiance you may add icons to the button element. It will be easier to understand the purpose of the button that way.
+
+<Showcase code={dedent(buttonsWithIconsString)}>
+  <ButtonsWithIcons />
+</Showcase>
+
+### Icon Buttons
+
+Most popular actions often have icons associated with them that are commonly used and easy to understand (i.e. hamburger menu, trash icon, notification). In that situation you can skip adding text label to the button, because it's clear what the button does.
+
+Another popular use case for icon buttons are toggle states, that allow user to select or deselect functionality.
+
+<Showcase code={dedent(iconButtonsString)}>
+  <IconButtons />
+</Showcase>
+
+## Customization
+
+</MainContainer>
