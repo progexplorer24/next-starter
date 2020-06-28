@@ -1,10 +1,10 @@
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import Alert from "./alert";
-import AlertInfo from "./variations/alert-info";
-import AlertWarning from "./variations/alert-warning";
-import AlertError from "./variations/alert-error";
-import AlertSuccess from "./variations/alert-success";
+import AlertInfo from "./variants/alert-info";
+import AlertWarning from "./variants/alert-warning";
+import AlertError from "./variants/alert-error";
+import AlertSuccess from "./variants/alert-success";
 import CustomIcon1 from "./custom-1.svg";
 import CustomIcon2 from "./custom-2.svg";
 import InfoIcon from "./info.svg";
