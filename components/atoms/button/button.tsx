@@ -2,7 +2,7 @@ import React, { ReactNode, ReactElement } from "react";
 import { SerializedStyles, css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 
-export type ButtonProps = {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   css?: SerializedStyles;
   className?: string;
   children: ReactNode;
