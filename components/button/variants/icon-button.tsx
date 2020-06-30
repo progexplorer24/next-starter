@@ -1,41 +1,52 @@
 import React, { ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import { SerializedStyles, css as emotionCss, ClassNames } from "@emotion/core";
 import tw from "twin.macro";
 import AtomButton from "@components/atoms/button/button";
 import emotionClone from "@utils/emotion-clone";
 import { IconTypeElement } from "@components/alert/alert";
+import { disabledTextButton } from "../styles";
 
 type IconButtonProps = {
-  css?: SerializedStyles;
+  cssProp?: SerializedStyles;
   className?: string;
-  label: string;
+  disabled?: boolean;
+  ariaLabel: string;
   children: IconTypeElement;
 };
 
 const IconButton = ({
   children,
-  css,
-  label,
+  cssProp,
+  className,
+  disabled = false,
+  ariaLabel,
   ...props
 }: IconButtonProps): ReactElement => {
   const iconStyled = emotionClone(children, {
     css: emotionCss([
-      tw`w-6 h-6 text-gray-700 fill-current`,
+      tw`w-6 h-6 text-current fill-current`,
       children.props.css,
     ]),
   });
 
+  const disabledStyles = disabled ? disabledTextButton : undefined;
+
   return (
-    <AtomButton
-      {...props}
-      css={emotionCss([
-        tw`inline-flex items-center justify-center rounded-full w-11 h-11`,
-        css,
-      ])}
-      aria-label={label}
-    >
-      {iconStyled}
-    </AtomButton>
+    <ClassNames>
+      {({ css }) => (
+        <AtomButton
+          {...props}
+          css={emotionCss([
+            tw`inline-flex items-center justify-center text-gray-700 rounded-full w-11 h-11`,
+            cssProp,
+          ])}
+          aria-label={ariaLabel}
+          className={css([className, disabledStyles])}
+        >
+          {iconStyled}
+        </AtomButton>
+      )}
+    </ClassNames>
   );
 };
 export default IconButton;
