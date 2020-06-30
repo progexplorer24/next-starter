@@ -9,14 +9,15 @@ type MainContainerProps = {
 
 const MainContainer: FC<MainContainerProps> = ({ children, ...props }) => {
   return (
-    <div
+    <main
+      role="main"
       css={css`
         ${tw`max-w-3xl px-5 my-6 md:mx-auto `}
       `}
       {...props}
     >
       {children}
-    </div>
+    </main>
   );
 };
 
