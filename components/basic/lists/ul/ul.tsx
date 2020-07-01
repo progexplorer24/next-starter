@@ -3,7 +3,7 @@ import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import cloneEmotion from "@utils/emotion-clone";
 import AtomUl from "@components/atoms/lists/ul/ul";
-import type { UlProps } from "@components/types";
+import type { UlProps } from "@components/atoms/atom-types";
 import RightArrow from "./right-arrow.svg";
 
 const Ul = ({

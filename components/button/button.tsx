@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { css as emotionCss, ClassNames, SerializedStyles } from "@emotion/core";
 import tw, { TwStyle } from "twin.macro";
 import { cond, always, equals, T } from "ramda";
-import type { ButtonProps as AtomButtonProps } from "@components/types";
+import type { ButtonProps as AtomButtonProps } from "@components/atoms/atom-types";
 import AtomButton from "../atoms/button/button";
 import {
   disabledFilledButton,

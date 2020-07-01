@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import AtomOl from "@components/atoms/lists/ol/ol";
-import type { OlProps } from "@components/types";
+import type { OlProps } from "@components/atoms/atom-types";
 import Numeration from "./numeration/numeration";
 
 const Ol = ({ children, cssProp, ...props }: OlProps): ReactElement => {

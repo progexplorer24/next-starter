@@ -3,7 +3,7 @@ import { SerializedStyles, css as emotionCss, ClassNames } from "@emotion/core";
 import tw from "twin.macro";
 import AtomButton from "@components/atoms/button/button";
 import emotionClone from "@utils/emotion-clone";
-import { IconTypeElement } from "@components/types";
+import { IconTypeElement } from "@components/atoms/atom-types";
 import { disabledTextButton } from "../styles";
 
 type IconButtonProps = {

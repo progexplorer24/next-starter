@@ -1,7 +1,7 @@
 import React from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import type { AProps } from "@components/types";
+import type { AProps } from "@components/atoms/atom-types";
 
 const A = React.forwardRef<HTMLAnchorElement, AProps>(
   ({ children, href, cssProp, ...props }, ref) => {

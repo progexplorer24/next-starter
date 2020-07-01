@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import BlockquoteAtom from "@components/atoms/blockquote/blockquote";
-import type { BlockquoteProps } from "@components/types";
+import type { BlockquoteProps } from "@components/atoms/atom-types";
 
 const Blockquote = ({
   children,

@@ -3,11 +3,8 @@ import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import cloneEmotion from "@utils/emotion-clone";
 import { cond, T, always, equals } from "ramda";
-import type {
-  AlertProps,
-  AlertStyles,
-  IconTypeElement,
-} from "@components/types";
+import type { IconTypeElement } from "@components/atoms/atom-types";
+import type { AlertProps, AlertStyles } from "@components/types";
 import InfoIcon from "./info.svg";
 
 const Alert = ({

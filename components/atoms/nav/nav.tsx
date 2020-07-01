@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
-import { NavProps } from "@components/types";
+import { NavProps } from "@components/atoms/atom-types";
 
 const Nav = ({ children, cssProp, ...props }: NavProps): ReactElement => {
   return (

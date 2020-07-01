@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { mount } from "cypress-react-unit-test";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import type { TdProps } from "@components/types";
+import type { TdProps } from "@components/atoms/atom-types";
 import Table from "../table";
 import Tr from "./tr";
 

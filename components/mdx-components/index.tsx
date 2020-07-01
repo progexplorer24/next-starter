@@ -35,7 +35,7 @@ import type {
   HrProps,
   ImgProps,
   CodeProps as InlineCodeProps,
-} from "@components/types";
+} from "@components/atoms/atom-types";
 
 const MdxComponents = {
   p: ({ children, ...props }: ParagraphProps): ReactElement => (

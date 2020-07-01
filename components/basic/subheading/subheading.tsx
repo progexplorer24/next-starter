@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import type { ParagraphProps } from "@components/types";
+import type { ParagraphProps } from "@components/atoms/atom-types";
 import P from "../p/p";
 
 const SubHeading = ({

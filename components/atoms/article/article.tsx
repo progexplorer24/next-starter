@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
-import { ArticleProps } from "@components/types";
+import { ArticleProps } from "@components/atoms/atom-types";
 
 const Article = ({
   children,

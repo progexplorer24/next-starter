@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
-import type { PreProps } from "@components/types";
+import type { PreProps } from "@components/atoms/atom-types";
 
 const Pre = ({ children, cssProp, ...props }: PreProps): ReactElement => {
   return (

@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import type { TrProps } from "@components/types";
+import type { TrProps } from "@components/atoms/atom-types";
 
 const Tr = ({ children, cssProp, ...props }: TrProps): ReactElement => {
   return (

@@ -7,7 +7,7 @@ import Thead from "@components/atoms/table/thead/thead";
 import Th from "@components/atoms/table/th/th";
 import Tbody from "@components/atoms/table/tbody/tbody";
 import Tr from "@components/atoms/table/tr/tr";
-import type { TableProps } from "@components/types";
+import type { TableProps } from "@components/atoms/atom-types";
 import LeftCol from "./left-col/left-col";
 import RightCol from "./right-col/right-col";
 

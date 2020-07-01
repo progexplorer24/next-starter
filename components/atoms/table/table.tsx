@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import type { TableProps } from "@components/types";
+import type { TableProps } from "@components/atoms/atom-types";
 
 const Table = ({ children, cssProp, ...props }: TableProps): ReactElement => (
   <table

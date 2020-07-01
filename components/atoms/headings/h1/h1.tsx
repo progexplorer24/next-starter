@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
-import type { HeadingProps } from "@components/types";
+import type { HeadingProps } from "@components/atoms/atom-types";
 
 const H1 = ({ children, cssProp, ...props }: HeadingProps): ReactElement => {
   return (

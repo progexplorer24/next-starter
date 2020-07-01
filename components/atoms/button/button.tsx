@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import type { ButtonProps } from "@components/types";
+import type { ButtonProps } from "@components/atoms/atom-types";
 
 const Button = ({ children, cssProp, ...props }: ButtonProps): ReactElement => {
   return (

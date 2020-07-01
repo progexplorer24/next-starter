@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
-import type { CodeProps } from "@components/types";
+import type { CodeProps } from "@components/atoms/atom-types";
 import tw from "twin.macro";
 
 const Code = ({ children, cssProp, ...props }: CodeProps): ReactElement => {

@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
-import type { AsideProps } from "@components/types";
+import type { AsideProps } from "@components/atoms/atom-types";
 
 const Aside = ({ children, cssProp, ...props }: AsideProps): ReactElement => {
   return (

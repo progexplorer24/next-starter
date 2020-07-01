@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from "react";
 import { jsx } from "@emotion/core";
-import type { EmotionProps } from "@components/types";
+import type { EmotionProps } from "@components/atoms/atom-types";
 /**
 |--------------------------------------------------
 | This function was created based on this issues:
