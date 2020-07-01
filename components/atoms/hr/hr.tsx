@@ -1,17 +1,14 @@
 import React, { ReactElement } from "react";
 import tw from "twin.macro";
-import { css as emotionCss, SerializedStyles } from "@emotion/core";
+import { css as emotionCss } from "@emotion/core";
+import type { HrProps } from "@components/types";
 
-export type HrProps = {
-  css?: SerializedStyles;
-  className?: string;
-};
-
-const Hr = ({ css, ...props }: HrProps): ReactElement => {
+const Hr = ({ cssProp, ...props }: HrProps): ReactElement => {
   return (
-    /* !!-example-!!*/
-    <hr css={emotionCss([tw`my-10 border-t border-gray-300`])} {...props} />
-    /* @@-example-@@*/
+    <hr
+      css={emotionCss([tw`my-10 border-t border-gray-300`, cssProp])}
+      {...props}
+    />
   );
 };
 

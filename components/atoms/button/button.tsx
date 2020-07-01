@@ -1,12 +1,7 @@
-import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  cssProp?: SerializedStyles;
-  className?: string;
-  children: ReactNode;
-};
+import type { ButtonProps } from "@components/types";
 
 const Button = ({ children, cssProp, ...props }: ButtonProps): ReactElement => {
   return (

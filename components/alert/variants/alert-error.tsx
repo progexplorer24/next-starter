@@ -3,14 +3,19 @@ import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import cloneEmotion from "@utils/emotion-clone";
 import { equals, always, T, cond } from "ramda";
-import Alert, { AlertProps, IconTypeElement, AlertStyles } from "../alert";
+import type {
+  AlertProps,
+  AlertStyles,
+  IconTypeElement,
+} from "@components/types";
+import Alert from "../alert";
 import ErrorIcon from "../error.svg";
 
 const AlertError = ({
   children,
   icon = <ErrorIcon />,
   type = "default",
-  css,
+  cssProp,
   ...props
 }: AlertProps): ReactElement => {
   const { iconStyles, alertStyles } = cond<string, AlertStyles>([
@@ -39,6 +44,7 @@ const AlertError = ({
 
   const styledIcon = icon
     ? (cloneEmotion(icon, {
+        ...icon.props,
         css: emotionCss([iconStyles]),
       }) as IconTypeElement)
     : false;
@@ -48,7 +54,7 @@ const AlertError = ({
       icon={styledIcon}
       type={type}
       {...props}
-      css={emotionCss([alertStyles, css])}
+      css={emotionCss([alertStyles, cssProp])}
     >
       {children}
     </Alert>

@@ -1,29 +1,18 @@
-import React, { ReactNode, ReactElement } from "react";
-import { css as emotionCss, SerializedStyles } from "@emotion/core";
-import tw, { TwStyle } from "twin.macro";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import tw from "twin.macro";
 import cloneEmotion from "@utils/emotion-clone";
 import { cond, T, always, equals } from "ramda";
+import type {
+  AlertProps,
+  AlertStyles,
+  IconTypeElement,
+} from "@components/types";
 import InfoIcon from "./info.svg";
-
-export type AlertStyles = {
-  iconStyles?: TwStyle | SerializedStyles;
-  alertStyles?: TwStyle | SerializedStyles;
-};
-
-export type IconTypeElement = ReactElement<
-  EmotionProps,
-  (props: EmotionProps) => ReactElement
->;
-
-export type AlertProps = EmotionProps & {
-  icon?: IconTypeElement | false;
-  type?: "outlined" | "filled" | "default";
-  children: ReactNode;
-};
 
 const Alert = ({
   children,
-  css,
+  cssProp,
   icon = <InfoIcon />,
   type = "default",
   ...props
@@ -54,6 +43,7 @@ const Alert = ({
 
   const renderIcon = (iconElement: IconTypeElement) => {
     const iconStyled = cloneEmotion(iconElement, {
+      ...iconElement.props,
       css: emotionCss([
         tw`w-5 h-5 fill-current`,
         iconStyles,
@@ -71,7 +61,7 @@ const Alert = ({
       css={emotionCss([
         tw`flex w-full px-4 py-3 mt-4 rounded-md`,
         alertStyles,
-        css,
+        cssProp,
       ])}
     >
       {icon ? renderIcon(icon) : undefined}

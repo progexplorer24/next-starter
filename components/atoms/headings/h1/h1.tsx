@@ -1,11 +1,10 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import type { HeadingProps } from "@components/types";
 
-import type { HeadingProps } from "../types";
-
-const H1 = ({ children, css, ...props }: HeadingProps): ReactElement => {
+const H1 = ({ children, cssProp, ...props }: HeadingProps): ReactElement => {
   return (
-    <h1 css={emotionCss([css])} {...props}>
+    <h1 css={emotionCss([cssProp])} {...props}>
       {children}
     </h1>
   );

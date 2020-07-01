@@ -1,12 +1,13 @@
 import React, { ReactElement } from "react";
 import { TwStyle } from "twin.macro";
 import { v4 as uuid } from "uuid";
-import Table, { TableProps } from "@components/atoms/table/table";
+import { toPairs } from "ramda";
+import Table from "@components/atoms/table/table";
 import Thead from "@components/atoms/table/thead/thead";
 import Th from "@components/atoms/table/th/th";
 import Tbody from "@components/atoms/table/tbody/tbody";
 import Tr from "@components/atoms/table/tr/tr";
-import { toPairs } from "ramda";
+import type { TableProps } from "@components/types";
 import LeftCol from "./left-col/left-col";
 import RightCol from "./right-col/right-col";
 

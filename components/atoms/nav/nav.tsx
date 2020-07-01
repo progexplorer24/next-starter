@@ -1,15 +1,10 @@
-import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import { NavProps } from "@components/types";
 
-type NavProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children: ReactNode;
-};
-
-const Nav = ({ children, css, ...props }: NavProps): ReactElement => {
+const Nav = ({ children, cssProp, ...props }: NavProps): ReactElement => {
   return (
-    <nav {...props} css={emotionCss([css])}>
+    <nav {...props} css={emotionCss([cssProp])}>
       {children}
     </nav>
   );

@@ -1,18 +1,19 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import AtomLi, { LiProps } from "@components/atoms/lists/li/li";
+import AtomLi from "@components/atoms/lists/li/li";
+import type { LiProps } from "@components/types";
 
 const Li = ({
   children,
   listDecoration,
-  css,
+  cssProp,
   ...props
 }: LiProps): ReactElement => {
   return (
     <AtomLi
       {...props}
-      css={emotionCss([tw`mt-2 text-lg font-thin text-gray-700`, css])}
+      css={emotionCss([tw`mt-2 text-lg font-thin text-gray-700`, cssProp])}
     >
       {typeof listDecoration !== undefined ? listDecoration : undefined}
       {children}

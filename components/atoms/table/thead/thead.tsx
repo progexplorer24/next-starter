@@ -1,18 +1,10 @@
 import React, { ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
-import { TrProps } from "../tr/tr";
+import { css as emotionCss } from "@emotion/core";
+import type { TheadProps } from "@components/types";
 
-export type TheadProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children?:
-    | ReactElement<TrProps, (props: TrProps) => ReactElement>
-    | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
-};
-
-const Thead = ({ children, css, ...props }: TheadProps): ReactElement => {
+const Thead = ({ children, cssProp, ...props }: TheadProps): ReactElement => {
   return (
-    <thead {...props} css={emotionCss([css])}>
+    <thead {...props} css={emotionCss([cssProp])}>
       {children}
     </thead>
   );

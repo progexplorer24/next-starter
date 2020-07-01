@@ -1,16 +1,11 @@
-import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
+import type { TdProps } from "@components/types";
 
-export type TdProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children: ReactNode;
-};
-
-const Td = ({ children, css, ...props }: TdProps): ReactElement => {
+const Td = ({ children, cssProp, ...props }: TdProps): ReactElement => {
   return (
-    <td css={emotionCss([tw`p-2`, css])} {...props}>
+    <td css={emotionCss([tw`p-2`, cssProp])} {...props}>
       {children}
     </td>
   );

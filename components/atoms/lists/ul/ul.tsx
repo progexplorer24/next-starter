@@ -1,23 +1,11 @@
-import React, { ReactElement, FunctionComponentElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import { LiProps } from "../li/li";
+import type { UlProps } from "@components/types";
 
-export type UlProps = {
-  css?: SerializedStyles;
-  className?: string;
-  icon?: ReactElement<
-    { css?: SerializedStyles },
-    (props: { css?: SerializedStyles }) => ReactElement
-  >;
-  children:
-    | FunctionComponentElement<LiProps>
-    | FunctionComponentElement<LiProps>[];
-};
-
-const Ul = ({ children, css, ...props }: UlProps): ReactElement => {
+const Ul = ({ children, cssProp, ...props }: UlProps): ReactElement => {
   return (
-    <ul {...props} css={emotionCss([tw`mt-6`, css])}>
+    <ul {...props} css={emotionCss([tw`mt-6`, cssProp])}>
       {children}
     </ul>
   );

@@ -1,15 +1,10 @@
-import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import { AbbrProps } from "@components/types";
 
-type AbbrProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children: ReactNode;
-};
-
-const Abbr = ({ children, css, ...props }: AbbrProps): ReactElement => {
+const Abbr = ({ children, cssProp, ...props }: AbbrProps): ReactElement => {
   return (
-    <abbr {...props} css={emotionCss([css])}>
+    <abbr {...props} css={emotionCss([cssProp])}>
       {children}
     </abbr>
   );

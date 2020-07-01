@@ -1,15 +1,9 @@
 import React, { ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import { css as emotionCss } from "@emotion/core";
+import type { ImgProps } from "@components/types";
 
-export type ImgProps = {
-  css?: SerializedStyles;
-  className?: string;
-  alt: string;
-  src: string;
-};
-
-const Img = ({ alt = "", src, css, ...props }: ImgProps): ReactElement => {
-  return <img alt={alt} src={src} css={emotionCss([css])} {...props} />;
+const Img = ({ alt = "", src, cssProp, ...props }: ImgProps): ReactElement => {
+  return <img alt={alt} src={src} css={emotionCss([cssProp])} {...props} />;
 };
 
 export default Img;

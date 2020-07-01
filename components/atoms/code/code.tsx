@@ -1,16 +1,11 @@
-import React, { ReactNode, ReactElement } from "react";
-import { css as emotionCss, SerializedStyles } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import type { CodeProps } from "@components/types";
 import tw from "twin.macro";
 
-export type CodeProps = {
-  css?: SerializedStyles;
-  children: ReactNode;
-  className?: string;
-};
-
-const Code = ({ children, css, ...props }: CodeProps): ReactElement => {
+const Code = ({ children, cssProp, ...props }: CodeProps): ReactElement => {
   return (
-    <code css={emotionCss([tw`font-mono`, css])} {...props}>
+    <code css={emotionCss([tw`font-mono`, cssProp])} {...props}>
       {children}
     </code>
   );

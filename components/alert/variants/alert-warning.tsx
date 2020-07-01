@@ -3,7 +3,12 @@ import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import cloneEmotion from "@utils/emotion-clone";
 import { cond, equals, always, T } from "ramda";
-import Alert, { AlertProps, IconTypeElement, AlertStyles } from "../alert";
+import type {
+  AlertProps,
+  AlertStyles,
+  IconTypeElement,
+} from "@components/types";
+import Alert from "../alert";
 import WarningIcon from "../warning.svg";
 
 const AlertWarning = ({
@@ -39,6 +44,7 @@ const AlertWarning = ({
 
   const styledIcon = icon
     ? (cloneEmotion(icon, {
+        ...icon.props,
         css: emotionCss([iconStyles, icon.props.css]),
       }) as IconTypeElement)
     : false;

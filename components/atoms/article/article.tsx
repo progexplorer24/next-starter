@@ -1,15 +1,14 @@
-import React, { ReactNode } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import { ArticleProps } from "@components/types";
 
-type ArticleProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children: ReactNode;
-};
-
-const Article = ({ children, css, ...props }: ArticleProps): JSX.Element => {
+const Article = ({
+  children,
+  cssProp,
+  ...props
+}: ArticleProps): ReactElement => {
   return (
-    <article {...props} css={emotionCss([css])}>
+    <article {...props} css={emotionCss([cssProp])}>
       {children}
     </article>
   );
