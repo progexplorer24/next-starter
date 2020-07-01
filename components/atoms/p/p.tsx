@@ -1,15 +1,10 @@
-import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import type { ParagraphProps } from "@components/types";
 
-export type ParagraphProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children: ReactNode;
-};
-
-const P = ({ children, css, ...props }: ParagraphProps): ReactElement => {
+const P = ({ children, cssProp, ...props }: ParagraphProps): ReactElement => {
   return (
-    <p css={emotionCss([css])} {...props}>
+    <p css={emotionCss([cssProp])} {...props}>
       {children}
     </p>
   );

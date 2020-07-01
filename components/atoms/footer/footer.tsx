@@ -1,15 +1,10 @@
-import React, { ReactNode } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import { FooterProps } from "@components/types";
 
-type FooterProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children: ReactNode;
-};
-
-const Footer = ({ children, css, ...props }: FooterProps): JSX.Element => {
+const Footer = ({ children, cssProp, ...props }: FooterProps): ReactElement => {
   return (
-    <footer {...props} css={emotionCss([css])}>
+    <footer {...props} css={emotionCss([cssProp])}>
       {children}
     </footer>
   );

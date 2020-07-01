@@ -1,22 +1,12 @@
 import React, { ReactElement } from "react";
-import { css as emotionCss, SerializedStyles } from "@emotion/core";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-
-export type BlockquoteProps = {
-  children: React.ReactElement<
-    { css?: SerializedStyles; hello: string[] },
-    (props: unknown) => ReactElement
-  >;
-  css?: SerializedStyles;
-  className?: string;
-  author?: string;
-  cite?: string;
-};
+import { BlockquoteProps } from "@components/types";
 
 const Blockquote = ({
   children,
   cite,
-  css,
+  cssProp,
   ...props
 }: BlockquoteProps): ReactElement => {
   const zeroMaringOnParagraph = emotionCss`
@@ -31,7 +21,7 @@ const Blockquote = ({
     <blockquote
       css={emotionCss([
         tw`py-4 pl-6 mt-6 text-lg break-words bg-gray-200 border-l-4 border-gray-600`,
-        css,
+        cssProp,
       ])}
       cite={typeof cite === "undefined" ? undefined : cite}
       {...props}

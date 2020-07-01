@@ -1,18 +1,10 @@
 import React, { ReactElement } from "react";
-import { css as emotionCss, SerializedStyles } from "@emotion/core";
-import type { TrProps } from "../tr/tr";
+import { css as emotionCss } from "@emotion/core";
+import type { TbodyProps } from "@components/types";
 
-export type TbodyProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children?:
-    | ReactElement<TrProps, (props: TrProps) => ReactElement>
-    | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
-};
-
-const Tbody = ({ children, css, ...props }: TbodyProps): ReactElement => {
+const Tbody = ({ children, cssProp, ...props }: TbodyProps): ReactElement => {
   return (
-    <tbody css={emotionCss([css])} {...props}>
+    <tbody css={emotionCss([cssProp])} {...props}>
       {children}
     </tbody>
   );

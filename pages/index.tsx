@@ -17,7 +17,6 @@ import MainContainer from "layouts/main-container";
 
 import Nav from "@components/nav/nav";
 import A from "@components/atoms/a/a";
-import NextLink from "@components/atoms/next-link/next-link";
 import Showcase from "@components/docs/showcase";
 // import ColorPill from "@components/docs/color-pill/color-pill";
 
@@ -119,7 +118,6 @@ const Home: NextPage<HomeProps> = () => {
 
         <Showcase code="Hello" />
 
-        <NextLink href="/all-mdx-components">All Mdx components</NextLink>
         <A
           css={css`
             ${tw`block`}

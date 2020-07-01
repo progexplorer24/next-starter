@@ -2,8 +2,8 @@ import React, { ReactElement } from "react";
 import { mount } from "cypress-react-unit-test";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
+import type { TrProps } from "@components/types";
 import Table from "./table";
-import type { TrProps } from "./tr/tr";
 
 before(() => {
   cy.addGlobalStyles();

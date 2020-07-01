@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from "react";
 import { jsx } from "@emotion/core";
-
+import type { EmotionProps } from "@components/types";
 /**
 |--------------------------------------------------
 | This function was created based on this issues:
@@ -10,9 +10,9 @@ import { jsx } from "@emotion/core";
 |--------------------------------------------------
 */
 
-const emotionClone = (
-  element: ReactElement<EmotionProps, (props: EmotionProps) => ReactElement>,
-  config: EmotionProps,
+const emotionClone = <T extends EmotionProps>(
+  element: ReactElement<T, (props: T) => ReactElement>,
+  config: T,
   children?: ReactNode
 ): ReactElement => {
   return jsx(

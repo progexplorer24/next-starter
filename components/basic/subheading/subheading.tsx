@@ -1,21 +1,16 @@
-import React, { ReactNode } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
+import type { ParagraphProps } from "@components/types";
 import P from "../p/p";
-
-type SubHeadingProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children: ReactNode;
-};
 
 const SubHeading = ({
   children,
-  css,
+  cssProp,
   ...props
-}: SubHeadingProps): JSX.Element => {
+}: ParagraphProps): ReactElement => {
   return (
-    <P {...props} css={emotionCss([tw`mt-0 mb-8 font-bold`, css])}>
+    <P {...props} css={emotionCss([tw`mt-0 mb-8 font-bold`, cssProp])}>
       {children}
     </P>
   );

@@ -1,12 +1,13 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import AtomOl, { OlProps } from "@components/atoms/lists/ol/ol";
+import AtomOl from "@components/atoms/lists/ol/ol";
+import type { OlProps } from "@components/types";
 import Numeration from "./numeration/numeration";
 
-const Ol = ({ children, css, ...props }: OlProps): ReactElement => {
+const Ol = ({ children, cssProp, ...props }: OlProps): ReactElement => {
   return (
-    <AtomOl css={emotionCss([tw`mt-6`, css])} {...props}>
+    <AtomOl css={emotionCss([tw`mt-6`, cssProp])} {...props}>
       {React.Children.map(children, (child, i) =>
         React.cloneElement(child, {
           listDecoration: (

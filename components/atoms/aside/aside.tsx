@@ -1,15 +1,10 @@
-import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import type { AsideProps } from "@components/types";
 
-type AsideProps = {
-  css?: SerializedStyles;
-  className?: string;
-  children: ReactNode;
-};
-
-const Aside = ({ children, css, ...props }: AsideProps): ReactElement => {
+const Aside = ({ children, cssProp, ...props }: AsideProps): ReactElement => {
   return (
-    <aside {...props} css={emotionCss([css])}>
+    <aside {...props} css={emotionCss([cssProp])}>
       {children}
     </aside>
   );

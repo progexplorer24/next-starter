@@ -2,11 +2,8 @@ import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import colors from "@design/design-tokens/colors";
-import Hr, { HrProps } from "./atoms/hr/hr";
-
-export type TextHRProps = HrProps & {
-  dataContent?: string;
-};
+import Hr from "./atoms/hr/hr";
+import type { TextHRProps } from "./types";
 
 const TextHr = ({ dataContent, ...props }: TextHRProps): ReactElement => {
   const createFadingEffect = emotionCss`

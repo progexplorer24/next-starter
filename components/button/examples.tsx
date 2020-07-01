@@ -12,6 +12,7 @@ import BookmarkIcon from "./bookmark.svg";
 import DownloadIcon from "./download.svg";
 import IconButton from "./variants/icon-button";
 import VolumeOffIcon from "./volume-off.svg";
+import { denseButton } from "./styles";
 
 export const Basic = (): ReactElement => (
   <div>
@@ -96,35 +97,54 @@ export const Priority = (): ReactElement => {
 export const Filled = (): ReactElement => {
   return (
     <div>
-      <Button type="filled" css={emotionCss([tw`m-4`])}>
+      <Button variant="filled" css={emotionCss([tw`m-4`])}>
         Filled
       </Button>
-      <Button type="filled" css={emotionCss([tw`m-4 bg-red-700`])}>
+      <Button variant="filled" css={emotionCss([tw`m-4 bg-red-700`])}>
         Filled
       </Button>
-      <Button type="filled" css={emotionCss([tw`m-4 bg-green-700`])}>
+      <Button variant="filled" css={emotionCss([tw`m-4 bg-green-700`])}>
         Filled
       </Button>
-      <Button type="filled" css={emotionCss([tw`m-4 bg-blue-700`])}>
+      <Button variant="filled" css={emotionCss([tw`m-4 bg-blue-700`])}>
         Filled
       </Button>
-      <Button type="filled" css={emotionCss([tw`m-4 bg-orange-700`])}>
+      <Button variant="filled" css={emotionCss([tw`m-4 bg-orange-700`])}>
         Filled
       </Button>
-      <Button type="filled" css={emotionCss([tw`m-4 bg-yellow-800`])}>
+      <Button variant="filled" css={emotionCss([tw`m-4 bg-yellow-800`])}>
         Filled
       </Button>
-      <Button type="filled" css={emotionCss([tw`m-4 bg-teal-700`])}>
+      <Button
+        variant="filled"
+        css={emotionCss([tw`m-4 bg-teal-700`, denseButton])}
+      >
         Filled
       </Button>
-      <Button type="filled" css={emotionCss([tw`m-4 bg-purple-700`])}>
+      <Button
+        variant="filled"
+        css={emotionCss([tw`m-4 bg-purple-700`, denseButton])}
+      >
         Filled
       </Button>
-      <Button type="filled" css={emotionCss([tw`m-4 bg-indigo-700`])}>
+      <Button
+        variant="filled"
+        css={emotionCss([tw`m-4 bg-indigo-700`, denseButton])}
+      >
         Filled
       </Button>
-      <Button type="filled" css={emotionCss([tw`m-4 bg-pink-700`])}>
+      <Button
+        variant="filled"
+        css={emotionCss([tw`m-4 bg-pink-700`, denseButton])}
+      >
         Filled
+      </Button>
+      <Button
+        variant="filled"
+        css={emotionCss([tw`m-4 text-white bg-pink-700`, denseButton])}
+        disabled
+      >
+        Disabled
       </Button>
     </div>
   );
@@ -133,34 +153,37 @@ export const Filled = (): ReactElement => {
 export const Text = (): ReactElement => {
   return (
     <div>
-      <Button type="text" css={emotionCss([tw`m-4`])}>
+      <Button variant="text" css={emotionCss([tw`m-4`])}>
         Text button
       </Button>
-      <Button type="text" css={emotionCss([tw`m-4 text-red-700`])}>
+      <Button variant="text" css={emotionCss([tw`m-4 text-red-700`])}>
         Text button
       </Button>
-      <Button type="text" css={emotionCss([tw`m-4 text-green-800`])}>
+      <Button variant="text" css={emotionCss([tw`m-4 text-green-800`])}>
         Text button
       </Button>
-      <Button type="text" css={emotionCss([tw`m-4 text-blue-700`])}>
+      <Button variant="text" css={emotionCss([tw`m-4 text-blue-700`])}>
         Text button
       </Button>
-      <Button type="text" css={emotionCss([tw`m-4 text-orange-800`])}>
+      <Button variant="text" css={emotionCss([tw`m-4 text-orange-800`])}>
         Text button
       </Button>
-      <Button type="text" css={emotionCss([tw`m-4 text-yellow-800`])}>
+      <Button variant="text" css={emotionCss([tw`m-4 text-yellow-800`])}>
         Text button
       </Button>
-      <Button type="text" css={emotionCss([tw`m-4 text-teal-700`])}>
+      <Button variant="text" css={emotionCss([tw`m-4 text-teal-700`])}>
         Text button
       </Button>
-      <Button type="text" css={emotionCss([tw`m-4 text-purple-700`])}>
+      <Button variant="text" css={emotionCss([tw`m-4 text-purple-700`])}>
         Text button
       </Button>
-      <Button type="text" css={emotionCss([tw`m-4 text-indigo-700`])}>
+      <Button variant="text" css={emotionCss([tw`m-4 text-indigo-700`])}>
         Text button
       </Button>
-      <Button type="text" css={emotionCss([tw`m-4 text-pink-700`])}>
+      <Button variant="text" css={emotionCss([tw`m-4 text-pink-700`])}>
+        Text button
+      </Button>
+      <Button variant="text" disabled css={emotionCss([tw`m-4 text-pink-700`])}>
         Text button
       </Button>
     </div>
@@ -170,62 +193,75 @@ export const Text = (): ReactElement => {
 export const Outlined = (): ReactElement => {
   return (
     <div>
-      <Button type="outlined" css={emotionCss([tw`m-4`])}>
+      <Button variant="outlined" css={emotionCss([tw`m-4`])}>
         Outlined
       </Button>
       <Button
-        type="outlined"
+        variant="outlined"
         css={emotionCss([tw`m-4 text-red-700 border-red-300`])}
       >
         Outlined
       </Button>
       <Button
-        type="outlined"
+        variant="outlined"
         css={emotionCss([tw`m-4 text-green-800 border-green-300`])}
       >
         Outlined
       </Button>
       <Button
-        type="outlined"
+        variant="outlined"
         css={emotionCss([tw`m-4 text-blue-700 border-blue-300`])}
       >
         Outlined
       </Button>
       <Button
-        type="outlined"
+        variant="outlined"
         css={emotionCss([tw`m-4 text-orange-800 border-orange-300`])}
       >
         Outlined
       </Button>
       <Button
-        type="outlined"
+        variant="outlined"
         css={emotionCss([tw`m-4 text-yellow-800 border-yellow-400`])}
       >
         Outlined
       </Button>
       <Button
-        type="outlined"
+        variant="outlined"
         css={emotionCss([tw`m-4 text-teal-700 border-teal-400`])}
       >
         Outlined
       </Button>
       <Button
-        type="outlined"
-        css={emotionCss([tw`m-4 text-purple-700 border-purple-300`])}
+        variant="outlined"
+        css={emotionCss([
+          tw`m-4 text-purple-700 border-purple-300`,
+          denseButton,
+        ])}
       >
         Outlined
       </Button>
       <Button
-        type="outlined"
-        css={emotionCss([tw`m-4 text-indigo-700 border-indigo-300`])}
+        variant="outlined"
+        css={emotionCss([
+          tw`m-4 text-indigo-700 border-indigo-300`,
+          denseButton,
+        ])}
       >
         Outlined
       </Button>
       <Button
-        type="outlined"
-        css={emotionCss([tw`m-4 text-pink-700 border-pink-300`])}
+        variant="outlined"
+        css={emotionCss([tw`m-4 text-pink-700 border-pink-300`, denseButton])}
       >
         Outlined
+      </Button>
+      <Button
+        variant="outlined"
+        css={emotionCss([tw`m-4 text-pink-700 border-pink-300`, denseButton])}
+        disabled
+      >
+        Disabled
       </Button>
     </div>
   );
@@ -235,68 +271,85 @@ export const ButtonsWithIcons = (): ReactElement => {
   return (
     <div css={emotionCss([tw`flex flex-wrap align-baseline`])}>
       <Button
-        type="filled"
-        css={emotionCss([tw`inline-flex items-center justify-center m-4`])}
+        variant="filled"
+        css={emotionCss([
+          tw`inline-flex items-center justify-center m-4`,
+          denseButton,
+        ])}
       >
         Send
         <SendIcon
-          css={emotionCss([tw`w-4 h-4 ml-2 text-white fill-current`])}
+          css={emotionCss([tw`w-4 h-4 ml-2 text-current fill-current`])}
         />
       </Button>
       <Button
-        type="filled"
+        variant="filled"
         css={emotionCss([
           tw`inline-flex items-center justify-center m-4 bg-red-700`,
         ])}
       >
         <FavouriteIcon
-          css={emotionCss([tw`w-4 h-4 mr-2 text-white fill-current`])}
+          css={emotionCss([tw`w-4 h-4 mr-2 text-current fill-current`])}
         />
         favourite
       </Button>
       <Button
-        type="outlined"
+        variant="outlined"
         css={emotionCss([
           tw`inline-flex items-center justify-center m-4 text-blue-700 border-blue-400`,
+          denseButton,
         ])}
       >
         settings
         <SettingsIcon
-          css={emotionCss([tw`w-4 h-4 ml-2 text-blue-700 fill-current`])}
+          css={emotionCss([tw`w-4 h-4 ml-2 text-current fill-current`])}
         />
       </Button>
       <Button
-        type="outlined"
+        variant="outlined"
         css={emotionCss([
           tw`inline-flex items-center justify-center m-4 text-red-700 border-red-300`,
         ])}
       >
         <DeleteIcon
-          css={emotionCss([tw`w-4 h-4 mr-2 text-red-700 fill-current `])}
+          css={emotionCss([tw`w-4 h-4 mr-2 text-current fill-current `])}
         />
         delete
       </Button>
       <Button
-        type="text"
+        variant="text"
         css={emotionCss([
           tw`inline-flex items-center justify-center m-4 text-teal-600 bg-gray-100`,
         ])}
       >
         upload
         <UploadIcon
-          css={emotionCss([tw`w-4 h-4 ml-2 text-teal-700 fill-current`])}
+          css={emotionCss([tw`w-4 h-4 ml-2 text-current fill-current`])}
         />
       </Button>
       <Button
-        type="text"
+        variant="text"
         css={emotionCss([
           tw`inline-flex items-center justify-center m-4 text-pink-700`,
         ])}
       >
         <BookmarkIcon
-          css={emotionCss([tw`w-4 h-4 mr-2 text-pink-700 fill-current`])}
+          css={emotionCss([tw`w-4 h-4 mr-2 text-current fill-current`])}
         />
         bookmark
+      </Button>
+      <Button
+        variant="outlined"
+        disabled
+        css={emotionCss([
+          tw`inline-flex items-center justify-center m-4 text-blue-700 border-blue-400`,
+          denseButton,
+        ])}
+      >
+        settings
+        <SettingsIcon
+          css={emotionCss([tw`w-4 h-4 ml-2 text-current fill-current`])}
+        />
       </Button>
     </div>
   );
@@ -305,17 +358,26 @@ export const ButtonsWithIcons = (): ReactElement => {
 export const IconButtons = (): ReactElement => {
   return (
     <div>
-      <IconButton css={emotionCss([tw`m-4`])} label="delete">
-        <DeleteIcon css={emotionCss([tw`text-red-600`])} />
+      <IconButton css={emotionCss([tw`m-4 text-red-600`])} ariaLabel="delete">
+        <DeleteIcon />
       </IconButton>
-      <IconButton css={emotionCss([tw`m-4`])} label="settings">
-        <SettingsIcon css={emotionCss([tw`text-blue-500`])} />
+      <IconButton
+        css={emotionCss([tw`m-4 text-blue-500`])}
+        ariaLabel="settings"
+      >
+        <SettingsIcon />
       </IconButton>
-      <IconButton css={emotionCss([tw`m-4`])} label="download">
-        <DownloadIcon css={emotionCss([tw`text-teal-400`])} />
+      <IconButton
+        css={emotionCss([tw`m-4 text-teal-400`])}
+        ariaLabel="download"
+      >
+        <DownloadIcon />
       </IconButton>
-      <IconButton css={emotionCss([tw`m-4`])} label="volume-off">
-        <VolumeOffIcon css={emotionCss([tw`text-indigo-400`])} />
+      <IconButton
+        css={emotionCss([tw`m-4 text-indigo-400`])}
+        ariaLabel="volume-off"
+      >
+        <VolumeOffIcon />
       </IconButton>
     </div>
   );

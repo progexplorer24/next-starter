@@ -1,21 +1,15 @@
-import React, { ReactNode } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React from "react";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-
-export type AProps = {
-  css?: SerializedStyles;
-  className?: string;
-  href: string;
-  children: ReactNode;
-};
+import type { AProps } from "@components/types";
 
 const A = React.forwardRef<HTMLAnchorElement, AProps>(
-  ({ children, href, css, ...props }, ref) => {
+  ({ children, href, cssProp, ...props }, ref) => {
     return (
       <a
         ref={ref}
         href={href}
-        css={emotionCss([tw`font-bold underline cursor-pointer`, css])}
+        css={emotionCss([tw`font-bold underline cursor-pointer`, cssProp])}
         {...props}
       >
         {children}
