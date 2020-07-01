@@ -1,10 +1,9 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { css as emotionCss, ClassNames, SerializedStyles } from "@emotion/core";
 import tw, { TwStyle } from "twin.macro";
 import { cond, always, equals, T } from "ramda";
-import AtomButton, {
-  ButtonProps as AtomButtonProps,
-} from "../atoms/button/button";
+import type { ButtonProps as AtomButtonProps } from "@components/types";
+import AtomButton from "../atoms/button/button";
 import {
   disabledFilledButton,
   disabledTextButton,
@@ -13,7 +12,6 @@ import {
 
 type ButtonProps = AtomButtonProps & {
   variant?: "filled" | "default" | "text" | "outlined";
-  disabled?: boolean;
 };
 
 const Button = ({
@@ -23,7 +21,7 @@ const Button = ({
   disabled = false,
   variant = "default",
   ...props
-}: ButtonProps): JSX.Element => {
+}: ButtonProps): ReactElement => {
   const { buttonStyles, disabledStyles } = cond<
     string,
     {
