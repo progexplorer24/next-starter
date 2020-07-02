@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import Td from "@components/atoms/table/td/td";
+import Td from "@components/atoms/table-content/td/td";
 import type { TdProps } from "@components/atoms/atom-types";
 
 const RightCol = ({ children, cssProp, ...props }: TdProps): ReactElement => {

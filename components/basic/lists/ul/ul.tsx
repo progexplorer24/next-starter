@@ -1,9 +1,9 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, cloneElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import cloneEmotion from "@utils/emotion-clone";
-import AtomUl from "@components/atoms/lists/ul/ul";
+import AtomUl from "@components/atoms/text-content/ul/ul";
 import type { UlProps } from "@components/atoms/atom-types";
+import emotionClone from "@utils/emotion-clone";
 import RightArrow from "./right-arrow.svg";
 
 const Ul = ({
@@ -16,7 +16,7 @@ const Ul = ({
     ${tw`absolute top-0 left-0 w-5 h-5 mt-1 text-gray-600 fill-current`}
   `;
 
-  const iconWithStyles = cloneEmotion(icon, {
+  const iconWithStyles = emotionClone(icon, {
     ...icon.props,
     css: iconStyles,
   });
@@ -24,9 +24,9 @@ const Ul = ({
   return (
     <AtomUl css={emotionCss([tw`mt-6`, cssProp])} {...props}>
       {React.Children.map(children, (child) =>
-        React.cloneElement(child, {
+        cloneElement(child, {
+          cssProp: emotionCss([tw`relative pl-7`]),
           listDecoration: iconWithStyles,
-          css: emotionCss([tw`relative pl-7`]),
         })
       )}
     </AtomUl>

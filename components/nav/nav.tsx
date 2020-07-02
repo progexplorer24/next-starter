@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { SerializedStyles, css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import Link from "next/link";
-import A from "@components/atoms/a/a";
+import A from "@components/atoms/inline-text-semantics/a/a";
 
 type NavProps = {
   css?: SerializedStyles;

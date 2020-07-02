@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import Code from "@components/atoms/code/code";
+import Code from "@components/atoms/inline-text-semantics/code/code";
 import type { CodeProps } from "@components/atoms/atom-types";
 
 const InlineCode = ({

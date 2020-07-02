@@ -3,7 +3,7 @@ import { css as emotionCss, ClassNames, SerializedStyles } from "@emotion/core";
 import tw, { TwStyle } from "twin.macro";
 import { cond, always, equals, T } from "ramda";
 import type { ButtonProps as AtomButtonProps } from "@components/atoms/atom-types";
-import AtomButton from "../atoms/button/button";
+import AtomButton from "../atoms/forms/button/button";
 import {
   disabledFilledButton,
   disabledTextButton,

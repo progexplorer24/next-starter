@@ -3,33 +3,34 @@ import { css } from "@emotion/core";
 
 import tw from "twin.macro";
 import Icon from "@svg/icon-arrow-left.svg";
-import Table from "@components/atoms/table/table";
-import Thead from "@components/atoms/table/thead/thead";
-import Th from "@components/atoms/table/th/th";
-import Tr from "@components/atoms/table/tr/tr";
-import Tbody from "@components/atoms/table/tbody/tbody";
-import Td from "@components/atoms/table/td/td";
+import Table from "@components/atoms/table-content/table/table";
+import Thead from "@components/atoms/table-content/thead/thead";
+import Th from "@components/atoms/table-content/th/th";
+import Tr from "@components/atoms/table-content/tr/tr";
+import Tbody from "@components/atoms/table-content/tbody/tbody";
+import Td from "@components/atoms/table-content/td/td";
 import Ul from "@components/basic/lists/ul/ul";
 import Li from "@components/basic/lists/li/li";
 import TextHr from "@components/text-hr";
-import Img from "@components/atoms/img/img";
+import Img from "@components/atoms/multimedia/img/img";
 import MainContainer from "layouts/main-container";
 
 import Nav from "@components/nav/nav";
-import A from "@components/atoms/a/a";
+import A from "@components/atoms/inline-text-semantics/a/a";
 import Showcase from "@components/docs/showcase";
 // import ColorPill from "@components/docs/color-pill/color-pill";
 
 import RenderColorPalette from "@components/docs/render-color-palette/render-color-palette";
 import H1 from "@components/basic/h1/h1";
 import Ol from "@components/basic/lists/ol/ol";
-import Checkbox from "@components/atoms/form-elements/checkbox/checkbox";
-import Input from "@components/atoms/form-elements/input/input";
-import Multiselect from "@components/atoms/form-elements/multiselect/multiselect";
-import RadioButton from "@components/atoms/form-elements/radio-button/radio-button";
-import Select from "@components/atoms/form-elements/select/select";
-import Textarea from "@components/atoms/form-elements/textarea/textarea";
+import Checkbox from "@components/atoms/forms/checkbox/checkbox";
+import InputText from "@components/atoms/forms/input/input-text";
+import Multiselect from "@components/atoms/forms/multiselect/multiselect";
+import RadioButton from "@components/atoms/forms/radio-button/radio-button";
+import Select from "@components/atoms/forms/select/select";
+import Textarea from "@components/atoms/forms/textarea/textarea";
 import Alert from "@components/alert/alert";
+import InputEmail from "@components/atoms/forms/input/input-email";
 
 type HomeProps = Record<string, unknown>;
 
@@ -54,6 +55,9 @@ const Home: NextPage<HomeProps> = () => {
           <ColorPill twClass={tw`bg-red-800`} color="#FF3322" value="800" />
           <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
         </div> */}
+
+        <InputEmail />
+        <InputText />
 
         <Showcase code="string">
           <Alert>
@@ -96,7 +100,6 @@ const Home: NextPage<HomeProps> = () => {
         </Ol>
 
         <Checkbox id="test" name="horn" />
-        <Input />
         <Multiselect id="test" name="horn">
           <option>1</option>
           <option>2</option>

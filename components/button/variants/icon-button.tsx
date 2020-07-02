@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { SerializedStyles, css as emotionCss, ClassNames } from "@emotion/core";
 import tw from "twin.macro";
-import AtomButton from "@components/atoms/button/button";
+import AtomButton from "@components/atoms/forms/button/button";
 import emotionClone from "@utils/emotion-clone";
 import { IconTypeElement } from "@components/atoms/atom-types";
 import { disabledTextButton } from "../styles";

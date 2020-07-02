@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import H2Atom from "@components/atoms/headings/h2/h2";
+import H2Atom from "@components/atoms/content-sectioning/h2/h2";
 import type { HeadingProps } from "@components/atoms/atom-types";
 
 const H2 = ({ children, cssProp, ...props }: HeadingProps): ReactElement => (

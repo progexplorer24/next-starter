@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import AtomOl from "@components/atoms/lists/ol/ol";
+import AtomOl from "@components/atoms/text-content/ol/ol";
 import type { OlProps } from "@components/atoms/atom-types";
 import Numeration from "./numeration/numeration";
 
@@ -15,7 +15,7 @@ const Ol = ({ children, cssProp, ...props }: OlProps): ReactElement => {
               {i + 1}
             </Numeration>
           ),
-          css: emotionCss([tw`relative pl-7`]),
+          cssProp: emotionCss([tw`relative pl-7`]),
         })
       )}
     </AtomOl>

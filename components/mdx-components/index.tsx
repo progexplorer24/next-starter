@@ -8,13 +8,13 @@ import H5 from "@components/basic/h5/h5";
 import H6 from "@components/basic/h6/h6";
 import InlineCode from "@components/basic/inline-code/inline-code";
 import A from "@components/basic/a/a";
-import Table from "@components/atoms/table/table";
-import Tr from "@components/atoms/table/tr/tr";
+import Table from "@components/atoms/table-content/table/table";
+import Tr from "@components/atoms/table-content/tr/tr";
 import Ul from "@components/basic/lists/ul/ul";
 import Li from "@components/basic/lists/li/li";
 import Ol from "@components/basic/lists/ol/ol";
-import Hr from "@components/atoms/hr/hr";
-import Img from "@components/atoms/img/img";
+import Hr from "@components/atoms/text-content/hr/hr";
+import Img from "@components/atoms/multimedia/img/img";
 import Code, { CodeProps } from "@components/code/code";
 import Blockquote from "@components/basic/blockquote/blockquote";
 
