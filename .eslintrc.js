@@ -36,6 +36,13 @@ module.exports = {
     "jsx-a11y/label-has-associated-control": "off",
     "react/react-in-jsx-scope": "off",
     "unicorn/prevent-abbreviations": "off",
+    "jsx-a11y/media-has-caption": [
+      2,
+      {
+        audio: ["Audio"],
+        video: ["Video"],
+      },
+    ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
