@@ -1,8 +1,8 @@
 import { SerializedStyles } from "@emotion/core";
-import { ReactNode, ReactElement, FunctionComponentElement } from "react";
+import { ReactElement, FunctionComponentElement } from "react";
 
 /**
- * Partial Types
+ * --------- Helper Types -----------------------------------------------------
  */
 
 export type EmotionProps = {
@@ -20,174 +20,152 @@ export type IconTypeElement = ReactElement<
   (props: SVGSVGElement) => ReactElement
 >;
 
-// ======================================
-// ======================================
-
-type CssProp = {
+type Css = {
   css?: SerializedStyles;
 };
+
+type CssProp = {
+  cssProp?: SerializedStyles;
+};
+
+// ======================================
+// ======================================
 
 /**
  * --- ATOM ELEMENTS ------
  * This section includes all typings for atom elements
  */
 
-/**
- * Default HTML Component Type
- */
-
-export type StandardHtmlComponent = React.HTMLAttributes<HTMLElement> & {
-  cssProp?: SerializedStyles;
-  children: ReactNode;
-};
-
-/**
- * Anchor Types
- */
-
-export type AProps = {
-  cssProp?: SerializedStyles;
-  children: ReactNode;
-} & React.AnchorHTMLAttributes<HTMLAnchorElement>;
-
-/**
-|--------------------------------------------------
-| Address Types
-|--------------------------------------------------
-*/
-
+export type StandardHtmlComponent = React.HTMLAttributes<HTMLElement> & CssProp;
+export type AProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & CssProp;
 export type AddressProps = StandardHtmlComponent;
 
-/**
- * Abbr Types
- */
+export type AreaProps = Omit<
+  React.AreaHTMLAttributes<HTMLAreaElement>,
+  "alt" | "children"
+> &
+  CssProp & {
+    alt: string;
+  };
 
 export type AbbrProps = StandardHtmlComponent;
-
-/**
- * Article Types
- */
-
 export type ArticleProps = StandardHtmlComponent;
-
-/**
- * Aside Types
- */
-
 export type AsideProps = StandardHtmlComponent;
-
-/**
- * Blockquote Types
- */
+export type AudioProps = React.AudioHTMLAttributes<HTMLAudioElement> & CssProp;
 
 export type BlockquoteProps = Omit<
   React.BlockquoteHTMLAttributes<HTMLElement>,
   "children"
-> & {
-  children: ReactElement<CssProp>;
-  cssProp?: SerializedStyles;
-};
+> &
+  CssProp & {
+    children: ReactElement<Css>;
+  };
 
-/**
- * Button Types
- */
-
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  cssProp?: SerializedStyles;
-  children: ReactNode;
-};
-
-/**
- * Code Types
- */
-
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  CssProp;
+export type CanvasProps = React.CanvasHTMLAttributes<HTMLCanvasElement> &
+  CssProp;
+export type CaptionProps = StandardHtmlComponent;
+export type CiteProps = StandardHtmlComponent;
 export type CodeProps = StandardHtmlComponent;
 
-/**
- * Footer Types
- */
+export type ColProps = Omit<
+  React.ColHTMLAttributes<HTMLTableColElement>,
+  "children"
+> &
+  CssProp;
 
+export type ColgroupProps = Omit<
+  React.ColgroupHTMLAttributes<HTMLTableColElement>,
+  "children"
+> &
+  CssProp & {
+    children?: ColProps | ColProps[];
+  };
+
+export type DatalistProps = Omit<StandardHtmlComponent, "children"> &
+  CssProp & {
+    children?: OptionProps | OptionProps[];
+  };
+
+export type DdProps = StandardHtmlComponent;
+export type DelProps = React.DelHTMLAttributes<HTMLElement> & CssProp;
+export type DetailsProps = React.DetailsHTMLAttributes<HTMLDetailsElement> &
+  CssProp;
+export type DfnProps = StandardHtmlComponent;
+export type DialogProps = React.DialogHTMLAttributes<HTMLDialogElement> &
+  CssProp;
+export type DivProps = StandardHtmlComponent;
+export type DlProps = Omit<StandardHtmlComponent, "children"> & {
+  children?: DdProps | DtProps | (DdProps | DtProps)[];
+};
+export type DtProps = StandardHtmlComponent;
+export type EmProps = StandardHtmlComponent;
+export type FieldsetProps = React.FieldsetHTMLAttributes<HTMLFieldSetElement> &
+  CssProp;
+export type FigcaptionProps = StandardHtmlComponent;
+export type FigureProps = StandardHtmlComponent;
 export type FooterProps = StandardHtmlComponent;
-
-/**
- * Heading Types
- */
-
+export type FormProps = React.FormHTMLAttributes<HTMLFormElement> & CssProp;
+export type HeaderProps = StandardHtmlComponent;
 export type HeadingProps = StandardHtmlComponent;
-
-/**
- * Hr Types
- */
-
 export type HrProps = Omit<StandardHtmlComponent, "children">;
+export type IframeProps = React.IframeHTMLAttributes<HTMLIFrameElement> &
+  CssProp;
+export type ImgProps = React.ImgHTMLAttributes<HTMLImageElement> &
+  CssProp & {
+    src: string;
+  };
 
-/**
- * Image Types
- */
-
-export type ImgProps = React.ImgHTMLAttributes<HTMLImageElement> & {
-  cssProp?: SerializedStyles;
-  src: string;
-};
-
-/**
- * List Item Types
- */
-
-export type LiProps = React.LiHTMLAttributes<HTMLLIElement> & {
-  cssProp?: SerializedStyles;
-  children: ReactNode;
-  listDecoration?: JSX.Element;
-};
-
-/**
- * Main Types
- */
-
+export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & CssProp;
+export type InsProps = React.InsHTMLAttributes<HTMLElement> & CssProp;
+export type KbdProps = StandardHtmlComponent;
+export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & CssProp;
+export type LegendProps = StandardHtmlComponent;
+export type LiProps = React.LiHTMLAttributes<HTMLLIElement> &
+  CssProp & {
+    listDecoration?: JSX.Element;
+  };
 export type MainProps = StandardHtmlComponent;
-
-/**
- * Nav Types
- */
-
+export type MapProps = React.MapHTMLAttributes<HTMLMapElement> & CssProp;
+export type MarkProps = StandardHtmlComponent;
+export type MeterProps = React.MeterHTMLAttributes<HTMLMeterElement> & CssProp;
 export type NavProps = StandardHtmlComponent;
-
-/**
- * Ordered List Types
- */
 
 export type OlProps = Omit<
   React.OlHTMLAttributes<HTMLOListElement>,
   "children"
-> & {
-  cssProp?: SerializedStyles;
-  children:
-    | FunctionComponentElement<LiProps>
-    | FunctionComponentElement<LiProps>[];
-};
+> &
+  CssProp & {
+    children:
+      | FunctionComponentElement<LiProps>
+      | FunctionComponentElement<LiProps>[];
+  };
 
-/**
- * Paragraph Types
- */
-
+export type OptgroupProps = React.OptgroupHTMLAttributes<HTMLOptionElement> &
+  CssProp;
+export type OptionProps = React.OptionHTMLAttributes<HTMLOptionElement> &
+  CssProp;
 export type ParagraphProps = StandardHtmlComponent;
-
-/**
- * Preformatted Text Types
- */
-
+export type PcitureProps = StandardHtmlComponent;
 export type PreProps = StandardHtmlComponent;
-
-/**
- * Section Types
- */
-
+export type ProgressProps = React.ProgressHTMLAttributes<HTMLProgressElement> &
+  CssProp;
+export type QProps = React.QuoteHTMLAttributes<HTMLQuoteElement> & CssProp;
 export type SectionProps = StandardHtmlComponent;
 
-/**
- * Table Types
- */
+export type SourceProps = Omit<
+  React.SourceHTMLAttributes<HTMLSourceElement>,
+  "children"
+> &
+  CssProp;
 
+export type SpanProps = StandardHtmlComponent;
+export type StrongProps = StandardHtmlComponent;
+export type SubProps = StandardHtmlComponent;
+export type SupProps = StandardHtmlComponent;
+export type SummaryProps = StandardHtmlComponent;
+export type SvgProps = React.SVGProps<SVGSVGElement> & CssProp;
 export type TableProps = Omit<StandardHtmlComponent, "children"> & {
   cssProp?: SerializedStyles;
   children?:
@@ -201,10 +179,6 @@ export type TableProps = Omit<StandardHtmlComponent, "children"> & {
       >[];
 };
 
-/**
- * Tbody Types
- */
-
 export type TbodyProps = Omit<StandardHtmlComponent, "children"> & {
   cssProp?: SerializedStyles;
   children?:
@@ -212,27 +186,11 @@ export type TbodyProps = Omit<StandardHtmlComponent, "children"> & {
     | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
 };
 
-/**
- * Data Cell Types
- */
-
-export type TdProps = React.TdHTMLAttributes<HTMLTableDataCellElement> & {
-  cssProp?: SerializedStyles;
-  children: ReactNode;
-};
-
-/**
- * Header Cell Types
- */
-
-export type ThProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement> & {
-  cssProp?: SerializedStyles;
-  children: ReactNode;
-};
-
-/**
- * Grouped Header content Types
- */
+export type TdProps = React.TdHTMLAttributes<HTMLTableDataCellElement> &
+  CssProp;
+export type TfootProps = StandardHtmlComponent;
+export type ThProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement> &
+  CssProp;
 
 export type TheadProps = Omit<StandardHtmlComponent, "children"> & {
   cssProp?: SerializedStyles;
@@ -240,10 +198,7 @@ export type TheadProps = Omit<StandardHtmlComponent, "children"> & {
     | ReactElement<TrProps, (props: TrProps) => ReactElement>
     | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
 };
-
-/**
- * Table Row Types
- */
+export type TimeProps = React.TimeHTMLAttributes<HTMLTimeElement> & CssProp;
 
 export type TrProps = Omit<StandardHtmlComponent, "children"> & {
   cssProp?: SerializedStyles;
@@ -258,10 +213,13 @@ export type TrProps = Omit<StandardHtmlComponent, "children"> & {
       >[];
 };
 
-/**
- * Unordered List Types
- */
+export type TrackProps = Omit<
+  React.TrackHTMLAttributes<HTMLTrackElement>,
+  "children"
+> &
+  CssProp;
 
+export type UProps = StandardHtmlComponent;
 export type UlProps = Omit<StandardHtmlComponent, "children"> & {
   cssProp?: SerializedStyles;
   icon?: IconTypeElement;
@@ -269,6 +227,7 @@ export type UlProps = Omit<StandardHtmlComponent, "children"> & {
     | FunctionComponentElement<LiProps>
     | FunctionComponentElement<LiProps>[];
 };
+export type VideoProps = React.VideoHTMLAttributes<HTMLVideoElement> & CssProp;
 
 // ======================================================================================================
 // ======================================================================================================
