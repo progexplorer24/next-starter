@@ -68,6 +68,7 @@ const Button = ({
           {...props}
           css={emotionCss([tw`px-4 py-2`, buttonStyles, cssProp])}
           className={css([className, disabledVariant])}
+          disabled={disabled}
         >
           {children}
         </AtomButton>
