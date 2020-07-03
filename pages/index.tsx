@@ -35,7 +35,6 @@ import InputEmail from "@components/atoms/forms/input/input-email";
 type HomeProps = Record<string, unknown>;
 
 const Home: NextPage<HomeProps> = () => {
-  // console.log(props);
   return (
     <main>
       <Nav />
