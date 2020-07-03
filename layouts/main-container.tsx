@@ -1,23 +1,21 @@
-import React, { FC, ReactNode } from "react";
-import { SerializedStyles, css } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
+import { MainProps } from "@components/atoms/atom-types";
+import Main from "@components/atoms/content-sectioning/main/main";
 
-type MainContainerProps = {
-  css?: SerializedStyles;
-  children: ReactNode;
-};
-
-const MainContainer: FC<MainContainerProps> = ({ children, ...props }) => {
+const MainContainer = ({
+  children,
+  cssProp,
+  ...props
+}: MainProps): ReactElement => {
   return (
-    <main
-      role="main"
-      css={css`
-        ${tw`max-w-3xl px-5 my-6 md:mx-auto `}
-      `}
+    <Main
+      cssProp={emotionCss([tw`max-w-3xl px-5 my-6 md:mx-auto`, cssProp])}
       {...props}
     >
       {children}
-    </main>
+    </Main>
   );
 };
 
