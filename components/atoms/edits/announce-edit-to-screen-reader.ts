@@ -4,8 +4,8 @@ type StartMsg = "deletion start" | "insertion start";
 type EndMsg = "insertion end" | "deletion end";
 
 const announceEdit = (startMsg: StartMsg, endMsg: EndMsg) => css`
-  del::before,
-  del::after {
+  &::before,
+  &::after {
     clip-path: inset(100%);
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
@@ -15,11 +15,11 @@ const announceEdit = (startMsg: StartMsg, endMsg: EndMsg) => css`
     width: 1px;
   }
 
-  del::before {
+  &::before {
     content: " [${startMsg}] ";
   }
 
-  del::after {
+  &::after {
     content: " [${endMsg}] ";
   }
 `;
