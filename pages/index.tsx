@@ -24,13 +24,10 @@ import RenderColorPalette from "@components/docs/render-color-palette/render-col
 import H1 from "@components/basic/h1/h1";
 import Ol from "@components/basic/lists/ol/ol";
 import Checkbox from "@components/atoms/forms/checkbox/checkbox";
-import InputText from "@components/atoms/forms/input/input-text";
 import Multiselect from "@components/atoms/forms/multiselect/multiselect";
 import RadioButton from "@components/atoms/forms/radio-button/radio-button";
-import Select from "@components/atoms/forms/select/select";
 import Textarea from "@components/atoms/forms/textarea/textarea";
 import Alert from "@components/alert/alert";
-import InputEmail from "@components/atoms/forms/input/input-email";
 
 type HomeProps = Record<string, unknown>;
 
@@ -55,8 +52,8 @@ const Home: NextPage<HomeProps> = () => {
           <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
         </div> */}
 
-        <InputEmail />
-        <InputText />
+        <RadioButton name="contact" id="1" value="1" css={css([tw`mr-4`])} />
+        <RadioButton name="contact" id="2" value="2" />
 
         <Showcase code="string">
           <Alert>
@@ -106,12 +103,7 @@ const Home: NextPage<HomeProps> = () => {
           <option>4</option>
         </Multiselect>
         <RadioButton id="test" name="horn" />
-        <Select id="test" name="horn">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-        </Select>
+
         <Textarea />
 
         <H1>Color Palette</H1>
