@@ -1,50 +1,37 @@
-import React, { ReactNode, ReactElement } from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import addFillColorToSvg from "@utils/add-fill-color-to-svg";
+import type { SelectProps } from "@components/atoms/atom-types";
+import emotionClone from "@utils/emotion-clone";
 import { addBasicFormStyling } from "../styles";
-
-type SelectProps = {
-  css?: SerializedStyles;
-  className?: string;
-  name: string;
-  id: string;
-  iconColor?: string;
-  children: ReactNode;
-};
-
-const svg = (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path
-      className="heroicon-ui"
-      d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"
-    />
-  </svg>
-);
+import ArrowIcon from "./arrow.svg";
 
 const Select = ({
   id,
   name,
   children,
-  iconColor = "#A0AEC0",
+  icon = <ArrowIcon />,
   ...props
 }: SelectProps): ReactElement => {
-  const selectStyles = emotionCss`
-     ${tw`pr-10`};
-        background-position: ${`right 0.5rem center`};
-        background-size: 1.5em 1.5em;
-        background-repeat: no-repeat;
-        background-image: url(${addFillColorToSvg(svg, iconColor)});
-  `;
+  const iconWithStyles = emotionClone(icon, {
+    ...icon.props,
+    css: emotionCss([
+      tw`absolute top-0 right-0 w-6 h-6 mr-2 text-gray-500 pointer-events-none fill-current`,
+    ]),
+  });
+
   return (
-    <select
-      name={name}
-      id={id}
-      {...props}
-      css={emotionCss([addBasicFormStyling, selectStyles])}
-    >
-      {children}
-    </select>
+    <span css={emotionCss([tw`relative`])}>
+      <select
+        name={name}
+        id={id}
+        {...props}
+        css={emotionCss([addBasicFormStyling])}
+      >
+        {children}
+      </select>
+      {iconWithStyles}
+    </span>
   );
 };
 
