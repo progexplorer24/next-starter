@@ -154,6 +154,11 @@ export type ProgressProps = React.ProgressHTMLAttributes<HTMLProgressElement> &
 export type QProps = React.QuoteHTMLAttributes<HTMLQuoteElement> & CssProp;
 export type SectionProps = StandardHtmlComponent;
 
+export type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement> &
+  CssProp & {
+    icon?: IconTypeElement;
+  };
+
 export type SourceProps = Omit<
   React.SourceHTMLAttributes<HTMLSourceElement>,
   "children"
