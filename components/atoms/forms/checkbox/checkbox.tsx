@@ -19,6 +19,16 @@ const svgIcon = (
   </svg>
 );
 
+/**
+ * # [MDN Documentation Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+ *
+ * `<input>` elements of type checkbox are rendered by default as boxes that are checked (ticked) when activated, like you might see in an
+ * official government paper form.
+ *
+ * ## Usage Notes
+ *
+ *
+ */
 const Checkbox = ({ svg = svgIcon, ...props }: CheckboxProps): ReactElement => {
   return (
     <input
