@@ -25,8 +25,14 @@ const svgIcon = (
  * `<input>` elements of type checkbox are rendered by default as boxes that are checked (ticked) when activated, like you might see in an
  * official government paper form.
  *
- * ## Usage Notes
+ * ## Accessibility Concerns
  *
+ * ### Providing a bigger hit area for your checkboxes
+ *
+ * You can toggle a checkbox by clicking on its associated `<label>` element as well as on the checkbox itself. This is a really useful feature
+ * of HTML form labels that makes it easier to click the option you want, especially on small-screen devices like smartphones.
+ *
+ * Beyond accessibility, this is another good reason to properly set up `<label>` elements on your forms.
  *
  */
 const Checkbox = ({ svg = svgIcon, ...props }: CheckboxProps): ReactElement => {
