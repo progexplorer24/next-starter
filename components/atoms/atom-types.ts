@@ -102,7 +102,13 @@ export type DlProps = Omit<StandardHtmlComponent, "children"> & {
 export type DtProps = StandardHtmlComponent;
 export type EmProps = StandardHtmlComponent;
 export type FieldsetProps = React.FieldsetHTMLAttributes<HTMLFieldSetElement> &
-  CssProp;
+  CssProp & {
+    /**
+     * You must provide legend as an aria value becasue of bug in chromium
+     * [Issue](https://stackoverflow.com/questions/28078681/why-cant-fieldset-be-flex-containers/46085387#46085387)
+     */
+    ariaLegend: string;
+  };
 export type FigcaptionProps = StandardHtmlComponent;
 export type FigureProps = StandardHtmlComponent;
 export type FooterProps = StandardHtmlComponent;
@@ -121,7 +127,12 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & CssProp;
 export type InsProps = React.InsHTMLAttributes<HTMLElement> & CssProp;
 export type KbdProps = StandardHtmlComponent;
 export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & CssProp;
-export type LegendProps = StandardHtmlComponent;
+export type LegendProps = Omit<StandardHtmlComponent, "id"> & {
+  /**
+   * Id should be the same as aria-labelledby attribute on fieldset element
+   */
+  id: string;
+};
 export type LiProps = React.LiHTMLAttributes<HTMLLIElement> &
   CssProp & {
     listDecoration?: JSX.Element;
@@ -154,7 +165,10 @@ export type ProgressProps = React.ProgressHTMLAttributes<HTMLProgressElement> &
 export type QProps = React.QuoteHTMLAttributes<HTMLQuoteElement> & CssProp;
 export type SectionProps = StandardHtmlComponent;
 
-export type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement> &
+export type SelectProps = Omit<
+  React.SelectHTMLAttributes<HTMLSelectElement>,
+  "multiple"
+> &
   CssProp & {
     icon?: IconTypeElement;
   };
