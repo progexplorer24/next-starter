@@ -24,7 +24,6 @@ import RenderColorPalette from "@components/docs/render-color-palette/render-col
 import H1 from "@components/basic/h1/h1";
 import Ol from "@components/basic/lists/ol/ol";
 import Checkbox from "@components/atoms/forms/checkbox/checkbox";
-import Multiselect from "@components/atoms/forms/multiselect/multiselect";
 import RadioButton from "@components/atoms/forms/radio-button/radio-button";
 import Textarea from "@components/atoms/forms/textarea/textarea";
 import Alert from "@components/alert/alert";
@@ -96,12 +95,6 @@ const Home: NextPage<HomeProps> = () => {
         </Ol>
 
         <Checkbox id="test" name="horn" />
-        <Multiselect id="test" name="horn">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-        </Multiselect>
         <RadioButton id="test" name="horn" />
 
         <Textarea />
