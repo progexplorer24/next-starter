@@ -9,9 +9,9 @@ import type { QProps } from "@components/atoms/atom-types";
  * text in quotation marks. This element is intended for short quotations that don't require paragraph breaks; for long quotations use the
  * `<blockquote>` element.
  */
-const Q = ({ children, cssProp, ...props }: QProps): ReactElement => {
+const Q = ({ children, css, ...props }: QProps): ReactElement => {
   return (
-    <q {...props} css={emotionCss([cssProp])}>
+    <q {...props} css={emotionCss([css])}>
       {children}
     </q>
   );

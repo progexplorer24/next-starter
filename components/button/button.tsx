@@ -16,7 +16,6 @@ type ButtonProps = AtomButtonProps & {
 
 const Button = ({
   children,
-  cssProp,
   className,
   disabled = false,
   variant = "default",
@@ -66,7 +65,7 @@ const Button = ({
       {({ css }) => (
         <AtomButton
           {...props}
-          css={emotionCss([tw`px-4 py-2`, buttonStyles, cssProp])}
+          css={emotionCss([tw`px-4 py-2`, buttonStyles, props.css])}
           className={css([className, disabledVariant])}
           disabled={disabled}
         >

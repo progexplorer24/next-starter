@@ -5,28 +5,21 @@ import { ReactElement, FunctionComponentElement } from "react";
  * --------- Helper Types -----------------------------------------------------
  */
 
-export type EmotionProps = {
+type Css = {
   css?: SerializedStyles;
+};
+
+export type EmotionProps = Css & {
   className?: string;
   __EMOTION_TYPE_PLEASE_DO_NOT_USE__?: (props: EmotionProps) => ReactElement;
 };
 
-type CustomSvgElement = SVGSVGElement & {
-  css?: SerializedStyles;
-};
+type CustomSvgElement = SVGSVGElement & Css;
 
 export type IconTypeElement = ReactElement<
   CustomSvgElement,
   (props: SVGSVGElement) => ReactElement
 >;
-
-type Css = {
-  css?: SerializedStyles;
-};
-
-type CssProp = {
-  cssProp?: SerializedStyles;
-};
 
 // ======================================
 // ======================================
@@ -36,35 +29,33 @@ type CssProp = {
  * This section includes all typings for atom elements
  */
 
-export type StandardHtmlComponent = React.HTMLAttributes<HTMLElement> & CssProp;
-export type AProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & CssProp;
+export type StandardHtmlComponent = React.HTMLAttributes<HTMLElement> & Css;
+export type AProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & Css;
 export type AddressProps = StandardHtmlComponent;
 
 export type AreaProps = Omit<
   React.AreaHTMLAttributes<HTMLAreaElement>,
   "alt" | "children"
 > &
-  CssProp & {
+  Css & {
     alt: string;
   };
 
 export type AbbrProps = StandardHtmlComponent;
 export type ArticleProps = StandardHtmlComponent;
 export type AsideProps = StandardHtmlComponent;
-export type AudioProps = React.AudioHTMLAttributes<HTMLAudioElement> & CssProp;
+export type AudioProps = React.AudioHTMLAttributes<HTMLAudioElement> & Css;
 
 export type BlockquoteProps = Omit<
   React.BlockquoteHTMLAttributes<HTMLElement>,
   "children"
 > &
-  CssProp & {
+  Css & {
     children: ReactElement<Css>;
   };
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  CssProp;
-export type CanvasProps = React.CanvasHTMLAttributes<HTMLCanvasElement> &
-  CssProp;
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & Css;
+export type CanvasProps = React.CanvasHTMLAttributes<HTMLCanvasElement> & Css;
 export type CaptionProps = StandardHtmlComponent;
 export type CiteProps = StandardHtmlComponent;
 export type CodeProps = StandardHtmlComponent;
@@ -73,28 +64,27 @@ export type ColProps = Omit<
   React.ColHTMLAttributes<HTMLTableColElement>,
   "children"
 > &
-  CssProp;
+  Css;
 
 export type ColgroupProps = Omit<
   React.ColgroupHTMLAttributes<HTMLTableColElement>,
   "children"
 > &
-  CssProp & {
+  Css & {
     children?: ColProps | ColProps[];
   };
 
 export type DatalistProps = Omit<StandardHtmlComponent, "children"> &
-  CssProp & {
+  Css & {
     children?: OptionProps | OptionProps[];
   };
 
 export type DdProps = StandardHtmlComponent;
-export type DelProps = React.DelHTMLAttributes<HTMLElement> & CssProp;
+export type DelProps = React.DelHTMLAttributes<HTMLElement> & Css;
 export type DetailsProps = React.DetailsHTMLAttributes<HTMLDetailsElement> &
-  CssProp;
+  Css;
 export type DfnProps = StandardHtmlComponent;
-export type DialogProps = React.DialogHTMLAttributes<HTMLDialogElement> &
-  CssProp;
+export type DialogProps = React.DialogHTMLAttributes<HTMLDialogElement> & Css;
 export type DivProps = StandardHtmlComponent;
 export type DlProps = Omit<StandardHtmlComponent, "children"> & {
   children?: DdProps | DtProps | (DdProps | DtProps)[];
@@ -102,7 +92,7 @@ export type DlProps = Omit<StandardHtmlComponent, "children"> & {
 export type DtProps = StandardHtmlComponent;
 export type EmProps = StandardHtmlComponent;
 export type FieldsetProps = React.FieldsetHTMLAttributes<HTMLFieldSetElement> &
-  CssProp & {
+  Css & {
     /**
      * You must provide legend as an aria value becasue of bug in chromium
      * [Issue](https://stackoverflow.com/questions/28078681/why-cant-fieldset-be-flex-containers/46085387#46085387)
@@ -112,22 +102,21 @@ export type FieldsetProps = React.FieldsetHTMLAttributes<HTMLFieldSetElement> &
 export type FigcaptionProps = StandardHtmlComponent;
 export type FigureProps = StandardHtmlComponent;
 export type FooterProps = StandardHtmlComponent;
-export type FormProps = React.FormHTMLAttributes<HTMLFormElement> & CssProp;
+export type FormProps = React.FormHTMLAttributes<HTMLFormElement> & Css;
 export type HeaderProps = StandardHtmlComponent;
 export type HeadingProps = StandardHtmlComponent;
 export type HrProps = Omit<StandardHtmlComponent, "children">;
 export type IProps = StandardHtmlComponent;
-export type IframeProps = React.IframeHTMLAttributes<HTMLIFrameElement> &
-  CssProp;
+export type IframeProps = React.IframeHTMLAttributes<HTMLIFrameElement> & Css;
 export type ImgProps = React.ImgHTMLAttributes<HTMLImageElement> &
-  CssProp & {
+  Css & {
     src: string;
   };
 
-export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & CssProp;
-export type InsProps = React.InsHTMLAttributes<HTMLElement> & CssProp;
+export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & Css;
+export type InsProps = React.InsHTMLAttributes<HTMLElement> & Css;
 export type KbdProps = StandardHtmlComponent;
-export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & CssProp;
+export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & Css;
 export type LegendProps = Omit<StandardHtmlComponent, "id"> & {
   /**
    * Id should be the same as aria-labelledby attribute on fieldset element
@@ -135,42 +124,41 @@ export type LegendProps = Omit<StandardHtmlComponent, "id"> & {
   id: string;
 };
 export type LiProps = React.LiHTMLAttributes<HTMLLIElement> &
-  CssProp & {
+  Css & {
     listDecoration?: JSX.Element;
   };
 export type MainProps = StandardHtmlComponent;
-export type MapProps = React.MapHTMLAttributes<HTMLMapElement> & CssProp;
+export type MapProps = React.MapHTMLAttributes<HTMLMapElement> & Css;
 export type MarkProps = StandardHtmlComponent;
-export type MeterProps = React.MeterHTMLAttributes<HTMLMeterElement> & CssProp;
+export type MeterProps = React.MeterHTMLAttributes<HTMLMeterElement> & Css;
 export type NavProps = StandardHtmlComponent;
 
 export type OlProps = Omit<
   React.OlHTMLAttributes<HTMLOListElement>,
   "children"
 > &
-  CssProp & {
+  Css & {
     children:
       | FunctionComponentElement<LiProps>
       | FunctionComponentElement<LiProps>[];
   };
 
 export type OptgroupProps = React.OptgroupHTMLAttributes<HTMLOptionElement> &
-  CssProp;
-export type OptionProps = React.OptionHTMLAttributes<HTMLOptionElement> &
-  CssProp;
+  Css;
+export type OptionProps = React.OptionHTMLAttributes<HTMLOptionElement> & Css;
 export type ParagraphProps = StandardHtmlComponent;
 export type PcitureProps = StandardHtmlComponent;
 export type PreProps = StandardHtmlComponent;
 export type ProgressProps = React.ProgressHTMLAttributes<HTMLProgressElement> &
-  CssProp;
-export type QProps = React.QuoteHTMLAttributes<HTMLQuoteElement> & CssProp;
+  Css;
+export type QProps = React.QuoteHTMLAttributes<HTMLQuoteElement> & Css;
 export type SectionProps = StandardHtmlComponent;
 
 export type SelectProps = Omit<
   React.SelectHTMLAttributes<HTMLSelectElement>,
   "multiple"
 > &
-  CssProp & {
+  Css & {
     icon?: IconTypeElement;
   };
 
@@ -178,14 +166,14 @@ export type SourceProps = Omit<
   React.SourceHTMLAttributes<HTMLSourceElement>,
   "children"
 > &
-  CssProp;
+  Css;
 
 export type SpanProps = StandardHtmlComponent;
 export type StrongProps = StandardHtmlComponent;
 export type SubProps = StandardHtmlComponent;
 export type SupProps = StandardHtmlComponent;
 export type SummaryProps = StandardHtmlComponent;
-export type SvgProps = React.SVGProps<SVGSVGElement> & CssProp;
+export type SvgProps = React.SVGProps<SVGSVGElement> & Css;
 export type TableProps = Omit<StandardHtmlComponent, "children"> & {
   cssProp?: SerializedStyles;
   children?:
@@ -206,11 +194,9 @@ export type TbodyProps = Omit<StandardHtmlComponent, "children"> & {
     | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
 };
 
-export type TdProps = React.TdHTMLAttributes<HTMLTableDataCellElement> &
-  CssProp;
+export type TdProps = React.TdHTMLAttributes<HTMLTableDataCellElement> & Css;
 export type TfootProps = StandardHtmlComponent;
-export type ThProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement> &
-  CssProp;
+export type ThProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement> & Css;
 
 export type TheadProps = Omit<StandardHtmlComponent, "children"> & {
   cssProp?: SerializedStyles;
@@ -218,7 +204,7 @@ export type TheadProps = Omit<StandardHtmlComponent, "children"> & {
     | ReactElement<TrProps, (props: TrProps) => ReactElement>
     | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
 };
-export type TimeProps = React.TimeHTMLAttributes<HTMLTimeElement> & CssProp;
+export type TimeProps = React.TimeHTMLAttributes<HTMLTimeElement> & Css;
 
 export type TrProps = Omit<StandardHtmlComponent, "children"> & {
   cssProp?: SerializedStyles;
@@ -237,7 +223,7 @@ export type TrackProps = Omit<
   React.TrackHTMLAttributes<HTMLTrackElement>,
   "children"
 > &
-  CssProp;
+  Css;
 
 export type UProps = StandardHtmlComponent;
 export type UlProps = Omit<StandardHtmlComponent, "children"> & {
@@ -247,7 +233,7 @@ export type UlProps = Omit<StandardHtmlComponent, "children"> & {
     | FunctionComponentElement<LiProps>
     | FunctionComponentElement<LiProps>[];
 };
-export type VideoProps = React.VideoHTMLAttributes<HTMLVideoElement> & CssProp;
+export type VideoProps = React.VideoHTMLAttributes<HTMLVideoElement> & Css;
 
 // ======================================================================================================
 // ======================================================================================================

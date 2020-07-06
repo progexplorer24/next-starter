@@ -27,7 +27,7 @@ export type AlertStyles = {
 export type AlertProps = React.HTMLAttributes<HTMLDivElement> &
   EmotionProps & {
     icon?: IconTypeElement | false;
-    cssProp?: SerializedStyles;
+    css?: SerializedStyles;
     type?: "outlined" | "filled" | "default";
     children: ReactNode;
   };
