@@ -3,6 +3,13 @@ import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import { BlockquoteProps } from "@components/atoms/atom-types";
 
+/**
+ *
+ * # [MDN Documentation Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)
+ *
+ * The HTML `<blockquote>` Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation.
+ *
+ */
 const Blockquote = ({
   children,
   cite,
