@@ -116,6 +116,7 @@ export type FormProps = React.FormHTMLAttributes<HTMLFormElement> & CssProp;
 export type HeaderProps = StandardHtmlComponent;
 export type HeadingProps = StandardHtmlComponent;
 export type HrProps = Omit<StandardHtmlComponent, "children">;
+export type IProps = StandardHtmlComponent;
 export type IframeProps = React.IframeHTMLAttributes<HTMLIFrameElement> &
   CssProp;
 export type ImgProps = React.ImgHTMLAttributes<HTMLImageElement> &
