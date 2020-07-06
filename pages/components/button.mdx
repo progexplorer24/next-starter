@@ -1,6 +1,7 @@
 import MainContainer from "layouts/main-container";
 import SubHeading from "components/basic/subheading/subheading";
 import Board from "components/docs/board/board";
+import Button from "components/button/button";
 import Showcase from "components/docs/showcase";
 import {
   Basic,
@@ -19,10 +20,25 @@ import {
   iconButtonsString,
 } from "components/button/examples";
 import dedent from "dedent";
+import { css as emotionCss } from "@emotion/core";
+import tw from "twin.macro";
 
 <MainContainer>
 
 # Button Component
+
+<Button variant="text" css={emotionCss([tw`m-4 text-red-700`])}>
+  Text button
+</Button>
+<Button variant="text" css={emotionCss([tw`m-4 text-green-800`])}>
+  Text button
+</Button>
+<Button variant="text" css={emotionCss([tw`m-4 text-blue-700`])}>
+  Text button
+</Button>
+<Button variant="text" css={emotionCss([tw`m-4 text-orange-800`])}>
+  Text button
+</Button>
 
 <SubHeading>In this section we will explore how to use buttons.</SubHeading>
 
