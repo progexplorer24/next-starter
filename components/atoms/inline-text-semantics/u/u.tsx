@@ -22,9 +22,9 @@ import type { UProps } from "@components/atoms/atom-types";
  * - **`<cite>`**
  *
  */
-const U = ({ children, cssProp, ...props }: UProps): ReactElement => {
+const U = ({ children, css, ...props }: UProps): ReactElement => {
   return (
-    <u {...props} css={emotionCss([cssProp])}>
+    <u {...props} css={emotionCss([css])}>
       {children}
     </u>
   );

@@ -29,9 +29,9 @@ import type { StrongProps } from "@components/atoms/atom-types";
  * used to give portions of a sentence added importance (e.g., "Warning! This is very dangerous.") Both `<strong>` and `<em>` can be nested to
  * increase the relative degree of importance or stress emphasis, respectively.
  */
-const Strong = ({ children, cssProp, ...props }: StrongProps): ReactElement => {
+const Strong = ({ children, css, ...props }: StrongProps): ReactElement => {
   return (
-    <strong {...props} css={emotionCss([cssProp])}>
+    <strong {...props} css={emotionCss([css])}>
       {children}
     </strong>
   );

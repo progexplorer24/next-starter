@@ -12,9 +12,9 @@ import type { InsProps } from "@components/atoms/atom-types";
  * The presence of the ins element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using `announceInsEdit` helper.
  *
  */
-const Ins = ({ children, cssProp, ...props }: InsProps): ReactElement => {
+const Ins = ({ children, css, ...props }: InsProps): ReactElement => {
   return (
-    <ins {...props} css={emotionCss([cssProp])}>
+    <ins {...props} css={emotionCss([css])}>
       {children}
     </ins>
   );

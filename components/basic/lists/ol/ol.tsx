@@ -5,9 +5,9 @@ import AtomOl from "@components/atoms/text-content/ol/ol";
 import type { OlProps } from "@components/atoms/atom-types";
 import Numeration from "./numeration/numeration";
 
-const Ol = ({ children, cssProp, ...props }: OlProps): ReactElement => {
+const Ol = ({ children, css, ...props }: OlProps): ReactElement => {
   return (
-    <AtomOl css={emotionCss([tw`mt-6`, cssProp])} {...props}>
+    <AtomOl css={emotionCss([tw`mt-6`, css])} {...props}>
       {React.Children.map(children, (child, i) =>
         React.cloneElement(child, {
           listDecoration: (
@@ -15,7 +15,7 @@ const Ol = ({ children, cssProp, ...props }: OlProps): ReactElement => {
               {i + 1}
             </Numeration>
           ),
-          cssProp: emotionCss([tw`relative pl-7`]),
+          css: emotionCss([tw`relative pl-7`]),
         })
       )}
     </AtomOl>

@@ -12,9 +12,9 @@ import type { AsideProps } from "@components/atoms/atom-types";
  * - Do not use the `<aside>` element to tag parenthesized text, as this kind of text is considered part of the main flow.
  *
  */
-const Aside = ({ children, cssProp, ...props }: AsideProps): ReactElement => {
+const Aside = ({ children, css, ...props }: AsideProps): ReactElement => {
   return (
-    <aside {...props} css={emotionCss([cssProp])}>
+    <aside {...props} css={emotionCss([css])}>
       {children}
     </aside>
   );

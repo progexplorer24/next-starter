@@ -10,9 +10,9 @@ import type { HeaderProps } from "@components/atoms/atom-types";
  * **ARIA role:**
  * - 	banner, or no corresponding role if a descendant of an article, aside, main, nav or section element, or an element with role=article, complementary, main, navigation or region
  */
-const Header = ({ children, cssProp, ...props }: HeaderProps): ReactElement => {
+const Header = ({ children, css, ...props }: HeaderProps): ReactElement => {
   return (
-    <header {...props} css={emotionCss([cssProp])}>
+    <header {...props} css={emotionCss([css])}>
       {children}
     </header>
   );

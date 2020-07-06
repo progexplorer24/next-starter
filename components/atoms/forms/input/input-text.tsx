@@ -25,18 +25,14 @@ import { addBasicFormStyling, addPlaceholderFormDefaults } from "../styles";
  */
 const InputText = ({
   placeholder = "Your name",
-  cssProp,
+  css,
   ...props
 }: Omit<InputProps, "type">): ReactElement => {
   return (
     <input
       type="text"
       placeholder={placeholder}
-      css={emotionCss([
-        addBasicFormStyling,
-        addPlaceholderFormDefaults,
-        cssProp,
-      ])}
+      css={emotionCss([addBasicFormStyling, addPlaceholderFormDefaults, css])}
       {...props}
     />
   );

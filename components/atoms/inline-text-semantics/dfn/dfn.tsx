@@ -32,9 +32,9 @@ import type { DfnProps } from "@components/atoms/atom-types";
  * term's link.
  *
  */
-const Dfn = ({ children, cssProp, ...props }: DfnProps): ReactElement => {
+const Dfn = ({ children, css, ...props }: DfnProps): ReactElement => {
   return (
-    <dfn {...props} css={emotionCss([cssProp])}>
+    <dfn {...props} css={emotionCss([css])}>
       {children}
     </dfn>
   );

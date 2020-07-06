@@ -4,13 +4,10 @@ import tw from "twin.macro";
 import AtomTh from "@components/atoms/table-content/th/th";
 import type { ThProps } from "@components/atoms/atom-types";
 
-const Th = ({ children, cssProp, ...props }: ThProps): ReactElement => {
+const Th = ({ children, css, ...props }: ThProps): ReactElement => {
   return (
     <AtomTh
-      css={emotionCss([
-        tw`text-sm font-bold text-gray-900 bg-gray-200`,
-        cssProp,
-      ])}
+      css={emotionCss([tw`text-sm font-bold text-gray-900 bg-gray-200`, css])}
       {...props}
     >
       {children}

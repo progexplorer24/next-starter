@@ -14,13 +14,9 @@ import type { SectionProps } from "@components/atoms/atom-types";
  * - Do not use the `<section>` element as a generic container; this is what `<div>` is for, especially when the sectioning is only for styling purposes. A rule of thumb is that a section should logically appear in the outline of a document.
  *
  */
-const Section = ({
-  children,
-  cssProp,
-  ...props
-}: SectionProps): ReactElement => {
+const Section = ({ children, css, ...props }: SectionProps): ReactElement => {
   return (
-    <section {...props} css={emotionCss([cssProp])}>
+    <section {...props} css={emotionCss([css])}>
       {children}
     </section>
   );

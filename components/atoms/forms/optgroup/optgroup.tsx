@@ -9,13 +9,9 @@ import type { OptgroupProps } from "@components/atoms/atom-types";
  *
  *
  */
-const Optgroup = ({
-  children,
-  cssProp,
-  ...props
-}: OptgroupProps): ReactElement => {
+const Optgroup = ({ children, css, ...props }: OptgroupProps): ReactElement => {
   return (
-    <optgroup {...props} css={emotionCss([cssProp])}>
+    <optgroup {...props} css={emotionCss([css])}>
       {children}
     </optgroup>
   );

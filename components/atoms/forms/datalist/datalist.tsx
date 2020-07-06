@@ -26,13 +26,9 @@ import type { DatalistProps } from "@components/atoms/atom-types";
  * Beyond accessibility, this is another good reason to properly set up `<label>` elements on your forms.
  *
  */
-const Datalist = ({
-  children,
-  cssProp,
-  ...props
-}: DatalistProps): ReactElement => {
+const Datalist = ({ children, css, ...props }: DatalistProps): ReactElement => {
   return (
-    <datalist {...props} css={emotionCss([cssProp])}>
+    <datalist {...props} css={emotionCss([css])}>
       {children}
     </datalist>
   );

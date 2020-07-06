@@ -3,10 +3,10 @@ import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import type { TrProps } from "@components/atoms/atom-types";
 
-const Tr = ({ children, cssProp, ...props }: TrProps): ReactElement => {
+const Tr = ({ children, css, ...props }: TrProps): ReactElement => {
   return (
     <tr
-      css={emotionCss([tw`border-t border-b border-gray-400`, cssProp])}
+      css={emotionCss([tw`border-t border-b border-gray-400`, css])}
       {...props}
     >
       {children}

@@ -13,7 +13,7 @@ import type { SourceProps } from "@components/atoms/atom-types";
  *
  *
  */
-const Source = ({ cssProp, ...props }: SourceProps): ReactElement => {
-  return <source {...props} css={emotionCss([cssProp])} />;
+const Source = ({ css, ...props }: SourceProps): ReactElement => {
+  return <source {...props} css={emotionCss([css])} />;
 };
 export default Source;

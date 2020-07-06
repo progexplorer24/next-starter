@@ -16,13 +16,9 @@ import { ArticleProps } from "@components/atoms/atom-types";
  * - The publication date and time of an `<article>` element can be described using the datetime attribute of a `<time>` element.
  */
 
-const Article = ({
-  children,
-  cssProp,
-  ...props
-}: ArticleProps): ReactElement => {
+const Article = ({ children, css, ...props }: ArticleProps): ReactElement => {
   return (
-    <article {...props} css={emotionCss([cssProp])}>
+    <article {...props} css={emotionCss([css])}>
       {children}
     </article>
   );

@@ -38,9 +38,9 @@ import type { InputProps } from "@components/atoms/atom-types";
  *
  */
 const InputFile = ({
-  cssProp,
+  css,
   ...props
 }: Omit<InputProps, "type">): ReactElement => {
-  return <input type="file" {...props} css={emotionCss([cssProp])} />;
+  return <input type="file" {...props} css={emotionCss([css])} />;
 };
 export default InputFile;

@@ -20,9 +20,9 @@ import type { SubProps } from "@components/atoms/atom-types";
  * subscripts.
  * - Denoting the number of atoms of a given element within a chemical formula.
  */
-const Sub = ({ children, cssProp, ...props }: SubProps): ReactElement => {
+const Sub = ({ children, css, ...props }: SubProps): ReactElement => {
   return (
-    <sub {...props} css={emotionCss([cssProp])}>
+    <sub {...props} css={emotionCss([css])}>
       {children}
     </sub>
   );

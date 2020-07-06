@@ -30,9 +30,9 @@ import type { MarkProps } from "@components/atoms/atom-types";
  * announced by using the CSS content property, along with the `::before` and `::after` pseudo-elements.
  *
  */
-const Mark = ({ children, cssProp, ...props }: MarkProps): ReactElement => {
+const Mark = ({ children, css, ...props }: MarkProps): ReactElement => {
   return (
-    <mark {...props} css={emotionCss([cssProp])}>
+    <mark {...props} css={emotionCss([css])}>
       {children}
     </mark>
   );

@@ -6,7 +6,7 @@ import { BlockquoteProps } from "@components/atoms/atom-types";
 const Blockquote = ({
   children,
   cite,
-  cssProp,
+  css,
   ...props
 }: BlockquoteProps): ReactElement => {
   const zeroMaringOnParagraph = emotionCss`
@@ -21,7 +21,7 @@ const Blockquote = ({
     <blockquote
       css={emotionCss([
         tw`py-4 pl-6 mt-6 text-lg break-words bg-gray-200 border-l-4 border-gray-600`,
-        cssProp,
+        css,
       ])}
       cite={typeof cite === "undefined" ? undefined : cite}
       {...props}

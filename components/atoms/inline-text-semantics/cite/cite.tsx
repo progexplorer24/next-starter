@@ -11,9 +11,9 @@ import type { CiteProps } from "@components/atoms/atom-types";
  * ## Usage Notes
  *
  */
-const Cite = ({ children, cssProp, ...props }: CiteProps): ReactElement => {
+const Cite = ({ children, css, ...props }: CiteProps): ReactElement => {
   return (
-    <cite {...props} css={emotionCss([cssProp])}>
+    <cite {...props} css={emotionCss([css])}>
       {children}
     </cite>
   );

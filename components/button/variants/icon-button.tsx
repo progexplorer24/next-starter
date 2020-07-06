@@ -7,7 +7,7 @@ import { IconTypeElement } from "@components/atoms/atom-types";
 import { disabledTextButton } from "../styles";
 
 type IconButtonProps = {
-  cssProp?: SerializedStyles;
+  css?: SerializedStyles;
   className?: string;
   disabled?: boolean;
   ariaLabel: string;
@@ -16,7 +16,6 @@ type IconButtonProps = {
 
 const IconButton = ({
   children,
-  cssProp,
   className,
   disabled = false,
   ariaLabel,
@@ -39,7 +38,7 @@ const IconButton = ({
           {...props}
           css={emotionCss([
             tw`inline-flex items-center justify-center text-gray-700 rounded-full w-11 h-11`,
-            cssProp,
+            props.css,
           ])}
           aria-label={ariaLabel}
           className={css([className, disabledStyles])}

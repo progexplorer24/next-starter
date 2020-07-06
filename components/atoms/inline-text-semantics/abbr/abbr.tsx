@@ -30,9 +30,9 @@ import { AbbrProps } from "@components/atoms/atom-types";
  *
  *
  */
-const Abbr = ({ children, cssProp, ...props }: AbbrProps): ReactElement => {
+const Abbr = ({ children, css, ...props }: AbbrProps): ReactElement => {
   return (
-    <abbr {...props} css={emotionCss([cssProp])}>
+    <abbr {...props} css={emotionCss([css])}>
       {children}
     </abbr>
   );

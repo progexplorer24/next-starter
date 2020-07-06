@@ -6,12 +6,12 @@ import Main from "@components/atoms/content-sectioning/main/main";
 
 const MainContainer = ({
   children,
-  cssProp,
+  css,
   ...props
 }: MainProps): ReactElement => {
   return (
     <Main
-      cssProp={emotionCss([tw`max-w-3xl px-5 my-6 md:mx-auto`, cssProp])}
+      css={emotionCss([tw`max-w-3xl px-5 my-6 md:mx-auto`, css])}
       {...props}
     >
       {children}

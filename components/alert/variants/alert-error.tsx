@@ -12,7 +12,7 @@ const AlertError = ({
   children,
   icon = <ErrorIcon />,
   type = "default",
-  cssProp,
+  css,
   ...props
 }: AlertProps): ReactElement => {
   const { iconStyles, alertStyles } = cond<string, AlertStyles>([
@@ -51,7 +51,7 @@ const AlertError = ({
       icon={styledIcon}
       type={type}
       {...props}
-      css={emotionCss([alertStyles, cssProp])}
+      css={emotionCss([alertStyles, css])}
     >
       {children}
     </Alert>

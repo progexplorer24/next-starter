@@ -22,18 +22,14 @@ import { addBasicFormStyling, addPlaceholderFormDefaults } from "../styles";
  */
 const InputUrl = ({
   placeholder = "Valid URL address",
-  cssProp,
+  css,
   ...props
 }: Omit<InputProps, "type">): ReactElement => {
   return (
     <input
       type="url"
       placeholder={placeholder}
-      css={emotionCss([
-        addBasicFormStyling,
-        addPlaceholderFormDefaults,
-        cssProp,
-      ])}
+      css={emotionCss([addBasicFormStyling, addPlaceholderFormDefaults, css])}
       {...props}
     />
   );

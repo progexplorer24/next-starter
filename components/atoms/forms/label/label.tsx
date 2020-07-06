@@ -46,9 +46,9 @@ import type { LabelProps } from "@components/atoms/atom-types";
  * Buttons don't need labels.
  *
  */
-const Label = ({ children, cssProp, ...props }: LabelProps): ReactElement => {
+const Label = ({ children, css, ...props }: LabelProps): ReactElement => {
   return (
-    <label {...props} css={emotionCss([cssProp])}>
+    <label {...props} css={emotionCss([css])}>
       {children}
     </label>
   );

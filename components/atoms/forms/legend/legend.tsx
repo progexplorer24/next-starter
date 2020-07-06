@@ -15,9 +15,9 @@ import type { LegendProps } from "@components/atoms/atom-types";
  *
  *
  */
-const Legend = ({ children, cssProp, ...props }: LegendProps): ReactElement => {
+const Legend = ({ children, css, ...props }: LegendProps): ReactElement => {
   return (
-    <span {...props} css={emotionCss([cssProp])}>
+    <span {...props} css={emotionCss([css])}>
       {children}
     </span>
   );

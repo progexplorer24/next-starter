@@ -9,9 +9,9 @@ import type { DialogProps } from "@components/atoms/atom-types";
  *
  */
 
-const Dialog = ({ children, cssProp, ...props }: DialogProps): ReactElement => {
+const Dialog = ({ children, css, ...props }: DialogProps): ReactElement => {
   return (
-    <dialog {...props} css={emotionCss([cssProp])}>
+    <dialog {...props} css={emotionCss([css])}>
       {children}
     </dialog>
   );

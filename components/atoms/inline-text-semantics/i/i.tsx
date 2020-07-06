@@ -44,9 +44,9 @@ import type { IProps } from "@components/atoms/atom-types";
  * The word *the* is an article".
  *
  */
-const I = ({ children, cssProp, ...props }: IProps): ReactElement => {
+const I = ({ children, css, ...props }: IProps): ReactElement => {
   return (
-    <i {...props} css={emotionCss([cssProp])}>
+    <i {...props} css={emotionCss([css])}>
       {children}
     </i>
   );

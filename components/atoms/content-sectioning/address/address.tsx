@@ -14,13 +14,9 @@ import type { AddressProps } from "@components/atoms/atom-types";
  * - Typically an <address> element can be placed inside the <footer> element
  */
 
-const Address = ({
-  children,
-  cssProp,
-  ...props
-}: AddressProps): ReactElement => {
+const Address = ({ children, css, ...props }: AddressProps): ReactElement => {
   return (
-    <address {...props} css={emotionCss([cssProp])}>
+    <address {...props} css={emotionCss([css])}>
       {children}
     </address>
   );

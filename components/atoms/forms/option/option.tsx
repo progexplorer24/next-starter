@@ -9,9 +9,9 @@ import type { OptionProps } from "@components/atoms/atom-types";
  * `<option>` can represent menu items in popups and other lists of items in an HTML document.
  *
  */
-const Option = ({ children, cssProp, ...props }: OptionProps): ReactElement => {
+const Option = ({ children, css, ...props }: OptionProps): ReactElement => {
   return (
-    <option {...props} css={emotionCss([cssProp])}>
+    <option {...props} css={emotionCss([css])}>
       {children}
     </option>
   );

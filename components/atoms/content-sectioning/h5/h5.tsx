@@ -24,9 +24,9 @@ import type { HeadingProps } from "@components/atoms/atom-types";
  *
  * Sectioning content can be labeled using a combination of the aria-labelledby and id attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
  */
-const H5 = ({ children, cssProp, ...props }: HeadingProps): ReactElement => {
+const H5 = ({ children, css, ...props }: HeadingProps): ReactElement => {
   return (
-    <h5 css={emotionCss([cssProp])} {...props}>
+    <h5 css={emotionCss([css])} {...props}>
       {children}
     </h5>
   );

@@ -6,13 +6,9 @@ import type { DetailsProps } from "@components/atoms/atom-types";
  * Warning!: The details element is not supported in Edge (prior version 79).
  */
 
-const Details = ({
-  children,
-  cssProp,
-  ...props
-}: DetailsProps): ReactElement => {
+const Details = ({ children, css, ...props }: DetailsProps): ReactElement => {
   return (
-    <details {...props} css={emotionCss([cssProp])}>
+    <details {...props} css={emotionCss([css])}>
       {children}
     </details>
   );

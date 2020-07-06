@@ -66,13 +66,9 @@ import type { PcitureProps } from "@components/atoms/atom-types";
  *```
  *
  */
-const Pciture = ({
-  children,
-  cssProp,
-  ...props
-}: PcitureProps): ReactElement => {
+const Pciture = ({ children, css, ...props }: PcitureProps): ReactElement => {
   return (
-    <picture {...props} css={emotionCss([cssProp])}>
+    <picture {...props} css={emotionCss([css])}>
       {children}
     </picture>
   );

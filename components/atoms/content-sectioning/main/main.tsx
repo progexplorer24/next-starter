@@ -38,12 +38,12 @@ import type { MainProps } from "@components/atoms/atom-types";
  */
 const Main = ({
   children,
-  cssProp,
+  css,
   id = "main-content",
   ...props
 }: MainProps): ReactElement => {
   return (
-    <main id={id} {...props} css={emotionCss([cssProp])}>
+    <main id={id} {...props} css={emotionCss([css])}>
       {children}
     </main>
   );

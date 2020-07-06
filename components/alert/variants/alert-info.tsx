@@ -10,7 +10,7 @@ import InfoIcon from "../info.svg";
 
 const AlertInfo = ({
   children,
-  cssProp,
+  css,
   type = "default",
   icon = <InfoIcon />,
   ...props
@@ -51,7 +51,7 @@ const AlertInfo = ({
       {...props}
       icon={styledIcon}
       type={type}
-      css={emotionCss([alertStyles, cssProp])}
+      css={emotionCss([alertStyles, css])}
     >
       {children}
     </Alert>

@@ -4,9 +4,9 @@ import tw from "twin.macro";
 import H5Atom from "@components/atoms/content-sectioning/h5/h5";
 import type { HeadingProps } from "@components/atoms/atom-types";
 
-const H2 = ({ children, cssProp, ...props }: HeadingProps): ReactElement => (
+const H2 = ({ children, css, ...props }: HeadingProps): ReactElement => (
   <H5Atom
-    css={emotionCss([tw`mt-6 text-lg tracking-widest md:text-xl`, cssProp])}
+    css={emotionCss([tw`mt-6 text-lg tracking-widest md:text-xl`, css])}
     {...props}
   >
     {children}

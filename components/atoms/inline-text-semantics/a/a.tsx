@@ -80,12 +80,12 @@ import type { AProps } from "@components/atoms/atom-types";
  *
  */
 const A = React.forwardRef<HTMLAnchorElement, AProps>(
-  ({ children, href, cssProp, ...props }, ref) => {
+  ({ children, href, css, ...props }, ref) => {
     return (
       <a
         ref={ref}
         href={href}
-        css={emotionCss([tw`font-bold underline cursor-pointer`, cssProp])}
+        css={emotionCss([tw`font-bold underline cursor-pointer`, css])}
         {...props}
       >
         {children}

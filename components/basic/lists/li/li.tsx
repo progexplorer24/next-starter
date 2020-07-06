@@ -7,13 +7,13 @@ import type { LiProps } from "@components/atoms/atom-types";
 const Li = ({
   children,
   listDecoration,
-  cssProp,
+  css,
   ...props
 }: LiProps): ReactElement => {
   return (
     <AtomLi
       {...props}
-      css={emotionCss([tw`mt-2 text-lg font-thin text-gray-700`, cssProp])}
+      css={emotionCss([tw`mt-2 text-lg font-thin text-gray-700`, css])}
     >
       {typeof listDecoration !== undefined ? listDecoration : undefined}
       {children}

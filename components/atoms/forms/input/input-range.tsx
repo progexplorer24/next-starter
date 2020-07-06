@@ -29,10 +29,10 @@ import type { InputProps } from "@components/atoms/atom-types";
  *
  */
 const InputRange = ({
-  cssProp,
+  css,
   ...props
 }: Omit<InputProps, "type">): ReactElement => {
-  return <input type="range" css={emotionCss([cssProp])} {...props} />;
+  return <input type="range" css={emotionCss([css])} {...props} />;
 };
 
 export default InputRange;

@@ -30,18 +30,14 @@ import { addBasicFormStyling, addPlaceholderFormDefaults } from "../styles";
  */
 const InputNumber = ({
   placeholder = "Type a number here",
-  cssProp,
+  css,
   ...props
 }: Omit<InputProps, "type">): ReactElement => {
   return (
     <input
       type="number"
       placeholder={placeholder}
-      css={emotionCss([
-        addBasicFormStyling,
-        addPlaceholderFormDefaults,
-        cssProp,
-      ])}
+      css={emotionCss([addBasicFormStyling, addPlaceholderFormDefaults, css])}
       {...props}
     />
   );

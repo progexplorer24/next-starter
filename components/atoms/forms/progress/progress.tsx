@@ -15,13 +15,9 @@ import type { ProgressProps } from "@components/atoms/atom-types";
  *  after giving it a value you must remove the value attribute with `element.removeAttribute('value')`.
  *
  */
-const Progress = ({
-  children,
-  cssProp,
-  ...props
-}: ProgressProps): ReactElement => {
+const Progress = ({ children, css, ...props }: ProgressProps): ReactElement => {
   return (
-    <progress {...props} css={emotionCss([cssProp])}>
+    <progress {...props} css={emotionCss([css])}>
       {children}
     </progress>
   );

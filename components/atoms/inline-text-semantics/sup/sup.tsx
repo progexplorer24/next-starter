@@ -19,9 +19,9 @@ import type { SupProps } from "@components/atoms/atom-types";
  * - Displaying superior lettering, which is used in some languages when rendering certain abbreviations.
  * - Representing ordinal numbers
  */
-const Sup = ({ children, cssProp, ...props }: SupProps): ReactElement => {
+const Sup = ({ children, css, ...props }: SupProps): ReactElement => {
   return (
-    <sup {...props} css={emotionCss([cssProp])}>
+    <sup {...props} css={emotionCss([css])}>
       {children}
     </sup>
   );

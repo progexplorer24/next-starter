@@ -12,9 +12,9 @@ import { FooterProps } from "@components/atoms/atom-types";
  * - Enclose information about the author in an `<address>` element that can be included into the `<footer>` element.
  * - This element is strictly informative. You shouldn't style it. (This is my interpretation).
  */
-const Footer = ({ children, cssProp, ...props }: FooterProps): ReactElement => {
+const Footer = ({ children, css, ...props }: FooterProps): ReactElement => {
   return (
-    <footer {...props} css={emotionCss([cssProp])}>
+    <footer {...props} css={emotionCss([css])}>
       {children}
     </footer>
   );

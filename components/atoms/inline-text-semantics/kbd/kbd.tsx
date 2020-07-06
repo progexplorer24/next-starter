@@ -13,9 +13,9 @@ import type { KbdProps } from "@components/atoms/atom-types";
  * Other elements can be used in tandem with `<kbd>` to represent more specific scenarios.
  *
  */
-const Kbd = ({ children, cssProp, ...props }: KbdProps): ReactElement => {
+const Kbd = ({ children, css, ...props }: KbdProps): ReactElement => {
   return (
-    <kbd {...props} css={emotionCss([cssProp])}>
+    <kbd {...props} css={emotionCss([css])}>
       {children}
     </kbd>
   );

@@ -4,11 +4,11 @@ import tw from "twin.macro";
 import H2Atom from "@components/atoms/content-sectioning/h2/h2";
 import type { HeadingProps } from "@components/atoms/atom-types";
 
-const H2 = ({ children, cssProp, ...props }: HeadingProps): ReactElement => (
+const H2 = ({ children, css, ...props }: HeadingProps): ReactElement => (
   <H2Atom
     css={emotionCss([
       tw`mt-6 text-3xl font-light tracking-tight md:text-4xl`,
-      cssProp,
+      css,
     ])}
     {...props}
   >

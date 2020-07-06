@@ -6,11 +6,11 @@ import P from "../p/p";
 
 const SubHeading = ({
   children,
-  cssProp,
+  css,
   ...props
 }: ParagraphProps): ReactElement => {
   return (
-    <P {...props} css={emotionCss([tw`mt-0 mb-8 font-bold`, cssProp])}>
+    <P {...props} css={emotionCss([tw`mt-0 mb-8 font-bold`, css])}>
       {children}
     </P>
   );

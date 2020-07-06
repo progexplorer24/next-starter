@@ -15,9 +15,9 @@ import tw from "twin.macro";
  *
  *
  */
-const Code = ({ children, cssProp, ...props }: CodeProps): ReactElement => {
+const Code = ({ children, css, ...props }: CodeProps): ReactElement => {
   return (
-    <code css={emotionCss([tw`font-mono`, cssProp])} {...props}>
+    <code css={emotionCss([tw`font-mono`, css])} {...props}>
       {children}
     </code>
   );

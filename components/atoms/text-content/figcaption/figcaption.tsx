@@ -4,11 +4,11 @@ import type { FigcaptionProps } from "@components/atoms/atom-types";
 
 const Figcaption = ({
   children,
-  cssProp,
+  css,
   ...props
 }: FigcaptionProps): ReactElement => {
   return (
-    <figcaption {...props} css={emotionCss([cssProp])}>
+    <figcaption {...props} css={emotionCss([css])}>
       {children}
     </figcaption>
   );

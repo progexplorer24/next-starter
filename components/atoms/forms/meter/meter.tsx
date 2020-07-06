@@ -9,9 +9,9 @@ import type { MeterProps } from "@components/atoms/atom-types";
  *
  *
  */
-const Meter = ({ children, cssProp, ...props }: MeterProps): ReactElement => {
+const Meter = ({ children, css, ...props }: MeterProps): ReactElement => {
   return (
-    <meter {...props} css={emotionCss([cssProp])}>
+    <meter {...props} css={emotionCss([css])}>
       {children}
     </meter>
   );

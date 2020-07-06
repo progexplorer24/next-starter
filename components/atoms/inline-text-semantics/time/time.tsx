@@ -22,9 +22,9 @@ import type { TimeProps } from "@components/atoms/atom-types";
  *
  *
  */
-const Time = ({ children, cssProp, ...props }: TimeProps): ReactElement => {
+const Time = ({ children, css, ...props }: TimeProps): ReactElement => {
   return (
-    <time {...props} css={emotionCss([cssProp])}>
+    <time {...props} css={emotionCss([css])}>
       {children}
     </time>
   );

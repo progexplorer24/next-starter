@@ -21,18 +21,14 @@ import { addBasicFormStyling, addPlaceholderFormDefaults } from "../styles";
  */
 const InputPassword = ({
   placeholder = "Pass phrase",
-  cssProp,
+  css,
   ...props
 }: Omit<InputProps, "type">): ReactElement => {
   return (
     <input
       type="password"
       placeholder={placeholder}
-      css={emotionCss([
-        addBasicFormStyling,
-        addPlaceholderFormDefaults,
-        cssProp,
-      ])}
+      css={emotionCss([addBasicFormStyling, addPlaceholderFormDefaults, css])}
       {...props}
     />
   );

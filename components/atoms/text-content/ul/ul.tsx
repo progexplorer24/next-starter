@@ -3,9 +3,9 @@ import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import type { UlProps } from "@components/atoms/atom-types";
 
-const Ul = ({ children, cssProp, ...props }: UlProps): ReactElement => {
+const Ul = ({ children, css, ...props }: UlProps): ReactElement => {
   return (
-    <ul {...props} css={emotionCss([tw`mt-6`, cssProp])}>
+    <ul {...props} css={emotionCss([tw`mt-6`, css])}>
       {children}
     </ul>
   );

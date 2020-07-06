@@ -28,9 +28,9 @@ import type { EmProps } from "@components/atoms/atom-types";
  * The word *the* is an article".
  *
  */
-const Em = ({ children, cssProp, ...props }: EmProps): ReactElement => {
+const Em = ({ children, css, ...props }: EmProps): ReactElement => {
   return (
-    <em {...props} css={emotionCss([cssProp])}>
+    <em {...props} css={emotionCss([css])}>
       {children}
     </em>
   );

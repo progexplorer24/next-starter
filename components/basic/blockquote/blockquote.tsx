@@ -6,11 +6,11 @@ import type { BlockquoteProps } from "@components/atoms/atom-types";
 
 const Blockquote = ({
   children,
-  cssProp,
+  css,
   ...props
 }: BlockquoteProps): ReactElement => (
   <BlockquoteAtom
-    css={emotionCss([tw`italic font-thin rounded-lg`, cssProp])}
+    css={emotionCss([tw`italic font-thin rounded-lg`, css])}
     {...props}
   >
     {children}

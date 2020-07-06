@@ -16,9 +16,9 @@ import type { IframeProps } from "@components/atoms/atom-types";
  * People navigating with assistive technology such as a screen reader can use the title attribute on an `<iframe>` to label its content. The title's value should concisely describe the embedded content.
  *
  */
-const Iframe = ({ children, cssProp, ...props }: IframeProps): ReactElement => {
+const Iframe = ({ children, css, ...props }: IframeProps): ReactElement => {
   return (
-    <div {...props} css={emotionCss([cssProp])}>
+    <div {...props} css={emotionCss([css])}>
       {children}
     </div>
   );

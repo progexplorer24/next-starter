@@ -12,9 +12,9 @@ import type { DelProps } from "@components/atoms/atom-types";
  * The presence of the del element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using `announceDelEdit` helper.
  *
  */
-const Del = ({ children, cssProp, ...props }: DelProps): ReactElement => {
+const Del = ({ children, css, ...props }: DelProps): ReactElement => {
   return (
-    <del {...props} css={emotionCss([cssProp])}>
+    <del {...props} css={emotionCss([css])}>
       {children}
     </del>
   );

@@ -174,50 +174,50 @@ export type SubProps = StandardHtmlComponent;
 export type SupProps = StandardHtmlComponent;
 export type SummaryProps = StandardHtmlComponent;
 export type SvgProps = React.SVGProps<SVGSVGElement> & Css;
-export type TableProps = Omit<StandardHtmlComponent, "children"> & {
-  cssProp?: SerializedStyles;
-  children?:
-    | ReactElement<
-        TbodyProps | TheadProps | TrProps,
-        (props: TbodyProps | TheadProps | TrProps) => ReactElement
-      >
-    | ReactElement<
-        TbodyProps | TheadProps | TrProps,
-        (props: TbodyProps | TheadProps | TrProps) => ReactElement
-      >[];
-};
+export type TableProps = Omit<StandardHtmlComponent, "children"> &
+  Css & {
+    children?:
+      | ReactElement<
+          TbodyProps | TheadProps | TrProps,
+          (props: TbodyProps | TheadProps | TrProps) => ReactElement
+        >
+      | ReactElement<
+          TbodyProps | TheadProps | TrProps,
+          (props: TbodyProps | TheadProps | TrProps) => ReactElement
+        >[];
+  };
 
-export type TbodyProps = Omit<StandardHtmlComponent, "children"> & {
-  cssProp?: SerializedStyles;
-  children?:
-    | ReactElement<TrProps, (props: TrProps) => ReactElement>
-    | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
-};
+export type TbodyProps = Omit<StandardHtmlComponent, "children"> &
+  Css & {
+    children?:
+      | ReactElement<TrProps, (props: TrProps) => ReactElement>
+      | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
+  };
 
 export type TdProps = React.TdHTMLAttributes<HTMLTableDataCellElement> & Css;
 export type TfootProps = StandardHtmlComponent;
 export type ThProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement> & Css;
 
-export type TheadProps = Omit<StandardHtmlComponent, "children"> & {
-  cssProp?: SerializedStyles;
-  children?:
-    | ReactElement<TrProps, (props: TrProps) => ReactElement>
-    | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
-};
+export type TheadProps = Omit<StandardHtmlComponent, "children"> &
+  Css & {
+    children?:
+      | ReactElement<TrProps, (props: TrProps) => ReactElement>
+      | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
+  };
 export type TimeProps = React.TimeHTMLAttributes<HTMLTimeElement> & Css;
 
-export type TrProps = Omit<StandardHtmlComponent, "children"> & {
-  cssProp?: SerializedStyles;
-  children?:
-    | ReactElement<
-        TdProps | ThProps,
-        (props: TdProps | ThProps) => ReactElement
-      >
-    | ReactElement<
-        TdProps | ThProps,
-        (props: TdProps | ThProps) => ReactElement
-      >[];
-};
+export type TrProps = Omit<StandardHtmlComponent, "children"> &
+  Css & {
+    children?:
+      | ReactElement<
+          TdProps | ThProps,
+          (props: TdProps | ThProps) => ReactElement
+        >
+      | ReactElement<
+          TdProps | ThProps,
+          (props: TdProps | ThProps) => ReactElement
+        >[];
+  };
 
 export type TrackProps = Omit<
   React.TrackHTMLAttributes<HTMLTrackElement>,
@@ -226,13 +226,13 @@ export type TrackProps = Omit<
   Css;
 
 export type UProps = StandardHtmlComponent;
-export type UlProps = Omit<StandardHtmlComponent, "children"> & {
-  cssProp?: SerializedStyles;
-  icon?: IconTypeElement;
-  children:
-    | FunctionComponentElement<LiProps>
-    | FunctionComponentElement<LiProps>[];
-};
+export type UlProps = Omit<StandardHtmlComponent, "children"> &
+  Css & {
+    icon?: IconTypeElement;
+    children:
+      | FunctionComponentElement<LiProps>
+      | FunctionComponentElement<LiProps>[];
+  };
 export type VideoProps = React.VideoHTMLAttributes<HTMLVideoElement> & Css;
 
 // ======================================================================================================

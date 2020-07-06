@@ -4,11 +4,11 @@ import tw from "twin.macro";
 import AtomTd from "@components/atoms/table-content/td/td";
 import type { TdProps } from "@components/atoms/atom-types";
 
-const Td = ({ children, cssProp, ...props }: TdProps): ReactElement => {
+const Td = ({ children, css, ...props }: TdProps): ReactElement => {
   return (
     <AtomTd
       {...props}
-      css={emotionCss([tw`text-sm font-semibold text-gray-700`, cssProp])}
+      css={emotionCss([tw`text-sm font-semibold text-gray-700`, css])}
     >
       {children}
     </AtomTd>

@@ -17,18 +17,14 @@ import { addBasicFormStyling, addPlaceholderFormDefaults } from "../styles";
  */
 const InputTel = ({
   placeholder = "Telephone Number",
-  cssProp,
+  css,
   ...props
 }: Omit<InputProps, "type">): ReactElement => {
   return (
     <input
       type="tel"
       placeholder={placeholder}
-      css={emotionCss([
-        addBasicFormStyling,
-        addPlaceholderFormDefaults,
-        cssProp,
-      ])}
+      css={emotionCss([addBasicFormStyling, addPlaceholderFormDefaults, css])}
       {...props}
     />
   );

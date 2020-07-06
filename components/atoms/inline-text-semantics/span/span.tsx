@@ -11,9 +11,9 @@ import type { SpanProps } from "@components/atoms/atom-types";
  * whereas a `<span>` is an inline element.
  *
  */
-const Span = ({ children, cssProp, ...props }: SpanProps): ReactElement => {
+const Span = ({ children, css, ...props }: SpanProps): ReactElement => {
   return (
-    <span {...props} css={emotionCss([cssProp])}>
+    <span {...props} css={emotionCss([css])}>
       {children}
     </span>
   );

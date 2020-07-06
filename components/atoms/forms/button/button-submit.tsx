@@ -47,11 +47,11 @@ import type { ButtonProps } from "@components/atoms/atom-types";
  */
 const ButtonSubmit = ({
   children,
-  cssProp,
+  css,
   ...props
 }: Omit<ButtonProps, "type">): ReactElement => {
   return (
-    <button type="submit" css={emotionCss([cssProp])} {...props}>
+    <button type="submit" css={emotionCss([css])} {...props}>
       {children}
     </button>
   );

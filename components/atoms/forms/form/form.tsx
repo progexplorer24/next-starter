@@ -13,9 +13,9 @@ import type { FormProps } from "@components/atoms/atom-types";
  * the form are valid.
  *
  */
-const Form = ({ children, cssProp, ...props }: FormProps): ReactElement => {
+const Form = ({ children, css, ...props }: FormProps): ReactElement => {
   return (
-    <form {...props} css={emotionCss([cssProp])}>
+    <form {...props} css={emotionCss([css])}>
       {children}
     </form>
   );

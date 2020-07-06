@@ -42,13 +42,13 @@ import type { ButtonProps } from "@components/atoms/atom-types";
  */
 const Button = ({
   children,
-  cssProp,
+  css,
   ...props
 }: Omit<ButtonProps, "type">): ReactElement => {
   return (
     <button
       type="button"
-      css={emotionCss([tw`min-w-11 min-h-11`, cssProp])}
+      css={emotionCss([tw`min-w-11 min-h-11`, css])}
       {...props}
     >
       {children}

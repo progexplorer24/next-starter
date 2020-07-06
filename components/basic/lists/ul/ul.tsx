@@ -9,7 +9,7 @@ import RightArrow from "./right-arrow.svg";
 const Ul = ({
   children,
   icon = <RightArrow />,
-  cssProp,
+  css,
   ...props
 }: UlProps): ReactElement => {
   const iconStyles = emotionCss`
@@ -22,10 +22,10 @@ const Ul = ({
   });
 
   return (
-    <AtomUl css={emotionCss([tw`mt-6`, cssProp])} {...props}>
+    <AtomUl css={emotionCss([tw`mt-6`, css])} {...props}>
       {React.Children.map(children, (child) =>
         cloneElement(child, {
-          cssProp: emotionCss([tw`relative pl-7`]),
+          css: emotionCss([tw`relative pl-7`]),
           listDecoration: iconWithStyles,
         })
       )}

@@ -3,9 +3,9 @@ import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import type { ThProps } from "@components/atoms/atom-types";
 
-const Th = ({ children, cssProp, ...props }: ThProps): ReactElement => {
+const Th = ({ children, css, ...props }: ThProps): ReactElement => {
   return (
-    <th css={emotionCss([tw`p-2`, cssProp])} {...props}>
+    <th css={emotionCss([tw`p-2`, css])} {...props}>
       {children}
     </th>
   );

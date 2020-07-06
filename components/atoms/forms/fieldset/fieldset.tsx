@@ -81,16 +81,12 @@ import type { FieldsetProps } from "@components/atoms/atom-types";
  */
 const FieldSet = ({
   children,
-  cssProp,
+  css,
   ariaLegend,
   ...props
 }: FieldsetProps): ReactElement => {
   return (
-    <fieldset
-      {...props}
-      aria-labelledby={ariaLegend}
-      css={emotionCss([cssProp])}
-    >
+    <fieldset {...props} aria-labelledby={ariaLegend} css={emotionCss([css])}>
       {children}
     </fieldset>
   );

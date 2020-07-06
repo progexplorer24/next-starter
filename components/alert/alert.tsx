@@ -9,7 +9,7 @@ import InfoIcon from "./info.svg";
 
 const Alert = ({
   children,
-  cssProp,
+  css,
   icon = <InfoIcon />,
   type = "default",
   ...props
@@ -58,7 +58,7 @@ const Alert = ({
       css={emotionCss([
         tw`flex w-full px-4 py-3 mt-4 rounded-md`,
         alertStyles,
-        cssProp,
+        css,
       ])}
     >
       {icon ? renderIcon(icon) : undefined}

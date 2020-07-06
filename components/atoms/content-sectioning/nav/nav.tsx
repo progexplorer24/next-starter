@@ -36,9 +36,9 @@ import { NavProps } from "@components/atoms/atom-types";
  *</footer
  * ```
  */
-const Nav = ({ children, cssProp, ...props }: NavProps): ReactElement => {
+const Nav = ({ children, css, ...props }: NavProps): ReactElement => {
   return (
-    <nav {...props} css={emotionCss([cssProp])}>
+    <nav {...props} css={emotionCss([css])}>
       {children}
     </nav>
   );
