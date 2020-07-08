@@ -16,7 +16,7 @@ const Numeration = ({
 }: NumerationProps): ReactElement => {
   return (
     <Span
-      css={emotionCss([tw`px-1 mr-2 font-semibold text-gray-600`, css])}
+      css={emotionCss([tw`px-1 mr-2 font-semibold text-gray-700`, css])}
       {...props}
     >
       {children}.
