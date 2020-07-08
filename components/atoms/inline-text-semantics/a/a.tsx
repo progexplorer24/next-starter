@@ -2,6 +2,7 @@ import React from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import type { AProps } from "@components/atoms/atom-types";
+import { motion } from "framer-motion";
 
 /**
  * # [MDN Documentation Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
@@ -82,14 +83,14 @@ import type { AProps } from "@components/atoms/atom-types";
 const A = React.forwardRef<HTMLAnchorElement, AProps>(
   ({ children, href, css, ...props }, ref) => {
     return (
-      <a
+      <motion.a
         ref={ref}
         href={href}
         css={emotionCss([tw`font-bold underline cursor-pointer`, css])}
         {...props}
       >
         {children}
-      </a>
+      </motion.a>
     );
   }
 );

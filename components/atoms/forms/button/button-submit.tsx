@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { ButtonProps } from "@components/atoms/atom-types";
 
 /**
@@ -51,9 +52,9 @@ const ButtonSubmit = ({
   ...props
 }: Omit<ButtonProps, "type">): ReactElement => {
   return (
-    <button type="submit" css={emotionCss([css])} {...props}>
+    <motion.button type="submit" css={emotionCss([css])} {...props}>
       {children}
-    </button>
+    </motion.button>
   );
 };
 export default ButtonSubmit;

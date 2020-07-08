@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { SupProps } from "@components/atoms/atom-types";
 
 /**
@@ -21,9 +22,9 @@ import type { SupProps } from "@components/atoms/atom-types";
  */
 const Sup = ({ children, css, ...props }: SupProps): ReactElement => {
   return (
-    <sup {...props} css={emotionCss([css])}>
+    <motion.sup {...props} css={emotionCss([css])}>
       {children}
-    </sup>
+    </motion.sup>
   );
 };
 export default Sup;

@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { SectionProps } from "@components/atoms/atom-types";
 
 /**
@@ -16,9 +17,9 @@ import type { SectionProps } from "@components/atoms/atom-types";
  */
 const Section = ({ children, css, ...props }: SectionProps): ReactElement => {
   return (
-    <section {...props} css={emotionCss([css])}>
+    <motion.section {...props} css={emotionCss([css])}>
       {children}
-    </section>
+    </motion.section>
   );
 };
 export default Section;

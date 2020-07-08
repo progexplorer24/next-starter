@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
+import { motion } from "framer-motion";
 import addFillColorToSvg from "@utils/add-fill-color-to-svg";
 import type { InputProps } from "@components/atoms/atom-types";
 
@@ -47,7 +48,7 @@ const RadioButton = ({
           background-image: url(${addFillColorToSvg(svg, "#FFFFFF")});
         }`;
   return (
-    <input
+    <motion.input
       type="radio"
       css={emotionCss([
         tw`inline-block text-blue-500 align-middle bg-white border border-gray-300 rounded-full appearance-none focus:outline-none focus:shadow-outline`,

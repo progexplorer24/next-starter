@@ -21,8 +21,13 @@ import Blockquote from "@components/basic/blockquote/blockquote";
 import Th from "@components/basic/table/th/th";
 import Td from "@components/basic/table/td/td";
 import type {
-  ParagraphProps,
-  HeadingProps,
+  PProps,
+  H1Props,
+  H2Props,
+  H3Props,
+  H4Props,
+  H5Props,
+  H6Props,
   AProps,
   UlProps,
   LiProps,
@@ -38,25 +43,25 @@ import type {
 } from "@components/atoms/atom-types";
 
 const MdxComponents = {
-  p: ({ children, ...props }: ParagraphProps): ReactElement => (
+  p: ({ children, ...props }: PProps): ReactElement => (
     <P {...props}>{children}</P>
   ),
-  h1: ({ children, ...props }: HeadingProps): ReactElement => (
+  h1: ({ children, ...props }: H1Props): ReactElement => (
     <H1 {...props}>{children}</H1>
   ),
-  h2: ({ children, ...props }: HeadingProps): ReactElement => (
+  h2: ({ children, ...props }: H2Props): ReactElement => (
     <H2 {...props}>{children}</H2>
   ),
-  h3: ({ children, ...props }: HeadingProps): ReactElement => (
+  h3: ({ children, ...props }: H3Props): ReactElement => (
     <H3 {...props}>{children}</H3>
   ),
-  h4: ({ children, ...props }: HeadingProps): ReactElement => (
+  h4: ({ children, ...props }: H4Props): ReactElement => (
     <H4 {...props}>{children}</H4>
   ),
-  h5: ({ children, ...props }: HeadingProps): ReactElement => (
+  h5: ({ children, ...props }: H5Props): ReactElement => (
     <H5 {...props}>{children}</H5>
   ),
-  h6: ({ children, ...props }: HeadingProps): ReactElement => (
+  h6: ({ children, ...props }: H6Props): ReactElement => (
     <H6 {...props}>{children}</H6>
   ),
   inlineCode: ({ children, ...props }: InlineCodeProps): ReactElement => (

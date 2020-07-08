@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import { ArticleProps } from "@components/atoms/atom-types";
-
+import { motion } from "framer-motion";
 /**
  * # [MDN Documentation Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
  *
@@ -18,9 +18,9 @@ import { ArticleProps } from "@components/atoms/atom-types";
 
 const Article = ({ children, css, ...props }: ArticleProps): ReactElement => {
   return (
-    <article {...props} css={emotionCss([css])}>
+    <motion.article {...props} css={emotionCss([css])}>
       {children}
-    </article>
+    </motion.article>
   );
 };
 export default Article;

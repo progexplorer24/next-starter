@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { ProgressProps } from "@components/atoms/atom-types";
 
 /**
@@ -17,9 +18,9 @@ import type { ProgressProps } from "@components/atoms/atom-types";
  */
 const Progress = ({ children, css, ...props }: ProgressProps): ReactElement => {
   return (
-    <progress {...props} css={emotionCss([css])}>
+    <motion.progress {...props} css={emotionCss([css])}>
       {children}
-    </progress>
+    </motion.progress>
   );
 };
 export default Progress;

@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
-import type { HeadingProps } from "@components/atoms/atom-types";
+import { motion } from "framer-motion";
+import type { H5Props } from "@components/atoms/atom-types";
 
 /**
  * # [MDN Documentation Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
@@ -24,11 +25,11 @@ import type { HeadingProps } from "@components/atoms/atom-types";
  *
  * Sectioning content can be labeled using a combination of the aria-labelledby and id attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
  */
-const H5 = ({ children, css, ...props }: HeadingProps): ReactElement => {
+const H5 = ({ children, css, ...props }: H5Props): ReactElement => {
   return (
-    <h5 css={emotionCss([css])} {...props}>
+    <motion.h5 css={emotionCss([css])} {...props}>
       {children}
-    </h5>
+    </motion.h5>
   );
 };
 

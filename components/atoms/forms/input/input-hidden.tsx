@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import { motion } from "framer-motion";
 import type { InputProps } from "@components/atoms/atom-types";
 
 /**
@@ -26,7 +27,7 @@ import type { InputProps } from "@components/atoms/atom-types";
  * 3. After editing, the user submits the form, and the updated data is sent back to the server to be updated in the database.
  */
 const InputHidden = (props: Omit<InputProps, "type">): ReactElement => {
-  return <input type="hidden" {...props} />;
+  return <motion.input type="hidden" {...props} />;
 };
 
 export default InputHidden;

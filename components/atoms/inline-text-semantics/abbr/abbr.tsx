@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import { AbbrProps } from "@components/atoms/atom-types";
 
 /**
@@ -32,9 +33,9 @@ import { AbbrProps } from "@components/atoms/atom-types";
  */
 const Abbr = ({ children, css, ...props }: AbbrProps): ReactElement => {
   return (
-    <abbr {...props} css={emotionCss([css])}>
+    <motion.abbr {...props} css={emotionCss([css])}>
       {children}
-    </abbr>
+    </motion.abbr>
   );
 };
 export default Abbr;

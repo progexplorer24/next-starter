@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { FormProps } from "@components/atoms/atom-types";
 
 /**
@@ -15,9 +16,9 @@ import type { FormProps } from "@components/atoms/atom-types";
  */
 const Form = ({ children, css, ...props }: FormProps): ReactElement => {
   return (
-    <form {...props} css={emotionCss([css])}>
+    <motion.form {...props} css={emotionCss([css])}>
       {children}
-    </form>
+    </motion.form>
   );
 };
 export default Form;

@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { AudioProps } from "@components/atoms/atom-types";
 
 /**
@@ -56,9 +57,9 @@ import type { AudioProps } from "@components/atoms/atom-types";
 const Audio = ({ children, css, ...props }: AudioProps): ReactElement => {
   return (
     // eslint-disable-next-line jsx-a11y/media-has-caption
-    <audio {...props} css={emotionCss([css])}>
+    <motion.audio {...props} css={emotionCss([css])}>
       {children}
-    </audio>
+    </motion.audio>
   );
 };
 export default Audio;

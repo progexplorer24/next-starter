@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import type { AddressProps } from "@components/atoms/atom-types";
+import { motion } from "framer-motion";
 
 /**
  * # [MDN Documentation Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address)
@@ -16,9 +17,9 @@ import type { AddressProps } from "@components/atoms/atom-types";
 
 const Address = ({ children, css, ...props }: AddressProps): ReactElement => {
   return (
-    <address {...props} css={emotionCss([css])}>
+    <motion.address {...props} css={emotionCss([css])}>
       {children}
-    </address>
+    </motion.address>
   );
 };
 export default Address;

@@ -2,9 +2,9 @@ import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import H4Atom from "@components/atoms/content-sectioning/h4/h4";
-import type { HeadingProps } from "@components/atoms/atom-types";
+import type { H4Props } from "@components/atoms/atom-types";
 
-const H2 = ({ children, css, ...props }: HeadingProps): ReactElement => (
+const H4 = ({ children, css, ...props }: H4Props): ReactElement => (
   <H4Atom
     css={emotionCss([
       tw`mt-6 text-xl font-semibold tracking-wide md:text-2xl`,
@@ -16,4 +16,4 @@ const H2 = ({ children, css, ...props }: HeadingProps): ReactElement => (
   </H4Atom>
 );
 
-export default H2;
+export default H4;

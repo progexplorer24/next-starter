@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { InputProps } from "@components/atoms/atom-types";
 
 /**
@@ -32,7 +33,7 @@ const InputRange = ({
   css,
   ...props
 }: Omit<InputProps, "type">): ReactElement => {
-  return <input type="range" css={emotionCss([css])} {...props} />;
+  return <motion.input type="range" css={emotionCss([css])} {...props} />;
 };
 
 export default InputRange;

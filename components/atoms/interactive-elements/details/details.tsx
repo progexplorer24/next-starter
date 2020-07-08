@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { DetailsProps } from "@components/atoms/atom-types";
 
 /**
@@ -33,9 +34,9 @@ import type { DetailsProps } from "@components/atoms/atom-types";
  */
 const Details = ({ children, css, ...props }: DetailsProps): ReactElement => {
   return (
-    <details {...props} css={emotionCss([css])}>
+    <motion.details {...props} css={emotionCss([css])}>
       {children}
-    </details>
+    </motion.details>
   );
 };
 export default Details;

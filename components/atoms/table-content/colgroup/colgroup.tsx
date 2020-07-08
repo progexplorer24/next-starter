@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { ColgroupProps } from "@components/atoms/atom-types";
 
 /**
@@ -11,9 +12,9 @@ import type { ColgroupProps } from "@components/atoms/atom-types";
  */
 const Colgroup = ({ children, css, ...props }: ColgroupProps): ReactElement => {
   return (
-    <colgroup {...props} css={emotionCss([css])}>
+    <motion.colgroup {...props} css={emotionCss([css])}>
       {children}
-    </colgroup>
+    </motion.colgroup>
   );
 };
 export default Colgroup;

@@ -1,8 +1,10 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
+import { motion } from "framer-motion";
 import type { SelectProps } from "@components/atoms/atom-types";
 import emotionClone from "@utils/emotion-clone";
+import Span from "@components/atoms/inline-text-semantics/span/span";
 import { addBasicFormStyling } from "../styles";
 import ArrowIcon from "./arrow.svg";
 
@@ -58,17 +60,17 @@ const Select = ({
   });
 
   return (
-    <span css={emotionCss([tw`relative`])}>
-      <select
+    <Span css={emotionCss([tw`relative`])}>
+      <motion.select
         name={name}
         id={id}
         {...props}
         css={emotionCss([addBasicFormStyling])}
       >
         {children}
-      </select>
+      </motion.select>
       {iconWithStyles}
-    </span>
+    </Span>
   );
 };
 

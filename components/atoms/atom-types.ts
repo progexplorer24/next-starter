@@ -1,5 +1,6 @@
 import { SerializedStyles } from "@emotion/core";
 import { ReactElement, FunctionComponentElement } from "react";
+import { HTMLMotionProps, SVGMotionProps, MotionProps } from "framer-motion";
 
 /**
  * --------- Helper Types -----------------------------------------------------
@@ -30,68 +31,55 @@ export type IconTypeElement = ReactElement<
  */
 
 export type StandardHtmlComponent = React.HTMLAttributes<HTMLElement> & Css;
-export type AProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & Css;
-export type AddressProps = StandardHtmlComponent;
+export type AProps = HTMLMotionProps<"a"> & Css;
+export type AddressProps = HTMLMotionProps<"address"> & Css;
 
-export type AreaProps = Omit<
-  React.AreaHTMLAttributes<HTMLAreaElement>,
-  "alt" | "children"
-> &
+export type AreaProps = HTMLMotionProps<"area"> &
+  Omit<React.AreaHTMLAttributes<HTMLAreaElement>, "alt" | "children"> &
   Css & {
     alt: string;
   };
 
-export type AbbrProps = StandardHtmlComponent;
-export type ArticleProps = StandardHtmlComponent;
-export type AsideProps = StandardHtmlComponent;
-export type AudioProps = React.AudioHTMLAttributes<HTMLAudioElement> & Css;
+export type AbbrProps = HTMLMotionProps<"abbr"> & Css;
+export type ArticleProps = HTMLMotionProps<"address"> & Css;
+export type AsideProps = HTMLMotionProps<"aside"> & Css;
+export type AudioProps = HTMLMotionProps<"audio"> & Css;
 
-export type BlockquoteProps = Omit<
-  React.BlockquoteHTMLAttributes<HTMLElement>,
-  "children"
-> &
+export type BlockquoteProps = Omit<HTMLMotionProps<"blockquote">, "children"> &
   Css & {
-    children: ReactElement<Css>;
+    children: FunctionComponentElement<Css & MotionProps>;
   };
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & Css;
-export type CanvasProps = React.CanvasHTMLAttributes<HTMLCanvasElement> & Css;
-export type CaptionProps = StandardHtmlComponent;
-export type CiteProps = StandardHtmlComponent;
-export type CodeProps = StandardHtmlComponent;
-
-export type ColProps = Omit<
-  React.ColHTMLAttributes<HTMLTableColElement>,
-  "children"
-> &
+export type ButtonProps = HTMLMotionProps<"button"> & Css;
+export type CanvasProps = HTMLMotionProps<"canvas"> &
+  React.CanvasHTMLAttributes<HTMLCanvasElement> &
   Css;
+export type CaptionProps = HTMLMotionProps<"caption"> & Css;
+export type CiteProps = HTMLMotionProps<"cite"> & Css;
+export type CodeProps = HTMLMotionProps<"code"> & Css;
 
-export type ColgroupProps = Omit<
-  React.ColgroupHTMLAttributes<HTMLTableColElement>,
-  "children"
-> &
+export type ColProps = HTMLMotionProps<"col"> & Css;
+
+export type ColgroupProps = HTMLMotionProps<"colgroup"> &
   Css & {
     children?: ColProps | ColProps[];
   };
 
-export type DatalistProps = Omit<StandardHtmlComponent, "children"> &
+export type DatalistProps = HTMLMotionProps<"datalist"> &
   Css & {
     children?: OptionProps | OptionProps[];
   };
 
-export type DdProps = StandardHtmlComponent;
-export type DelProps = React.DelHTMLAttributes<HTMLElement> & Css;
-export type DetailsProps = React.DetailsHTMLAttributes<HTMLDetailsElement> &
-  Css;
-export type DfnProps = StandardHtmlComponent;
-export type DialogProps = React.DialogHTMLAttributes<HTMLDialogElement> & Css;
-export type DivProps = StandardHtmlComponent;
-export type DlProps = Omit<StandardHtmlComponent, "children"> & {
-  children?: DdProps | DtProps | (DdProps | DtProps)[];
-};
-export type DtProps = StandardHtmlComponent;
-export type EmProps = StandardHtmlComponent;
-export type FieldsetProps = React.FieldsetHTMLAttributes<HTMLFieldSetElement> &
+export type DdProps = HTMLMotionProps<"dd"> & Css;
+export type DelProps = HTMLMotionProps<"del"> & Css;
+export type DetailsProps = HTMLMotionProps<"details"> & Css;
+export type DfnProps = HTMLMotionProps<"dfn"> & Css;
+export type DialogProps = HTMLMotionProps<"dialog"> & Css;
+export type DivProps = HTMLMotionProps<"div"> & Css;
+export type DlProps = HTMLMotionProps<"dl"> & Css;
+export type DtProps = HTMLMotionProps<"dt"> & Css;
+export type EmProps = HTMLMotionProps<"em"> & Css;
+export type FieldsetProps = HTMLMotionProps<"fieldset"> &
   Css & {
     /**
      * You must provide legend as an aria value becasue of bug in chromium
@@ -99,141 +87,105 @@ export type FieldsetProps = React.FieldsetHTMLAttributes<HTMLFieldSetElement> &
      */
     ariaLegend: string;
   };
-export type FigcaptionProps = StandardHtmlComponent;
-export type FigureProps = StandardHtmlComponent;
-export type FooterProps = StandardHtmlComponent;
-export type FormProps = React.FormHTMLAttributes<HTMLFormElement> & Css;
-export type HeaderProps = StandardHtmlComponent;
-export type HeadingProps = StandardHtmlComponent;
-export type HrProps = Omit<StandardHtmlComponent, "children">;
-export type IProps = StandardHtmlComponent;
-export type IframeProps = React.IframeHTMLAttributes<HTMLIFrameElement> & Css;
-export type ImgProps = React.ImgHTMLAttributes<HTMLImageElement> &
+export type FigcaptionProps = HTMLMotionProps<"figcaption"> & Css;
+export type FigureProps = HTMLMotionProps<"figure"> & Css;
+export type FooterProps = HTMLMotionProps<"footer"> & Css;
+export type FormProps = HTMLMotionProps<"form"> & Css;
+export type HeaderProps = HTMLMotionProps<"header"> & Css;
+export type H1Props = HTMLMotionProps<"h1"> & Css;
+export type H2Props = HTMLMotionProps<"h2"> & Css;
+export type H3Props = HTMLMotionProps<"h3"> & Css;
+export type H4Props = HTMLMotionProps<"h4"> & Css;
+export type H5Props = HTMLMotionProps<"h5"> & Css;
+export type H6Props = HTMLMotionProps<"h6"> & Css;
+export type HrProps = HTMLMotionProps<"hr"> & Css;
+export type IProps = HTMLMotionProps<"i"> & Css;
+export type IframeProps = Omit<HTMLMotionProps<"iframe">, "title"> &
+  Css & {
+    title: string;
+  };
+export type ImgProps = HTMLMotionProps<"img"> &
   Css & {
     src: string;
   };
 
-export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & Css;
-export type InsProps = React.InsHTMLAttributes<HTMLElement> & Css;
-export type KbdProps = StandardHtmlComponent;
-export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & Css;
-export type LegendProps = Omit<StandardHtmlComponent, "id"> & {
-  /**
-   * Id should be the same as aria-labelledby attribute on fieldset element
-   */
-  id: string;
-};
-export type LiProps = React.LiHTMLAttributes<HTMLLIElement> &
+export type InputProps = HTMLMotionProps<"input"> & Css;
+export type InsProps = HTMLMotionProps<"ins"> & Css;
+export type KbdProps = HTMLMotionProps<"kbd"> & Css;
+export type LabelProps = HTMLMotionProps<"label"> & Css;
+export type LegendProps = Omit<HTMLMotionProps<"span">, "id"> &
+  Css & {
+    /**
+     * Id should be the same as aria-labelledby attribute on fieldset element
+     */
+    id: string;
+  };
+export type LiProps = HTMLMotionProps<"li"> &
   Css & {
     listDecoration?: JSX.Element;
   };
-export type MainProps = StandardHtmlComponent;
-export type MapProps = React.MapHTMLAttributes<HTMLMapElement> & Css;
-export type MarkProps = StandardHtmlComponent;
-export type MeterProps = React.MeterHTMLAttributes<HTMLMeterElement> & Css;
-export type NavProps = StandardHtmlComponent;
+export type MainProps = HTMLMotionProps<"main"> & Css;
+export type MapProps = HTMLMotionProps<"map"> & Css;
+export type MarkProps = HTMLMotionProps<"mark"> & Css;
+export type MeterProps = HTMLMotionProps<"meter"> & Css;
+export type NavProps = HTMLMotionProps<"nav"> & Css;
 
-export type OlProps = Omit<
-  React.OlHTMLAttributes<HTMLOListElement>,
-  "children"
-> &
+export type OlProps = Omit<HTMLMotionProps<"ol">, "children"> &
   Css & {
     children:
       | FunctionComponentElement<LiProps>
       | FunctionComponentElement<LiProps>[];
   };
 
-export type OptgroupProps = React.OptgroupHTMLAttributes<HTMLOptionElement> &
-  Css;
-export type OptionProps = React.OptionHTMLAttributes<HTMLOptionElement> & Css;
-export type ParagraphProps = StandardHtmlComponent;
-export type PcitureProps = StandardHtmlComponent;
-export type PreProps = StandardHtmlComponent;
-export type ProgressProps = React.ProgressHTMLAttributes<HTMLProgressElement> &
-  Css;
-export type QProps = React.QuoteHTMLAttributes<HTMLQuoteElement> & Css;
-export type SectionProps = StandardHtmlComponent;
+export type OptgroupProps = HTMLMotionProps<"optgroup"> & Css;
+export type OptionProps = HTMLMotionProps<"option"> & Css;
+export type PProps = HTMLMotionProps<"p"> & Css;
+export type PcitureProps = HTMLMotionProps<"picture"> & Css;
+export type PreProps = HTMLMotionProps<"pre"> & Css;
+export type ProgressProps = HTMLMotionProps<"progress"> & Css;
+export type QProps = HTMLMotionProps<"q"> & Css;
+export type SectionProps = HTMLMotionProps<"section"> & Css;
 
-export type SelectProps = Omit<
-  React.SelectHTMLAttributes<HTMLSelectElement>,
-  "multiple"
-> &
+export type SelectProps = Omit<HTMLMotionProps<"select">, "multiple"> &
   Css & {
     icon?: IconTypeElement;
   };
 
-export type SourceProps = Omit<
-  React.SourceHTMLAttributes<HTMLSourceElement>,
-  "children"
-> &
+export type SourceProps = Omit<HTMLMotionProps<"source">, "children"> & Css;
+
+export type SpanProps = HTMLMotionProps<"span"> & Css;
+export type StrongProps = HTMLMotionProps<"strong"> & Css;
+export type SubProps = HTMLMotionProps<"sub"> & Css;
+export type SupProps = HTMLMotionProps<"sup"> & Css;
+export type SummaryProps = HTMLMotionProps<"summary"> & Css;
+export type SvgProps = Omit<React.SVGProps<SVGSVGElement>, "ref"> &
+  SVGMotionProps<"svg"> &
   Css;
+export type TableProps = HTMLMotionProps<"table"> & Css;
 
-export type SpanProps = StandardHtmlComponent;
-export type StrongProps = StandardHtmlComponent;
-export type SubProps = StandardHtmlComponent;
-export type SupProps = StandardHtmlComponent;
-export type SummaryProps = StandardHtmlComponent;
-export type SvgProps = React.SVGProps<SVGSVGElement> & Css;
-export type TableProps = Omit<StandardHtmlComponent, "children"> &
-  Css & {
-    children?:
-      | ReactElement<
-          TbodyProps | TheadProps | TrProps,
-          (props: TbodyProps | TheadProps | TrProps) => ReactElement
-        >
-      | ReactElement<
-          TbodyProps | TheadProps | TrProps,
-          (props: TbodyProps | TheadProps | TrProps) => ReactElement
-        >[];
-  };
+export type TbodyProps = HTMLMotionProps<"tbody"> & Css;
 
-export type TbodyProps = Omit<StandardHtmlComponent, "children"> &
-  Css & {
-    children?:
-      | ReactElement<TrProps, (props: TrProps) => ReactElement>
-      | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
-  };
+export type TdProps = HTMLMotionProps<"td"> & Css;
+export type TextareaProps = HTMLMotionProps<"textarea"> & Css;
+export type TfootProps = HTMLMotionProps<"tfoot"> & Css;
+export type ThProps = HTMLMotionProps<"th"> & Css;
 
-export type TdProps = React.TdHTMLAttributes<HTMLTableDataCellElement> & Css;
-export type TfootProps = StandardHtmlComponent;
-export type ThProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement> & Css;
+export type TheadProps = HTMLMotionProps<"thead"> & Css;
+export type TimeProps = HTMLMotionProps<"time"> & Css;
 
-export type TheadProps = Omit<StandardHtmlComponent, "children"> &
-  Css & {
-    children?:
-      | ReactElement<TrProps, (props: TrProps) => ReactElement>
-      | ReactElement<TrProps, (props: TrProps) => ReactElement>[];
-  };
-export type TimeProps = React.TimeHTMLAttributes<HTMLTimeElement> & Css;
+export type TrProps = HTMLMotionProps<"tr"> & Css;
 
-export type TrProps = Omit<StandardHtmlComponent, "children"> &
-  Css & {
-    children?:
-      | ReactElement<
-          TdProps | ThProps,
-          (props: TdProps | ThProps) => ReactElement
-        >
-      | ReactElement<
-          TdProps | ThProps,
-          (props: TdProps | ThProps) => ReactElement
-        >[];
-  };
+export type TrackProps = HTMLMotionProps<"track"> & Css;
 
-export type TrackProps = Omit<
-  React.TrackHTMLAttributes<HTMLTrackElement>,
-  "children"
-> &
-  Css;
-
-export type UProps = StandardHtmlComponent;
-export type UlProps = Omit<StandardHtmlComponent, "children"> &
+export type UProps = HTMLMotionProps<"u"> & Css;
+export type UlProps = Omit<HTMLMotionProps<"ul">, "children"> &
   Css & {
     icon?: IconTypeElement;
     children:
       | FunctionComponentElement<LiProps>
       | FunctionComponentElement<LiProps>[];
   };
-export type VideoProps = React.VideoHTMLAttributes<HTMLVideoElement> & Css;
+export type VideoProps = HTMLMotionProps<"video"> & Css;
 
 // ======================================================================================================
 // ======================================================================================================

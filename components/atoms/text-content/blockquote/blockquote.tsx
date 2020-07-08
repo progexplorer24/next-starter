@@ -1,7 +1,8 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import { BlockquoteProps } from "@components/atoms/atom-types";
+import type { BlockquoteProps } from "@components/atoms/atom-types";
+import { motion } from "framer-motion";
 
 /**
  *
@@ -25,7 +26,7 @@ const Blockquote = ({
   });
 
   return (
-    <blockquote
+    <motion.blockquote
       css={emotionCss([
         tw`py-4 pl-6 mt-6 text-lg break-words bg-gray-200 border-l-4 border-gray-600`,
         css,
@@ -34,7 +35,7 @@ const Blockquote = ({
       {...props}
     >
       {childrenWithStyles}
-    </blockquote>
+    </motion.blockquote>
   );
 };
 

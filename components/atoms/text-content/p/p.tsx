@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
-import type { ParagraphProps } from "@components/atoms/atom-types";
+import { motion } from "framer-motion";
+import type { PProps } from "@components/atoms/atom-types";
 
 /**
  *
@@ -21,11 +22,11 @@ import type { ParagraphProps } from "@components/atoms/atom-types";
  * none. This can confuse and frustrate the person using the screen reader.
  *
  */
-const P = ({ children, css, ...props }: ParagraphProps): ReactElement => {
+const P = ({ children, css, ...props }: PProps): ReactElement => {
   return (
-    <p css={emotionCss([css])} {...props}>
+    <motion.p css={emotionCss([css])} {...props}>
       {children}
-    </p>
+    </motion.p>
   );
 };
 

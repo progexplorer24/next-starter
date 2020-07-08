@@ -1,15 +1,13 @@
 import React, { ReactElement } from "react";
-
-import { css as emotionCss, SerializedStyles } from "@emotion/core";
-
+import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import tw from "twin.macro";
 import addFillColorToSvg from "@utils/add-fill-color-to-svg";
+import { InputProps } from "@components/atoms/atom-types";
 
-type CheckboxProps = {
+type CheckboxProps = Omit<InputProps, "name" | "id"> & {
   name: string;
   id: string;
-  css?: SerializedStyles;
-  className?: string;
   svg?: JSX.Element;
 };
 
@@ -37,7 +35,7 @@ const svgIcon = (
  */
 const Checkbox = ({ svg = svgIcon, ...props }: CheckboxProps): ReactElement => {
   return (
-    <input
+    <motion.input
       type="checkbox"
       css={emotionCss`
         ${tw`inline-block text-blue-500 align-middle bg-white border border-gray-300 rounded appearance-none focus:outline-none focus:shadow-outline `}

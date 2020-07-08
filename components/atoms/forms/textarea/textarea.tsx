@@ -1,12 +1,8 @@
-import React from "react";
-import { SerializedStyles, css as emotionCss } from "@emotion/core";
+import React, { ReactElement } from "react";
+import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
+import { TextareaProps } from "@components/atoms/atom-types";
 import { addBasicFormStyling, addPlaceholderFormDefaults } from "../styles";
-
-type TextareaProps = {
-  css?: SerializedStyles;
-  className?: string;
-  placeholder?: string;
-};
 
 /**
  * # [MDN Documentation Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
@@ -34,12 +30,12 @@ type TextareaProps = {
  * bottom of the `<textarea>` box. Don't use vertical-align: baseline on it; the behavior is unpredictable.
  *
  */
-const Textarea: React.FC<TextareaProps> = ({
+const Textarea = ({
   placeholder = "Enter some long form content.",
   ...props
-}) => {
+}: TextareaProps): ReactElement => {
   return (
-    <textarea
+    <motion.textarea
       css={emotionCss([addBasicFormStyling, addPlaceholderFormDefaults])}
       placeholder={placeholder}
       {...props}

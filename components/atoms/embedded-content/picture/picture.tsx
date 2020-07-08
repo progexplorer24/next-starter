@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { PcitureProps } from "@components/atoms/atom-types";
 
 /**
@@ -68,9 +69,9 @@ import type { PcitureProps } from "@components/atoms/atom-types";
  */
 const Pciture = ({ children, css, ...props }: PcitureProps): ReactElement => {
   return (
-    <picture {...props} css={emotionCss([css])}>
+    <motion.picture {...props} css={emotionCss([css])}>
       {children}
-    </picture>
+    </motion.picture>
   );
 };
 export default Pciture;

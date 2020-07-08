@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
+import { motion } from "framer-motion";
 import type { TrProps } from "@components/atoms/atom-types";
 
 /**
@@ -13,12 +14,12 @@ import type { TrProps } from "@components/atoms/atom-types";
  */
 const Tr = ({ children, css, ...props }: TrProps): ReactElement => {
   return (
-    <tr
+    <motion.tr
       css={emotionCss([tw`border-t border-b border-gray-400`, css])}
       {...props}
     >
       {children}
-    </tr>
+    </motion.tr>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { StrongProps } from "@components/atoms/atom-types";
 
 /**
@@ -31,9 +32,9 @@ import type { StrongProps } from "@components/atoms/atom-types";
  */
 const Strong = ({ children, css, ...props }: StrongProps): ReactElement => {
   return (
-    <strong {...props} css={emotionCss([css])}>
+    <motion.strong {...props} css={emotionCss([css])}>
       {children}
-    </strong>
+    </motion.strong>
   );
 };
 export default Strong;

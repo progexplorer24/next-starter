@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { DialogProps } from "@components/atoms/atom-types";
 
 /**
@@ -26,9 +27,9 @@ import type { DialogProps } from "@components/atoms/atom-types";
 
 const Dialog = ({ children, css, ...props }: DialogProps): ReactElement => {
   return (
-    <dialog {...props} css={emotionCss([css])}>
+    <motion.dialog {...props} css={emotionCss([css])}>
       {children}
-    </dialog>
+    </motion.dialog>
   );
 };
 export default Dialog;

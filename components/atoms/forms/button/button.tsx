@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
+import { motion } from "framer-motion";
 import type { ButtonProps } from "@components/atoms/atom-types";
 
 /**
@@ -46,13 +47,13 @@ const Button = ({
   ...props
 }: Omit<ButtonProps, "type">): ReactElement => {
   return (
-    <button
+    <motion.button
       type="button"
       css={emotionCss([tw`min-w-11 min-h-11`, css])}
       {...props}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };
 export default Button;

@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { CaptionProps } from "@components/atoms/atom-types";
 
 /**
@@ -18,9 +19,9 @@ import type { CaptionProps } from "@components/atoms/atom-types";
  */
 const Caption = ({ children, css, ...props }: CaptionProps): ReactElement => {
   return (
-    <caption {...props} css={emotionCss([css])}>
+    <motion.caption {...props} css={emotionCss([css])}>
       {children}
-    </caption>
+    </motion.caption>
   );
 };
 export default Caption;

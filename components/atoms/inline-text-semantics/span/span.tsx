@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { SpanProps } from "@components/atoms/atom-types";
 
 /**
@@ -13,9 +14,9 @@ import type { SpanProps } from "@components/atoms/atom-types";
  */
 const Span = ({ children, css, ...props }: SpanProps): ReactElement => {
   return (
-    <span {...props} css={emotionCss([css])}>
+    <motion.span {...props} css={emotionCss([css])}>
       {children}
-    </span>
+    </motion.span>
   );
 };
 export default Span;

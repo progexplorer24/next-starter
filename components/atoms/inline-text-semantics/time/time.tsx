@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { TimeProps } from "@components/atoms/atom-types";
 
 /**
@@ -24,9 +25,9 @@ import type { TimeProps } from "@components/atoms/atom-types";
  */
 const Time = ({ children, css, ...props }: TimeProps): ReactElement => {
   return (
-    <time {...props} css={emotionCss([css])}>
+    <motion.time {...props} css={emotionCss([css])}>
       {children}
-    </time>
+    </motion.time>
   );
 };
 export default Time;

@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { MainProps } from "@components/atoms/atom-types";
 
 /**
@@ -43,9 +44,9 @@ const Main = ({
   ...props
 }: MainProps): ReactElement => {
   return (
-    <main id={id} {...props} css={emotionCss([css])}>
+    <motion.main id={id} {...props} css={emotionCss([css])}>
       {children}
-    </main>
+    </motion.main>
   );
 };
 export default Main;

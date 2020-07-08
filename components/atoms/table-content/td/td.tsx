@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
+import { motion } from "framer-motion";
 import type { TdProps } from "@components/atoms/atom-types";
 
 /**
@@ -13,9 +14,9 @@ import type { TdProps } from "@components/atoms/atom-types";
  */
 const Td = ({ children, css, ...props }: TdProps): ReactElement => {
   return (
-    <td css={emotionCss([tw`p-2`, css])} {...props}>
+    <motion.td css={emotionCss([tw`p-2`, css])} {...props}>
       {children}
-    </td>
+    </motion.td>
   );
 };
 

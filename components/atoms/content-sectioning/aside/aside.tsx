@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { AsideProps } from "@components/atoms/atom-types";
 
 /**
@@ -14,9 +15,9 @@ import type { AsideProps } from "@components/atoms/atom-types";
  */
 const Aside = ({ children, css, ...props }: AsideProps): ReactElement => {
   return (
-    <aside {...props} css={emotionCss([css])}>
+    <motion.aside {...props} css={emotionCss([css])}>
       {children}
-    </aside>
+    </motion.aside>
   );
 };
 export default Aside;

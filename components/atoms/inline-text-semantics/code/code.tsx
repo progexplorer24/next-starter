@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { CodeProps } from "@components/atoms/atom-types";
 import tw from "twin.macro";
 
@@ -17,9 +18,9 @@ import tw from "twin.macro";
  */
 const Code = ({ children, css, ...props }: CodeProps): ReactElement => {
   return (
-    <code css={emotionCss([tw`font-mono`, css])} {...props}>
+    <motion.code css={emotionCss([tw`font-mono`, css])} {...props}>
       {children}
-    </code>
+    </motion.code>
   );
 };
 

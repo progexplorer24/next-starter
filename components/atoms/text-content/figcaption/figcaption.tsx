@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { FigcaptionProps } from "@components/atoms/atom-types";
 
 /**
@@ -16,9 +17,9 @@ const Figcaption = ({
   ...props
 }: FigcaptionProps): ReactElement => {
   return (
-    <figcaption {...props} css={emotionCss([css])}>
+    <motion.figcaption {...props} css={emotionCss([css])}>
       {children}
-    </figcaption>
+    </motion.figcaption>
   );
 };
 export default Figcaption;

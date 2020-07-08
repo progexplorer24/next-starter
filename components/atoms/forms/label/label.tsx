@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { LabelProps } from "@components/atoms/atom-types";
 
 /**
@@ -48,9 +49,9 @@ import type { LabelProps } from "@components/atoms/atom-types";
  */
 const Label = ({ children, css, ...props }: LabelProps): ReactElement => {
   return (
-    <label {...props} css={emotionCss([css])}>
+    <motion.label {...props} css={emotionCss([css])}>
       {children}
-    </label>
+    </motion.label>
   );
 };
 export default Label;

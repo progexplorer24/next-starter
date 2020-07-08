@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { DfnProps } from "@components/atoms/atom-types";
 
 /**
@@ -34,9 +35,9 @@ import type { DfnProps } from "@components/atoms/atom-types";
  */
 const Dfn = ({ children, css, ...props }: DfnProps): ReactElement => {
   return (
-    <dfn {...props} css={emotionCss([css])}>
+    <motion.dfn {...props} css={emotionCss([css])}>
       {children}
-    </dfn>
+    </motion.dfn>
   );
 };
 export default Dfn;

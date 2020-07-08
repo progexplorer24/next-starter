@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { PreProps } from "@components/atoms/atom-types";
 
 /**
@@ -42,9 +43,9 @@ import type { PreProps } from "@components/atoms/atom-types";
  */
 const Pre = ({ children, css, ...props }: PreProps): ReactElement => {
   return (
-    <pre {...props} css={emotionCss([css])}>
+    <motion.pre {...props} css={emotionCss([css])}>
       {children}
-    </pre>
+    </motion.pre>
   );
 };
 export default Pre;

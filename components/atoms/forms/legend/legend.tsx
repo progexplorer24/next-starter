@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { LegendProps } from "@components/atoms/atom-types";
 
 /**
@@ -17,9 +18,9 @@ import type { LegendProps } from "@components/atoms/atom-types";
  */
 const Legend = ({ children, css, ...props }: LegendProps): ReactElement => {
   return (
-    <span {...props} css={emotionCss([css])}>
+    <motion.span {...props} css={emotionCss([css])}>
       {children}
-    </span>
+    </motion.span>
   );
 };
 export default Legend;

@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { DdProps } from "@components/atoms/atom-types";
 
 /**
@@ -12,9 +13,9 @@ import type { DdProps } from "@components/atoms/atom-types";
  */
 const Dd = ({ children, css, ...props }: DdProps): ReactElement => {
   return (
-    <dd {...props} css={emotionCss([css])}>
+    <motion.dd {...props} css={emotionCss([css])}>
       {children}
-    </dd>
+    </motion.dd>
   );
 };
 export default Dd;

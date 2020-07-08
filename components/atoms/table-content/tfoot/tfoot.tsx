@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { TfootProps } from "@components/atoms/atom-types";
 
 /**
@@ -12,9 +13,9 @@ import type { TfootProps } from "@components/atoms/atom-types";
  */
 const Tfoot = ({ children, css, ...props }: TfootProps): ReactElement => {
   return (
-    <tfoot {...props} css={emotionCss([css])}>
+    <motion.tfoot {...props} css={emotionCss([css])}>
       {children}
-    </tfoot>
+    </motion.tfoot>
   );
 };
 export default Tfoot;

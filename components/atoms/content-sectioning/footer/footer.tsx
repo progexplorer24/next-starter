@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import { FooterProps } from "@components/atoms/atom-types";
 
 /**
@@ -14,9 +15,9 @@ import { FooterProps } from "@components/atoms/atom-types";
  */
 const Footer = ({ children, css, ...props }: FooterProps): ReactElement => {
   return (
-    <footer {...props} css={emotionCss([css])}>
+    <motion.footer {...props} css={emotionCss([css])}>
       {children}
-    </footer>
+    </motion.footer>
   );
 };
 export default Footer;

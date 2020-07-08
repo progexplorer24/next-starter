@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
+import { motion } from "framer-motion";
 import type { InputProps } from "@components/atoms/atom-types";
 
 /**
@@ -41,6 +42,6 @@ const InputFile = ({
   css,
   ...props
 }: Omit<InputProps, "type">): ReactElement => {
-  return <input type="file" {...props} css={emotionCss([css])} />;
+  return <motion.input type="file" {...props} css={emotionCss([css])} />;
 };
 export default InputFile;
