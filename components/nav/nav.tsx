@@ -27,7 +27,7 @@ const Nav = ({ css, ...props }: NavProps): ReactElement => {
       <Link href="/design-tokens/font-weight" passHref>
         <A>Font Weight</A>
       </Link>
-      <Link href="/mdx-components">
+      <Link href="/mdx-components" passHref>
         <A>MDX Components</A>
       </Link>
     </nav>
