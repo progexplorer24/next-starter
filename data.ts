@@ -564,382 +564,382 @@ export const colors = {
 
   gray: {
     "100": {
-      value: "#F7FAFC",
+      value: "rgb(247, 250, 252)",
       twClass: tw`bg-gray-100`,
     },
     "200": {
-      value: "#EDF2F7",
+      value: "rgb(237, 242, 247)",
       twClass: tw`bg-gray-200`,
     },
     "300": {
-      value: "#E2E8F0",
+      value: "rgb(226, 232, 240)",
       twClass: tw`bg-gray-300`,
     },
     "400": {
-      value: "#CBD5E0",
+      value: "rgb(203, 213, 224)",
       twClass: tw`bg-gray-400`,
     },
     "500": {
-      value: "#A0AEC0",
+      value: "rgb(160, 174, 192)",
       twClass: tw`bg-gray-500`,
     },
     "600": {
-      value: "#718096",
+      value: "rgb(113, 128, 150)",
       twClass: tw`bg-gray-600`,
     },
     "700": {
-      value: "#4A5568",
+      value: "rgb(74, 85, 104)",
       twClass: tw`bg-gray-700`,
     },
     "800": {
-      value: "#2D3748",
+      value: "rgb(45, 55, 72)",
       twClass: tw`bg-gray-800`,
     },
     "900": {
-      value: "#1A202C",
+      value: "rgb(26, 32, 44)",
       twClass: tw`bg-gray-900`,
     },
   },
   red: {
     "100": {
-      value: "#FFF5F5",
+      value: "rgb(255, 245, 245)",
       twClass: tw`bg-red-100`,
     },
     "200": {
-      value: "#FED7D7",
+      value: "rgb(254, 215, 215)",
       twClass: tw`bg-red-200`,
     },
     "300": {
-      value: "#FEB2B2",
+      value: "rgb(254, 178, 178)",
       twClass: tw`bg-red-300`,
     },
     "400": {
-      value: "#FC8181",
+      value: "rgb(252, 129, 129)",
       twClass: tw`bg-red-400`,
     },
     "500": {
-      value: "#F56565",
+      value: "rgb(245, 101, 101)",
       twClass: tw`bg-red-500`,
     },
     "600": {
-      value: "#E53E3E",
+      value: "rgb(229, 62, 62)",
       twClass: tw`bg-red-600`,
     },
     "700": {
-      value: "#C53030",
+      value: "rgb(197, 48, 48)",
       twClass: tw`bg-red-700`,
     },
     "800": {
-      value: "#9B2C2C",
+      value: "rgb(155, 44, 44)",
       twClass: tw`bg-red-800`,
     },
     "900": {
-      value: "#742A2A",
+      value: "rgb(116, 42, 42)",
       twClass: tw`bg-red-900`,
     },
   },
   orange: {
     "100": {
-      value: "#FFFAF0",
+      value: "rgb(255, 250, 240)",
       twClass: tw`bg-orange-100`,
     },
     "200": {
-      value: "#FEEBC8",
+      value: "rgb(254, 235, 200)",
       twClass: tw`bg-orange-200`,
     },
     "300": {
-      value: "#FBD38D",
+      value: "rgb(251, 211, 141)",
       twClass: tw`bg-orange-300`,
     },
     "400": {
-      value: "#F6AD55",
+      value: "rgb(246, 173, 85)",
       twClass: tw`bg-orange-400`,
     },
     "500": {
-      value: "#ED8936",
+      value: "rgb(237, 137, 54)",
       twClass: tw`bg-orange-500`,
     },
     "600": {
-      value: "#DD6B20",
+      value: "rgb(221, 107, 32)",
       twClass: tw`bg-orange-600`,
     },
     "700": {
-      value: "#C05621",
+      value: "rgb(192, 86, 33)",
       twClass: tw`bg-orange-700`,
     },
     "800": {
-      value: "#9C4221",
+      value: "rgb(156, 66, 33)",
       twClass: tw`bg-orange-800`,
     },
     "900": {
-      value: "#7B341E",
+      value: "rgb(123, 52, 30)",
       twClass: tw`bg-orange-900`,
     },
   },
   yellow: {
     "100": {
-      value: "#FFFFF0",
+      value: "rgb(255, 255, 240)",
       twClass: tw`bg-yellow-100`,
     },
     "200": {
-      value: "#FEFCBF",
+      value: "rgb(254, 252, 191)",
       twClass: tw`bg-yellow-200`,
     },
     "300": {
-      value: "#FAF089",
+      value: "rgb(250, 240, 137)",
       twClass: tw`bg-yellow-300`,
     },
     "400": {
-      value: "#F6E05E",
+      value: "rgb(246, 224, 94)",
       twClass: tw`bg-yellow-400`,
     },
     "500": {
-      value: "#ECC94B",
+      value: "rgb(236, 201, 75)",
       twClass: tw`bg-yellow-500`,
     },
     "600": {
-      value: "#D69E2E",
+      value: "rgb(214, 158, 46)",
       twClass: tw`bg-yellow-600`,
     },
     "700": {
-      value: "#B7791F",
+      value: "rgb(183, 121, 31)",
       twClass: tw`bg-yellow-700`,
     },
     "800": {
-      value: "#975A16",
+      value: "rgb(151, 90, 22)",
       twClass: tw`bg-yellow-800`,
     },
     "900": {
-      value: "#744210",
+      value: "rgb(116, 66, 16)",
       twClass: tw`bg-yellow-900`,
     },
   },
   green: {
     "100": {
-      value: "#F0FFF4",
+      value: "rgb(240, 255, 244)",
       twClass: tw`bg-green-100`,
     },
     "200": {
-      value: "#C6F6D5",
+      value: "rgb(198, 246, 213)",
       twClass: tw`bg-green-200`,
     },
     "300": {
-      value: "#9AE6B4",
+      value: "rgb(154, 230, 180)",
       twClass: tw`bg-green-300`,
     },
     "400": {
-      value: "#68D391",
+      value: "rgb(104, 211, 145)",
       twClass: tw`bg-green-400`,
     },
     "500": {
-      value: "#48BB78",
+      value: "rgb(72, 187, 120)",
       twClass: tw`bg-green-500`,
     },
     "600": {
-      value: "#38A169",
+      value: "rgb(56, 161, 105)",
       twClass: tw`bg-green-600`,
     },
     "700": {
-      value: "#2F855A",
+      value: "rgb(47, 133, 90)",
       twClass: tw`bg-green-700`,
     },
     "800": {
-      value: "#276749",
+      value: "rgb(39, 103, 73)",
       twClass: tw`bg-green-800`,
     },
     "900": {
-      value: "#22543D",
+      value: "rgb(34, 84, 61)",
       twClass: tw`bg-green-900`,
     },
   },
   teal: {
     "100": {
-      value: "#E6FFFA",
+      value: "rgb(230, 255, 250)",
       twClass: tw`bg-teal-100`,
     },
     "200": {
-      value: "#B2F5EA",
+      value: "rgb(178, 245, 234)",
       twClass: tw`bg-teal-200`,
     },
     "300": {
-      value: "#81E6D9",
+      value: "rgb(129, 230, 217)",
       twClass: tw`bg-teal-300`,
     },
     "400": {
-      value: "#4FD1C5",
+      value: "rgb(79, 209, 197)",
       twClass: tw`bg-teal-400`,
     },
     "500": {
-      value: "#38B2AC",
+      value: "rgb(56, 178, 172)",
       twClass: tw`bg-teal-500`,
     },
     "600": {
-      value: "#319795",
+      value: "rgb(49, 151, 149)",
       twClass: tw`bg-teal-600`,
     },
     "700": {
-      value: "#2C7A7B",
+      value: "rgb(44, 122, 123)",
       twClass: tw`bg-teal-700`,
     },
     "800": {
-      value: "#285E61",
+      value: "rgb(40, 94, 97)",
       twClass: tw`bg-teal-800`,
     },
     "900": {
-      value: "#234E52",
+      value: "rgb(35, 78, 82)",
       twClass: tw`bg-teal-900`,
     },
   },
   blue: {
     "100": {
-      value: "#EBF8FF",
+      value: "rgb(235, 248, 255)",
       twClass: tw`bg-blue-100`,
     },
     "200": {
-      value: "#BEE3F8",
+      value: "rgb(190, 227, 248)",
       twClass: tw`bg-blue-200`,
     },
     "300": {
-      value: "#90CDF4",
+      value: "rgb(144, 205, 244)",
       twClass: tw`bg-blue-300`,
     },
     "400": {
-      value: "#63B3ED",
+      value: "rgb(99, 179, 237)",
       twClass: tw`bg-blue-400`,
     },
     "500": {
-      value: "#4299E1",
+      value: "rgb(66, 153, 225)",
       twClass: tw`bg-blue-500`,
     },
     "600": {
-      value: "#3182CE",
+      value: "rgb(49, 130, 206)",
       twClass: tw`bg-blue-600`,
     },
     "700": {
-      value: "#2C7A7B",
+      value: "rgb(43, 108, 176)",
       twClass: tw`bg-blue-700`,
     },
     "800": {
-      value: "#2C5282",
+      value: "rgb(44, 82, 130)",
       twClass: tw`bg-blue-800`,
     },
     "900": {
-      value: "#2A4365",
+      value: "rgb(42, 67, 101)",
       twClass: tw`bg-blue-900`,
     },
   },
   indigo: {
     "100": {
-      value: "#EBF4FF",
+      value: "rgb(235, 244, 255)",
       twClass: tw`bg-indigo-100`,
     },
     "200": {
-      value: "#C3DAFE",
+      value: "rgb(195, 218, 254)",
       twClass: tw`bg-indigo-200`,
     },
     "300": {
-      value: "#A3BFFA",
+      value: "rgb(163, 191, 250)",
       twClass: tw`bg-indigo-300`,
     },
     "400": {
-      value: "#7F9CF5",
+      value: "rgb(127, 156, 245)",
       twClass: tw`bg-indigo-400`,
     },
     "500": {
-      value: "#667EEA",
+      value: "rgb(102, 126, 234)",
       twClass: tw`bg-indigo-500`,
     },
     "600": {
-      value: "#5A67D8",
+      value: "rgb(90, 103, 216)",
       twClass: tw`bg-indigo-600`,
     },
     "700": {
-      value: "#4C51BF",
+      value: "rgb(76, 81, 191)",
       twClass: tw`bg-indigo-700`,
     },
     "800": {
-      value: "#434190",
+      value: "rgb(67, 65, 144)",
       twClass: tw`bg-indigo-800`,
     },
     "900": {
-      value: "#3C366B",
+      value: "rgb(60, 54, 107)",
       twClass: tw`bg-indigo-900`,
     },
   },
   purple: {
     "100": {
-      value: "#FAF5FF",
+      value: "rgb(250, 245, 255)",
       twClass: tw`bg-purple-100`,
     },
     "200": {
-      value: "#E9D8FD",
+      value: "rgb(233, 216, 253)",
       twClass: tw`bg-purple-200`,
     },
     "300": {
-      value: "#D6BCFA",
+      value: "rgb(214, 188, 250)",
       twClass: tw`bg-purple-300`,
     },
     "400": {
-      value: "#B794F4",
+      value: "rgb(183, 148, 244)",
       twClass: tw`bg-purple-400`,
     },
     "500": {
-      value: "#9F7AEA",
+      value: "rgb(159, 122, 234)",
       twClass: tw`bg-purple-500`,
     },
     "600": {
-      value: "#805AD5",
+      value: "rgb(128, 90, 213)",
       twClass: tw`bg-purple-600`,
     },
     "700": {
-      value: "#6B46C1",
+      value: "rgb(107, 70, 193)",
       twClass: tw`bg-purple-700`,
     },
     "800": {
-      value: "#553C9A",
+      value: "rgb(85, 60, 154)",
       twClass: tw`bg-purple-800`,
     },
     "900": {
-      value: "#44337A",
+      value: "rgb(68, 51, 122)",
       twClass: tw`bg-purple-900`,
     },
   },
   pink: {
     "100": {
-      value: "#FFF5F7",
+      value: "rgb(255, 245, 247)",
       twClass: tw`bg-pink-100`,
     },
     "200": {
-      value: "#FED7E2",
+      value: "rgb(254, 215, 226)",
       twClass: tw`bg-pink-200`,
     },
     "300": {
-      value: "#FBB6CE",
+      value: "rgb(251, 182, 206)",
       twClass: tw`bg-pink-300`,
     },
     "400": {
-      value: "#F687B3",
+      value: "rgb(246, 135, 179)",
       twClass: tw`bg-pink-400`,
     },
     "500": {
-      value: "#ED64A6",
+      value: "rgb(237, 100, 166)",
       twClass: tw`bg-pink-500`,
     },
     "600": {
-      value: "#D53F8C",
+      value: "rgb(213, 63, 140)",
       twClass: tw`bg-pink-600`,
     },
     "700": {
-      value: "#B83280",
+      value: "rgb(184, 50, 128)",
       twClass: tw`bg-pink-700`,
     },
     "800": {
-      value: "#97266D",
+      value: "rgb(151, 38, 109)",
       twClass: tw`bg-pink-800`,
     },
     "900": {
-      value: "#702459",
+      value: "rgb(112, 36, 89)",
       twClass: tw`bg-pink-900`,
     },
   },
-};
+} as const;
