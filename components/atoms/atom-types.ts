@@ -1,5 +1,5 @@
 import { SerializedStyles } from "@emotion/core";
-import { ReactElement, FunctionComponentElement } from "react";
+import { FunctionComponentElement } from "react";
 import { HTMLMotionProps, SVGMotionProps, MotionProps } from "framer-motion";
 
 /**
@@ -9,18 +9,6 @@ import { HTMLMotionProps, SVGMotionProps, MotionProps } from "framer-motion";
 type Css = {
   css?: SerializedStyles;
 };
-
-export type EmotionProps = Css & {
-  className?: string;
-  __EMOTION_TYPE_PLEASE_DO_NOT_USE__?: (props: EmotionProps) => ReactElement;
-};
-
-type CustomSvgElement = SVGSVGElement & Css;
-
-export type IconTypeElement = ReactElement<
-  CustomSvgElement,
-  (props: SVGSVGElement) => ReactElement
->;
 
 // ======================================
 // ======================================
@@ -148,7 +136,7 @@ export type SectionProps = HTMLMotionProps<"section"> & Css;
 
 export type SelectProps = Omit<HTMLMotionProps<"select">, "multiple"> &
   Css & {
-    icon?: IconTypeElement;
+    icon?: FunctionComponentElement<SvgProps>;
   };
 
 export type SourceProps = Omit<HTMLMotionProps<"source">, "children"> & Css;
@@ -180,7 +168,7 @@ export type TrackProps = HTMLMotionProps<"track"> & Css;
 export type UProps = HTMLMotionProps<"u"> & Css;
 export type UlProps = Omit<HTMLMotionProps<"ul">, "children"> &
   Css & {
-    icon?: IconTypeElement;
+    icon?: FunctionComponentElement<SvgProps>;
     children:
       | FunctionComponentElement<LiProps>
       | FunctionComponentElement<LiProps>[];
