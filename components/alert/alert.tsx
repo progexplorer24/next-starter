@@ -9,7 +9,7 @@ import { cond, T, always, equals } from "ramda";
 import type { AlertProps, AlertStyles } from "@components/types";
 import type { SvgProps } from "@components/atoms/atom-types";
 import Div from "@components/atoms/text-content/div/div";
-import InfoIcon from "./info-icon";
+import InfoIcon from "../icons/info-icon";
 
 const Alert = ({
   children,

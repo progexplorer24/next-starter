@@ -5,9 +5,9 @@ import AlertInfo from "./variants/alert-info";
 import AlertWarning from "./variants/alert-warning";
 import AlertError from "./variants/alert-error";
 import AlertSuccess from "./variants/alert-success";
-import InfoIcon from "./info-icon";
-import MailIcon from "./mail-icon";
-import BadgeIcon from "./badge-icon";
+import InfoIcon from "../icons/info-icon";
+import MailIcon from "../icons/mail-icon";
+import BadgeIcon from "../icons/badge-icon";
 
 export const Basic = (): JSX.Element => {
   return (

@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import { cond, equals, always, T } from "ramda";
 import type { AlertProps, AlertStyles } from "@components/types";
 import Alert from "../alert";
-import InfoIcon from "../info-icon";
+import InfoIcon from "../../icons/info-icon";
 
 const AlertInfo = ({
   children,
