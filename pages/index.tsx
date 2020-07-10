@@ -2,7 +2,6 @@ import { NextPage, GetStaticProps } from "next";
 import { css } from "@emotion/core";
 
 import tw from "twin.macro";
-import Icon from "@svg/icon-arrow-left.svg";
 import Table from "@components/atoms/table-content/table/table";
 import Thead from "@components/atoms/table-content/thead/thead";
 import Th from "@components/atoms/table-content/th/th";
@@ -17,16 +16,11 @@ import MainContainer from "layouts/main-container";
 
 import Nav from "@components/nav/nav";
 import A from "@components/atoms/inline-text-semantics/a/a";
-import Showcase from "@components/docs/showcase";
 // import ColorPill from "@components/docs/color-pill/color-pill";
 
 import RenderColorPalette from "@components/docs/render-color-palette/render-color-palette";
 import H1 from "@components/basic/h1/h1";
 import Ol from "@components/basic/lists/ol/ol";
-import Checkbox from "@components/atoms/forms/checkbox/checkbox";
-import RadioButton from "@components/atoms/forms/radio-button/radio-button";
-import Textarea from "@components/atoms/forms/textarea/textarea";
-import Alert from "@components/alert/alert";
 
 type HomeProps = Record<string, unknown>;
 
@@ -51,32 +45,6 @@ const Home: NextPage<HomeProps> = () => {
           <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
         </div> */}
 
-        <RadioButton name="contact" id="1" value="1" css={css([tw`mr-4`])} />
-        <RadioButton name="contact" id="2" value="2" />
-
-        <Showcase code="string">
-          <Alert>
-            A simple alert can be used to give user notifications about some
-            action.
-          </Alert>
-          <Alert css={css([tw`text-red-900 bg-red-200`])}>
-            A simple alert can be used to give user notifications about some
-            action.
-          </Alert>
-          <Alert css={css([tw`text-orange-900 bg-orange-200`])}>
-            A simple alert can be used to give user notifications about some
-            action.
-          </Alert>
-          <Alert css={css([tw`text-blue-900 bg-blue-200`])}>
-            A simple alert can be used to give user notifications about some
-            action.
-          </Alert>
-          <Alert css={css([tw`text-green-900 bg-green-200`])}>
-            A simple alert can be used to give user notifications about some
-            action.
-          </Alert>
-        </Showcase>
-
         <Ol>
           <Li>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
@@ -94,16 +62,9 @@ const Home: NextPage<HomeProps> = () => {
           <Li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Li>
         </Ol>
 
-        <Checkbox id="test" name="horn" />
-        <RadioButton id="test" name="horn" />
-
-        <Textarea />
-
         <H1>Color Palette</H1>
 
         <RenderColorPalette />
-
-        <Showcase code="Hello" />
 
         <A
           css={css`
@@ -113,11 +74,6 @@ const Home: NextPage<HomeProps> = () => {
         >
           Link
         </A>
-        <Icon
-          css={css`
-            ${tw`w-8 h-8`}
-          `}
-        />
         <Img
           css={css`
             ${tw`w-32 h-32`}
