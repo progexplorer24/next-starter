@@ -158,8 +158,8 @@ export type StrongProps = HTMLMotionProps<"strong"> & Css;
 export type SubProps = HTMLMotionProps<"sub"> & Css;
 export type SupProps = HTMLMotionProps<"sup"> & Css;
 export type SummaryProps = HTMLMotionProps<"summary"> & Css;
-export type SvgProps = Omit<React.SVGProps<SVGSVGElement>, "ref"> &
-  SVGMotionProps<"svg"> &
+export type SvgProps = Omit<React.SVGProps<SVGSVGElement>, "ref" | "xmlns"> &
+  Omit<SVGMotionProps<"svg">, "xmlns"> &
   Css;
 export type TableProps = HTMLMotionProps<"table"> & Css;
 
