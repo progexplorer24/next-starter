@@ -1,11 +1,15 @@
-import React, { ReactElement } from "react";
+import React, {
+  ReactElement,
+  FunctionComponentElement,
+  cloneElement,
+} from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import cloneEmotion from "@utils/emotion-clone";
 import { cond, T, always, equals } from "ramda";
-import type { IconTypeElement } from "@components/atoms/atom-types";
 import type { AlertProps, AlertStyles } from "@components/types";
-import InfoIcon from "./info.svg";
+import type { SvgProps } from "@components/atoms/atom-types";
+import Div from "@components/atoms/text-content/div/div";
+import InfoIcon from "./info-icon";
 
 const Alert = ({
   children,
@@ -38,8 +42,8 @@ const Alert = ({
     ],
   ])(type);
 
-  const renderIcon = (iconElement: IconTypeElement) => {
-    const iconStyled = cloneEmotion(iconElement, {
+  const renderIcon = (iconElement: FunctionComponentElement<SvgProps>) => {
+    const iconStyled = cloneElement(iconElement, {
       ...iconElement.props,
       css: emotionCss([
         tw`w-5 h-5 fill-current`,
@@ -48,11 +52,11 @@ const Alert = ({
       ]),
     });
 
-    return <div css={emotionCss([tw`mr-3`])}>{iconStyled}</div>;
+    return <Div css={emotionCss([tw`mr-3`])}>{iconStyled}</Div>;
   };
 
   return (
-    <div
+    <Div
       role="alert"
       {...props}
       css={emotionCss([
@@ -63,8 +67,8 @@ const Alert = ({
     >
       {icon ? renderIcon(icon) : undefined}
 
-      <div css={emotionCss([tw`leading-tight`])}>{children}</div>
-    </div>
+      <Div css={emotionCss([tw`leading-tight`])}>{children}</Div>
+    </Div>
   );
 };
 export default Alert;

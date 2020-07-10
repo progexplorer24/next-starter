@@ -1,12 +1,11 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, cloneElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import { motion } from "framer-motion";
 import type { SelectProps } from "@components/atoms/atom-types";
-import emotionClone from "@utils/emotion-clone";
 import Span from "@components/atoms/inline-text-semantics/span/span";
 import { addBasicFormStyling } from "../styles";
-import ArrowIcon from "./arrow.svg";
+import ChevronDownIcon from "./chevron-down-icon";
 
 /**
  * # [MDN Documentation Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
@@ -49,10 +48,10 @@ const Select = ({
   id,
   name,
   children,
-  icon = <ArrowIcon />,
+  icon = <ChevronDownIcon />,
   ...props
 }: SelectProps): ReactElement => {
-  const iconWithStyles = emotionClone(icon, {
+  const iconWithStyles = cloneElement(icon, {
     ...icon.props,
     css: emotionCss([
       tw`absolute top-0 right-0 w-6 h-6 mr-2 text-gray-500 pointer-events-none fill-current`,
@@ -65,7 +64,7 @@ const Select = ({
         name={name}
         id={id}
         {...props}
-        css={emotionCss([addBasicFormStyling])}
+        css={emotionCss([addBasicFormStyling, tw`pr-10`])}
       >
         {children}
       </motion.select>

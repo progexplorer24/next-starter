@@ -1,9 +1,8 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, FunctionComponentElement } from "react";
 import { SerializedStyles, css as emotionCss, ClassNames } from "@emotion/core";
 import tw from "twin.macro";
 import AtomButton from "@components/atoms/forms/button/button";
-import emotionClone from "@utils/emotion-clone";
-import { IconTypeElement } from "@components/atoms/atom-types";
+import type { SvgProps } from "@components/atoms/atom-types";
 import { disabledTextButton } from "../styles";
 
 type IconButtonProps = {
@@ -11,7 +10,7 @@ type IconButtonProps = {
   className?: string;
   disabled?: boolean;
   ariaLabel: string;
-  children: IconTypeElement;
+  children: FunctionComponentElement<SvgProps>;
 };
 
 const IconButton = ({
@@ -21,7 +20,7 @@ const IconButton = ({
   ariaLabel,
   ...props
 }: IconButtonProps): ReactElement => {
-  const iconStyled = emotionClone(children, {
+  const iconStyled = React.cloneElement(children, {
     ...children.props,
     css: emotionCss([
       tw`w-6 h-6 text-current fill-current`,

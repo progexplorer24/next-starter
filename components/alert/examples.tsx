@@ -5,9 +5,9 @@ import AlertInfo from "./variants/alert-info";
 import AlertWarning from "./variants/alert-warning";
 import AlertError from "./variants/alert-error";
 import AlertSuccess from "./variants/alert-success";
-import CustomIcon1 from "./custom-1.svg";
-import CustomIcon2 from "./custom-2.svg";
-import InfoIcon from "./info.svg";
+import InfoIcon from "./info-icon";
+import MailIcon from "./mail-icon";
+import BadgeIcon from "./badge-icon";
 
 export const Basic = (): JSX.Element => {
   return (
@@ -63,7 +63,7 @@ export const Custom = (): JSX.Element => {
       <Alert
         type="outlined"
         icon={
-          <CustomIcon1
+          <MailIcon
             css={emotionCss([tw`stroke-2 stroke-teal-600 fill-none`])}
           />
         }
@@ -74,7 +74,7 @@ export const Custom = (): JSX.Element => {
 
       <Alert
         icon={
-          <CustomIcon2
+          <BadgeIcon
             css={emotionCss([tw`stroke-2 fill-none stroke-teal-700`])}
           />
         }

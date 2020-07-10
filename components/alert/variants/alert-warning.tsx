@@ -1,12 +1,10 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, cloneElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
-import cloneEmotion from "@utils/emotion-clone";
 import { cond, equals, always, T } from "ramda";
-import type { IconTypeElement } from "@components/atoms/atom-types";
 import type { AlertProps, AlertStyles } from "@components/types";
 import Alert from "../alert";
-import WarningIcon from "../warning.svg";
+import WarningIcon from "../warning-icon";
 
 const AlertWarning = ({
   children,
@@ -40,10 +38,10 @@ const AlertWarning = ({
   ])(type);
 
   const styledIcon = icon
-    ? (cloneEmotion(icon, {
+    ? cloneElement(icon, {
         ...icon.props,
         css: emotionCss([iconStyles, icon.props.css]),
-      }) as IconTypeElement)
+      })
     : false;
 
   return (
