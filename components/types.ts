@@ -1,7 +1,7 @@
 import { SerializedStyles } from "@emotion/core";
 import { TwStyle } from "twin.macro";
-import { ReactNode } from "react";
-import { HrProps, EmotionProps, IconTypeElement } from "./atoms/atom-types";
+import { ReactNode, FunctionComponentElement } from "react";
+import type { HrProps, SvgProps, DivProps } from "./atoms/atom-types";
 
 /**
  *  CUSTOM ELEMENTS
@@ -24,10 +24,9 @@ export type AlertStyles = {
   alertStyles?: TwStyle | SerializedStyles;
 };
 
-export type AlertProps = React.HTMLAttributes<HTMLDivElement> &
-  EmotionProps & {
-    icon?: IconTypeElement | false;
-    css?: SerializedStyles;
-    type?: "outlined" | "filled" | "default";
-    children: ReactNode;
-  };
+export type AlertProps = DivProps & {
+  icon?: FunctionComponentElement<SvgProps> | false;
+
+  type?: "outlined" | "filled" | "default";
+  children: ReactNode;
+};
