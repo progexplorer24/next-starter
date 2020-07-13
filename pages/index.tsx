@@ -21,6 +21,7 @@ import A from "@components/atoms/inline-text-semantics/a/a";
 import RenderColorPalette from "@components/docs/render-color-palette/render-color-palette";
 import H1 from "@components/basic/h1/h1";
 import Ol from "@components/basic/lists/ol/ol";
+import ButtonRipple from "@components/button/button-ripple";
 
 type HomeProps = Record<string, unknown>;
 
@@ -44,6 +45,8 @@ const Home: NextPage<HomeProps> = () => {
           <ColorPill twClass={tw`bg-red-800`} color="#FF3322" value="800" />
           <ColorPill twClass={tw`bg-red-900`} color="#FF3322" value="900" />
         </div> */}
+
+        <ButtonRipple>Hello</ButtonRipple>
 
         <Ol>
           <Li>
