@@ -23,6 +23,15 @@ const Motion: NextPage<Record<string, unknown>> = () => {
       </H1>
       <Frame />
 
+      <Div
+        css={emotionCss([
+          tw`mx-auto mt-8 bg-blue-300 rounded-lg rounded-full w-30 h-30`,
+        ])}
+        animate={{
+          scale: [0, 1],
+        }}
+      />
+
       <Div css={emotionCss([tw`flex justify-center`])}>
         <motion.button
           {...growAnimation}
