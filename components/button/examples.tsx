@@ -2,23 +2,48 @@ import { ReactElement } from "react";
 import { css as emotionCss } from "@emotion/core";
 import tw from "twin.macro";
 import responsiveBreakpoint from "@utils/responsive-breakpoint";
+// import { colors } from "data";
+import Span from "@components/atoms/inline-text-semantics/span/span";
 import Button from "./button";
-import SendIcon from "./send.svg";
-import FavouriteIcon from "./favorite.svg";
-import SettingsIcon from "./settings.svg";
-import DeleteIcon from "./delete.svg";
-import UploadIcon from "./upload.svg";
-import BookmarkIcon from "./bookmark.svg";
-import DownloadIcon from "./download.svg";
+import ButtonNew from "./button-new";
+
 import IconButton from "./variants/icon-button";
-import VolumeOffIcon from "./volume-off.svg";
+
 import { denseButton } from "./styles";
+import ButtonOverlay from "./button-overlay";
+import DeleteIcon from "../icons/delete-icon";
+import UploadIcon from "../icons/upload-icon";
+import SendIcon from "../icons/send-icon";
+import FavoriteIcon from "../icons/favorite-icon";
+import SettingsIcon from "../icons/settings-icon";
+import BookmarkIcon from "../icons/bookmark-icon";
+import DownloadIcon from "../icons/download-icon";
+import VolumeOffIcon from "../icons/volume-off-icon";
 
 export const Basic = (): ReactElement => (
   <div>
     <Button css={emotionCss([tw`m-4 rounded-sm`])}>Smallest Button</Button>
     <Button css={emotionCss([tw`m-4 rounded-sm h-14`])}>Medium Button</Button>
     <Button css={emotionCss([tw`m-4 rounded-sm h-18`])}>Large Button</Button>
+    <br />
+    <ButtonNew
+      buttonCss={emotionCss([tw`m-4`])}
+      css={emotionCss([tw`rounded-sm`])}
+    >
+      Smallest Button
+    </ButtonNew>
+    <ButtonNew
+      buttonCss={emotionCss([tw`m-4`])}
+      css={emotionCss([tw`rounded-sm h-14`])}
+    >
+      Medium Button
+    </ButtonNew>
+    <ButtonNew
+      buttonCss={emotionCss([tw`m-4`])}
+      css={emotionCss([tw`rounded-sm h-18`])}
+    >
+      Large Button
+    </ButtonNew>
   </div>
 );
 
@@ -100,6 +125,27 @@ export const Filled = (): ReactElement => {
       <Button variant="filled" css={emotionCss([tw`m-4`])}>
         Filled
       </Button>
+      <ButtonNew
+        variant="filled"
+        css={emotionCss([tw`h-11`])}
+        buttonCss={emotionCss([tw`m-4`])}
+      >
+        Filled
+      </ButtonNew>
+      <ButtonOverlay
+        css={emotionCss([tw`m-4`])}
+        variant="filled"
+        color="gray-700"
+      >
+        <Span>Overlay</Span>
+      </ButtonOverlay>
+      <ButtonOverlay
+        css={emotionCss([tw`m-4`])}
+        variant="filled"
+        color="blue-700"
+      >
+        <Span>Overlay</Span>
+      </ButtonOverlay>
       <Button variant="filled" css={emotionCss([tw`m-4 bg-red-700`])}>
         Filled
       </Button>
@@ -121,12 +167,28 @@ export const Filled = (): ReactElement => {
       >
         Filled
       </Button>
+      <ButtonNew
+        variant="filled"
+        buttonCss={emotionCss([tw`m-4`])}
+        color="teal"
+        css={emotionCss([denseButton])}
+      >
+        Filled
+      </ButtonNew>
       <Button
         variant="filled"
         css={emotionCss([tw`m-4 bg-purple-700`, denseButton])}
       >
         Filled
       </Button>
+      <ButtonNew
+        variant="filled"
+        buttonCss={emotionCss([tw`m-4`])}
+        css={emotionCss([denseButton])}
+        color="purple"
+      >
+        Filled
+      </ButtonNew>
       <Button
         variant="filled"
         css={emotionCss([tw`m-4 bg-indigo-700`, denseButton])}
@@ -156,6 +218,12 @@ export const Text = (): ReactElement => {
       <Button variant="text" css={emotionCss([tw`m-4`])}>
         Text button
       </Button>
+      <ButtonNew variant="text" buttonCss={emotionCss([tw`m-4`])}>
+        Text button
+      </ButtonNew>
+      <ButtonOverlay variant="text" color="red-200" css={emotionCss([tw`m-4`])}>
+        <Span css={emotionCss([tw`text-red-700`])}>Text button</Span>
+      </ButtonOverlay>
       <Button variant="text" css={emotionCss([tw`m-4 text-red-700`])}>
         Text button
       </Button>
@@ -177,6 +245,13 @@ export const Text = (): ReactElement => {
       <Button variant="text" css={emotionCss([tw`m-4 text-purple-700`])}>
         Text button
       </Button>
+      <ButtonNew
+        variant="text"
+        color="purple"
+        css={emotionCss([tw`m-4 text-purple-700`])}
+      >
+        Text button
+      </ButtonNew>
       <Button variant="text" css={emotionCss([tw`m-4 text-indigo-700`])}>
         Text button
       </Button>
@@ -202,6 +277,15 @@ export const Outlined = (): ReactElement => {
       >
         Outlined
       </Button>
+      <ButtonOverlay
+        variant="outlined"
+        color="red-100"
+        css={emotionCss([tw`text-red-700 border-red-300`])}
+      >
+        <Span css={emotionCss([tw`text-red-700 border-red-300`])}>
+          Outlined
+        </Span>
+      </ButtonOverlay>
       <Button
         variant="outlined"
         css={emotionCss([tw`m-4 text-green-800 border-green-300`])}
@@ -288,7 +372,7 @@ export const ButtonsWithIcons = (): ReactElement => {
           tw`inline-flex items-center justify-center m-4 bg-red-700`,
         ])}
       >
-        <FavouriteIcon
+        <FavoriteIcon
           css={emotionCss([tw`w-4 h-4 mr-2 text-current fill-current`])}
         />
         favourite
