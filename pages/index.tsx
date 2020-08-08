@@ -23,13 +23,13 @@ import H1 from "@components/basic/h1/h1";
 import Ol from "@components/basic/lists/ol/ol";
 import ButtonRipple from "@components/button/button-ripple";
 import gwo from "data/books/gwo";
-import H2 from "@components/basic/h2/h2";
+// import H2 from "@components/basic/h2/h2";
 import Span from "@components/atoms/inline-text-semantics/span/span";
 
 type HomeProps = Record<string, unknown>;
 
 const Home: NextPage<HomeProps> = () => {
-  console.log(gwo);
+  // console.log(gwo);
 
   return (
     <main>
