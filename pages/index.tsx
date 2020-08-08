@@ -22,10 +22,15 @@ import RenderColorPalette from "@components/docs/render-color-palette/render-col
 import H1 from "@components/basic/h1/h1";
 import Ol from "@components/basic/lists/ol/ol";
 import ButtonRipple from "@components/button/button-ripple";
+import gwo from "data/books/gwo";
+import H2 from "@components/basic/h2/h2";
+import Span from "@components/atoms/inline-text-semantics/span/span";
 
 type HomeProps = Record<string, unknown>;
 
 const Home: NextPage<HomeProps> = () => {
+  console.log(gwo);
+
   return (
     <main>
       <Nav />
@@ -47,6 +52,12 @@ const Home: NextPage<HomeProps> = () => {
         </div> */}
 
         <ButtonRipple>Hello</ButtonRipple>
+
+        <div css={css([tw`p-4 -mx-5 bg-white border border-gray-300`])}>
+          <Span css={css([tw`text-lg font-bold text-purple-700`])}>
+            {gwo.class4.title}
+          </Span>
+        </div>
 
         <Ol>
           <Li>
